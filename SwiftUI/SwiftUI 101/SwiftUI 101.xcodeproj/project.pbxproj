@@ -15,6 +15,9 @@
 		31D9A0C223A3895500222253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31D9A0C023A3895500222253 /* LaunchScreen.storyboard */; };
 		31DE97E423A3C30800A7A5B6 /* Next.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DE97E323A3C30800A7A5B6 /* Next.swift */; };
 		31DE97E623A3C54400A7A5B6 /* Musician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DE97E523A3C54400A7A5B6 /* Musician.swift */; };
+		31E03A3924093D320094F307 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31E03A3824093D320094F307 /* Auth.storyboard */; };
+		31E03A3B24093D620094F307 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E03A3A24093D620094F307 /* Login.swift */; };
+		F941CB7A989DB6361A8BEF19 /* Pods_SwiftUI_101.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87EB0CDE517971136A9C343E /* Pods_SwiftUI_101.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,11 @@
 		31D9A0C323A3895500222253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31DE97E323A3C30800A7A5B6 /* Next.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Next.swift; sourceTree = "<group>"; };
 		31DE97E523A3C54400A7A5B6 /* Musician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musician.swift; sourceTree = "<group>"; };
+		31E03A3824093D320094F307 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		31E03A3A24093D620094F307 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		87EB0CDE517971136A9C343E /* Pods_SwiftUI_101.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_101.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF08FDB9D603C58A31CDA8B /* Pods-SwiftUI 101.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI 101.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI 101/Pods-SwiftUI 101.debug.xcconfig"; sourceTree = "<group>"; };
+		E841FD7A22757F6672910853 /* Pods-SwiftUI 101.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI 101.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI 101/Pods-SwiftUI 101.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F941CB7A989DB6361A8BEF19 /* Pods_SwiftUI_101.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +55,8 @@
 			children = (
 				31D9A0B423A3895300222253 /* SwiftUI 101 */,
 				31D9A0B323A3895300222253 /* Products */,
+				F9D9E8A04DE6E83A23FA0378 /* Pods */,
+				57BF284742D902EBE3523BFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +80,8 @@
 				31D9A0BD23A3895500222253 /* Preview Content */,
 				31DE97E323A3C30800A7A5B6 /* Next.swift */,
 				31DE97E523A3C54400A7A5B6 /* Musician.swift */,
+				31E03A3824093D320094F307 /* Auth.storyboard */,
+				31E03A3A24093D620094F307 /* Login.swift */,
 			);
 			path = "SwiftUI 101";
 			sourceTree = "<group>";
@@ -81,6 +94,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		57BF284742D902EBE3523BFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87EB0CDE517971136A9C343E /* Pods_SwiftUI_101.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9D9E8A04DE6E83A23FA0378 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCF08FDB9D603C58A31CDA8B /* Pods-SwiftUI 101.debug.xcconfig */,
+				E841FD7A22757F6672910853 /* Pods-SwiftUI 101.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,6 +118,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31D9A0C623A3895500222253 /* Build configuration list for PBXNativeTarget "SwiftUI 101" */;
 			buildPhases = (
+				0E6B68C2DA6721B42995D5B8 /* [CP] Check Pods Manifest.lock */,
 				31D9A0AE23A3895300222253 /* Sources */,
 				31D9A0AF23A3895300222253 /* Frameworks */,
 				31D9A0B023A3895300222253 /* Resources */,
@@ -139,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31E03A3924093D320094F307 /* Auth.storyboard in Resources */,
 				31D9A0C223A3895500222253 /* LaunchScreen.storyboard in Resources */,
 				31D9A0BF23A3895500222253 /* Preview Assets.xcassets in Resources */,
 				31D9A0BC23A3895500222253 /* Assets.xcassets in Resources */,
@@ -146,6 +178,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E6B68C2DA6721B42995D5B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftUI 101-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31D9A0AE23A3895300222253 /* Sources */ = {
@@ -155,6 +212,7 @@
 				31D9A0B623A3895300222253 /* AppDelegate.swift in Sources */,
 				31DE97E623A3C54400A7A5B6 /* Musician.swift in Sources */,
 				31D9A0B823A3895300222253 /* SceneDelegate.swift in Sources */,
+				31E03A3B24093D620094F307 /* Login.swift in Sources */,
 				31DE97E423A3C30800A7A5B6 /* Next.swift in Sources */,
 				31D9A0BA23A3895300222253 /* ContentView.swift in Sources */,
 			);
@@ -290,6 +348,7 @@
 		};
 		31D9A0C723A3895500222253 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCF08FDB9D603C58A31CDA8B /* Pods-SwiftUI 101.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,6 +369,7 @@
 		};
 		31D9A0C823A3895500222253 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E841FD7A22757F6672910853 /* Pods-SwiftUI 101.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
