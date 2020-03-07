@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05C6C925BBACB9DD19D1046D /* Pods_Mackup_QueenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7FDF20A9A4E76A5CFDB389 /* Pods_Mackup_QueenUITests.framework */; };
+		3172E10823D8733F009EBD92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E10723D8733F009EBD92 /* AppDelegate.swift */; };
+		3172E10A23D8733F009EBD92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E10923D8733F009EBD92 /* SceneDelegate.swift */; };
+		3172E10C23D8733F009EBD92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E10B23D8733F009EBD92 /* ContentView.swift */; };
+		3172E10E23D87342009EBD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3172E10D23D87342009EBD92 /* Assets.xcassets */; };
+		3172E11123D87342009EBD92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3172E11023D87342009EBD92 /* Preview Assets.xcassets */; };
+		3172E11423D87342009EBD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3172E11223D87342009EBD92 /* LaunchScreen.storyboard */; };
+		3172E11F23D87342009EBD92 /* Mackup_QueenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E11E23D87342009EBD92 /* Mackup_QueenTests.swift */; };
+		3172E12A23D87342009EBD92 /* Mackup_QueenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E12923D87342009EBD92 /* Mackup_QueenUITests.swift */; };
+		3172E13923D875AA009EBD92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3172E13823D875AA009EBD92 /* GoogleService-Info.plist */; };
+		31C59AD6A2147A81EFC8230C /* Pods_Mackup_Queen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A334BD335DA833924CA4F52E /* Pods_Mackup_Queen.framework */; };
+		75F3C3C65881FF98542D7377 /* Pods_Mackup_QueenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24FB14C36CF19B8C37594CC /* Pods_Mackup_QueenTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3172E11B23D87342009EBD92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3172E0FC23D8733F009EBD92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3172E10323D8733F009EBD92;
+			remoteInfo = "Mackup Queen";
+		};
+		3172E12623D87342009EBD92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3172E0FC23D8733F009EBD92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3172E10323D8733F009EBD92;
+			remoteInfo = "Mackup Queen";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3172E10423D8733F009EBD92 /* Mackup Queen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mackup Queen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3172E10723D8733F009EBD92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3172E10923D8733F009EBD92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3172E10B23D8733F009EBD92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3172E10D23D87342009EBD92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3172E11023D87342009EBD92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3172E11323D87342009EBD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3172E11523D87342009EBD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3172E11A23D87342009EBD92 /* Mackup QueenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mackup QueenTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3172E11E23D87342009EBD92 /* Mackup_QueenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mackup_QueenTests.swift; sourceTree = "<group>"; };
+		3172E12023D87342009EBD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3172E12523D87342009EBD92 /* Mackup QueenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mackup QueenUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3172E12923D87342009EBD92 /* Mackup_QueenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mackup_QueenUITests.swift; sourceTree = "<group>"; };
+		3172E12B23D87342009EBD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3172E13823D875AA009EBD92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		60F01999330C53755AC81DB4 /* Pods-Mackup Queen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mackup Queen.debug.xcconfig"; path = "Target Support Files/Pods-Mackup Queen/Pods-Mackup Queen.debug.xcconfig"; sourceTree = "<group>"; };
+		7C7FDF20A9A4E76A5CFDB389 /* Pods_Mackup_QueenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mackup_QueenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F37223D1D9AA5026A254D54 /* Pods-Mackup Queen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mackup Queen.release.xcconfig"; path = "Target Support Files/Pods-Mackup Queen/Pods-Mackup Queen.release.xcconfig"; sourceTree = "<group>"; };
+		A334BD335DA833924CA4F52E /* Pods_Mackup_Queen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mackup_Queen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B186588E23780F03C8A5C014 /* Pods-Mackup QueenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mackup QueenUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mackup QueenUITests/Pods-Mackup QueenUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B82C2F12719E72228B4C14B5 /* Pods-Mackup QueenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mackup QueenTests.release.xcconfig"; path = "Target Support Files/Pods-Mackup QueenTests/Pods-Mackup QueenTests.release.xcconfig"; sourceTree = "<group>"; };
+		C24FB14C36CF19B8C37594CC /* Pods_Mackup_QueenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mackup_QueenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70F37E91ADE57C64378CE3C /* Pods-Mackup QueenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mackup QueenTests.debug.xcconfig"; path = "Target Support Files/Pods-Mackup QueenTests/Pods-Mackup QueenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC3AED99DCC7C2F6E260343F /* Pods-Mackup QueenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mackup QueenUITests.release.xcconfig"; path = "Target Support Files/Pods-Mackup QueenUITests/Pods-Mackup QueenUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3172E10123D8733F009EBD92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C59AD6A2147A81EFC8230C /* Pods_Mackup_Queen.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3172E11723D87342009EBD92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F3C3C65881FF98542D7377 /* Pods_Mackup_QueenTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3172E12223D87342009EBD92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C6C925BBACB9DD19D1046D /* Pods_Mackup_QueenUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DA05698ADE6FC872B09EF0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60F01999330C53755AC81DB4 /* Pods-Mackup Queen.debug.xcconfig */,
+				9F37223D1D9AA5026A254D54 /* Pods-Mackup Queen.release.xcconfig */,
+				C70F37E91ADE57C64378CE3C /* Pods-Mackup QueenTests.debug.xcconfig */,
+				B82C2F12719E72228B4C14B5 /* Pods-Mackup QueenTests.release.xcconfig */,
+				B186588E23780F03C8A5C014 /* Pods-Mackup QueenUITests.debug.xcconfig */,
+				FC3AED99DCC7C2F6E260343F /* Pods-Mackup QueenUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3172E0FB23D8733F009EBD92 = {
+			isa = PBXGroup;
+			children = (
+				3172E10623D8733F009EBD92 /* Mackup Queen */,
+				3172E11D23D87342009EBD92 /* Mackup QueenTests */,
+				3172E12823D87342009EBD92 /* Mackup QueenUITests */,
+				3172E10523D8733F009EBD92 /* Products */,
+				2DA05698ADE6FC872B09EF0A /* Pods */,
+				D01AEF640B1C961F691DCADF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3172E10523D8733F009EBD92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3172E10423D8733F009EBD92 /* Mackup Queen.app */,
+				3172E11A23D87342009EBD92 /* Mackup QueenTests.xctest */,
+				3172E12523D87342009EBD92 /* Mackup QueenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3172E10623D8733F009EBD92 /* Mackup Queen */ = {
+			isa = PBXGroup;
+			children = (
+				3172E13723D8758B009EBD92 /* Utils */,
+				3172E10723D8733F009EBD92 /* AppDelegate.swift */,
+				3172E10923D8733F009EBD92 /* SceneDelegate.swift */,
+				3172E10B23D8733F009EBD92 /* ContentView.swift */,
+				3172E10D23D87342009EBD92 /* Assets.xcassets */,
+				3172E11223D87342009EBD92 /* LaunchScreen.storyboard */,
+				3172E11523D87342009EBD92 /* Info.plist */,
+				3172E10F23D87342009EBD92 /* Preview Content */,
+			);
+			path = "Mackup Queen";
+			sourceTree = "<group>";
+		};
+		3172E10F23D87342009EBD92 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3172E11023D87342009EBD92 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3172E11D23D87342009EBD92 /* Mackup QueenTests */ = {
+			isa = PBXGroup;
+			children = (
+				3172E11E23D87342009EBD92 /* Mackup_QueenTests.swift */,
+				3172E12023D87342009EBD92 /* Info.plist */,
+			);
+			path = "Mackup QueenTests";
+			sourceTree = "<group>";
+		};
+		3172E12823D87342009EBD92 /* Mackup QueenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3172E12923D87342009EBD92 /* Mackup_QueenUITests.swift */,
+				3172E12B23D87342009EBD92 /* Info.plist */,
+			);
+			path = "Mackup QueenUITests";
+			sourceTree = "<group>";
+		};
+		3172E13723D8758B009EBD92 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3172E13823D875AA009EBD92 /* GoogleService-Info.plist */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D01AEF640B1C961F691DCADF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A334BD335DA833924CA4F52E /* Pods_Mackup_Queen.framework */,
+				C24FB14C36CF19B8C37594CC /* Pods_Mackup_QueenTests.framework */,
+				7C7FDF20A9A4E76A5CFDB389 /* Pods_Mackup_QueenUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3172E10323D8733F009EBD92 /* Mackup Queen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3172E12E23D87342009EBD92 /* Build configuration list for PBXNativeTarget "Mackup Queen" */;
+			buildPhases = (
+				89480C3D7429C54B87A3C0DA /* [CP] Check Pods Manifest.lock */,
+				3172E10023D8733F009EBD92 /* Sources */,
+				3172E10123D8733F009EBD92 /* Frameworks */,
+				3172E10223D8733F009EBD92 /* Resources */,
+				F394B91DB4ED72B561BFF1D6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mackup Queen";
+			productName = "Mackup Queen";
+			productReference = 3172E10423D8733F009EBD92 /* Mackup Queen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3172E11923D87342009EBD92 /* Mackup QueenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3172E13123D87342009EBD92 /* Build configuration list for PBXNativeTarget "Mackup QueenTests" */;
+			buildPhases = (
+				5AC3010DF048D0CA3C3D4A8E /* [CP] Check Pods Manifest.lock */,
+				3172E11623D87342009EBD92 /* Sources */,
+				3172E11723D87342009EBD92 /* Frameworks */,
+				3172E11823D87342009EBD92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3172E11C23D87342009EBD92 /* PBXTargetDependency */,
+			);
+			name = "Mackup QueenTests";
+			productName = "Mackup QueenTests";
+			productReference = 3172E11A23D87342009EBD92 /* Mackup QueenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3172E12423D87342009EBD92 /* Mackup QueenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3172E13423D87342009EBD92 /* Build configuration list for PBXNativeTarget "Mackup QueenUITests" */;
+			buildPhases = (
+				6BB0E180437C26EE39280B0C /* [CP] Check Pods Manifest.lock */,
+				3172E12123D87342009EBD92 /* Sources */,
+				3172E12223D87342009EBD92 /* Frameworks */,
+				3172E12323D87342009EBD92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3172E12723D87342009EBD92 /* PBXTargetDependency */,
+			);
+			name = "Mackup QueenUITests";
+			productName = "Mackup QueenUITests";
+			productReference = 3172E12523D87342009EBD92 /* Mackup QueenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3172E0FC23D8733F009EBD92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = tra;
+				TargetAttributes = {
+					3172E10323D8733F009EBD92 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					3172E11923D87342009EBD92 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 3172E10323D8733F009EBD92;
+					};
+					3172E12423D87342009EBD92 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 3172E10323D8733F009EBD92;
+					};
+				};
+			};
+			buildConfigurationList = 3172E0FF23D8733F009EBD92 /* Build configuration list for PBXProject "Mackup Queen" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3172E0FB23D8733F009EBD92;
+			productRefGroup = 3172E10523D8733F009EBD92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3172E10323D8733F009EBD92 /* Mackup Queen */,
+				3172E11923D87342009EBD92 /* Mackup QueenTests */,
+				3172E12423D87342009EBD92 /* Mackup QueenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3172E10223D8733F009EBD92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3172E11423D87342009EBD92 /* LaunchScreen.storyboard in Resources */,
+				3172E13923D875AA009EBD92 /* GoogleService-Info.plist in Resources */,
+				3172E11123D87342009EBD92 /* Preview Assets.xcassets in Resources */,
+				3172E10E23D87342009EBD92 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3172E11823D87342009EBD92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3172E12323D87342009EBD92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AC3010DF048D0CA3C3D4A8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mackup QueenTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BB0E180437C26EE39280B0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mackup QueenUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89480C3D7429C54B87A3C0DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mackup Queen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F394B91DB4ED72B561BFF1D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mackup Queen/Pods-Mackup Queen-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mackup Queen/Pods-Mackup Queen-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mackup Queen/Pods-Mackup Queen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3172E10023D8733F009EBD92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3172E10823D8733F009EBD92 /* AppDelegate.swift in Sources */,
+				3172E10A23D8733F009EBD92 /* SceneDelegate.swift in Sources */,
+				3172E10C23D8733F009EBD92 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3172E11623D87342009EBD92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3172E11F23D87342009EBD92 /* Mackup_QueenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3172E12123D87342009EBD92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3172E12A23D87342009EBD92 /* Mackup_QueenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3172E11C23D87342009EBD92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3172E10323D8733F009EBD92 /* Mackup Queen */;
+			targetProxy = 3172E11B23D87342009EBD92 /* PBXContainerItemProxy */;
+		};
+		3172E12723D87342009EBD92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3172E10323D8733F009EBD92 /* Mackup Queen */;
+			targetProxy = 3172E12623D87342009EBD92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3172E11223D87342009EBD92 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3172E11323D87342009EBD92 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3172E12C23D87342009EBD92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3172E12D23D87342009EBD92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3172E12F23D87342009EBD92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60F01999330C53755AC81DB4 /* Pods-Mackup Queen.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Mackup Queen/Preview Content\"";
+				DEVELOPMENT_TEAM = MZRFR72A7G;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Mackup Queen/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.panda.mackup-queen";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3172E13023D87342009EBD92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F37223D1D9AA5026A254D54 /* Pods-Mackup Queen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Mackup Queen/Preview Content\"";
+				DEVELOPMENT_TEAM = MZRFR72A7G;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Mackup Queen/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.panda.mackup-queen";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3172E13223D87342009EBD92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C70F37E91ADE57C64378CE3C /* Pods-Mackup QueenTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MZRFR72A7G;
+				INFOPLIST_FILE = "Mackup QueenTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tra.Mackup-QueenTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mackup Queen.app/Mackup Queen";
+			};
+			name = Debug;
+		};
+		3172E13323D87342009EBD92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B82C2F12719E72228B4C14B5 /* Pods-Mackup QueenTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MZRFR72A7G;
+				INFOPLIST_FILE = "Mackup QueenTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tra.Mackup-QueenTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mackup Queen.app/Mackup Queen";
+			};
+			name = Release;
+		};
+		3172E13523D87342009EBD92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B186588E23780F03C8A5C014 /* Pods-Mackup QueenUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MZRFR72A7G;
+				INFOPLIST_FILE = "Mackup QueenUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tra.Mackup-QueenUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mackup Queen";
+			};
+			name = Debug;
+		};
+		3172E13623D87342009EBD92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC3AED99DCC7C2F6E260343F /* Pods-Mackup QueenUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MZRFR72A7G;
+				INFOPLIST_FILE = "Mackup QueenUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tra.Mackup-QueenUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mackup Queen";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3172E0FF23D8733F009EBD92 /* Build configuration list for PBXProject "Mackup Queen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3172E12C23D87342009EBD92 /* Debug */,
+				3172E12D23D87342009EBD92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3172E12E23D87342009EBD92 /* Build configuration list for PBXNativeTarget "Mackup Queen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3172E12F23D87342009EBD92 /* Debug */,
+				3172E13023D87342009EBD92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3172E13123D87342009EBD92 /* Build configuration list for PBXNativeTarget "Mackup QueenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3172E13223D87342009EBD92 /* Debug */,
+				3172E13323D87342009EBD92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3172E13423D87342009EBD92 /* Build configuration list for PBXNativeTarget "Mackup QueenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3172E13523D87342009EBD92 /* Debug */,
+				3172E13623D87342009EBD92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3172E0FC23D8733F009EBD92 /* Project object */;
+}

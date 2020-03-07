@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Mackup Queen' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+   pod 'Firebase/Auth'
+   pod 'Firebase/Firestore'
+   pod 'Firebase/Messaging'
+   pod 'Firebase/Storage'
+
+   pod 'RxSwift'
+   pod 'ReactiveCocoa', '~> 10.1'
+   pod 'RxTheme'
+   pod 'TinyConstraints'
+   pod 'NotificationBannerSwift', '1.6.3'
+   pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.2.0'
+   
+   # Pods for Mackup Queen
+
+  target 'Mackup QueenTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Mackup QueenUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

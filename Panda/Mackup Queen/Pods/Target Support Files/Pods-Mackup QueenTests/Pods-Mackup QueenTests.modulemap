@@ -1,0 +1,6 @@
+framework module Pods_Mackup_QueenTests {
+  umbrella header "Pods-Mackup QueenTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
