@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1040140515177-1bitsbm8e9731fu43s7se2qgma7mok6e.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1040140515177-1bitsbm8e9731fu43s7se2qgma7mok6e</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAC6ZWIA4BTmTFp_5XpD9oKrl2Xu1ziqFk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1040140515177</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.panda.Chat</string>
+	<key>PROJECT_ID</key>
+	<string>chat-e700f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chat-e700f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1040140515177:ios:a73d7583cc474d13942ff8</string>
+	<key>DATABASE_URL</key>
+	<string>https://chat-e700f.firebaseio.com</string>
+</dict>
+</plist>

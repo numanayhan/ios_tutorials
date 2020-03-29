@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-Animation/Pods-Animation-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AloeStackView/AloeStackView.framework
+${BUILT_PRODUCTS_DIR}/MHLoadingButton/MHLoadingButton.framework
+${BUILT_PRODUCTS_DIR}/loady/Loady.framework
+${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework

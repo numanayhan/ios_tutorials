@@ -1,0 +1,28 @@
+PODS:
+  - AloeStackView (1.2.0)
+  - loady (1.0.5)
+  - lottie-ios (3.1.6)
+  - MHLoadingButton (0.0.1)
+
+DEPENDENCIES:
+  - AloeStackView
+  - loady
+  - lottie-ios
+  - MHLoadingButton
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AloeStackView
+    - loady
+    - lottie-ios
+    - MHLoadingButton
+
+SPEC CHECKSUMS:
+  AloeStackView: 8a4ce0efa08128dd78d538372f60c76c224034bb
+  loady: f61bf59437eff190c80f0bd113783879bf3dc8f9
+  lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
+  MHLoadingButton: c5db7794ef1adff7ff7fa398c5450d081d33b320
+
+PODFILE CHECKSUM: 34a607e13c3cd4ec728c5223cf54ce399812417a
+
+COCOAPODS: 1.7.5
