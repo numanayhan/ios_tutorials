@@ -271,47 +271,26 @@ PODS:
   - gRPC-Core/Interface (1.21.0)
   - GTMSessionFetcher/Core (1.3.1)
   - leveldb-library (1.22)
-  - MarqueeLabel/Swift (3.2.1)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
-  - NotificationBannerSwift (1.6.3):
-    - MarqueeLabel/Swift
-    - SnapKit (~> 4.0)
+  - PMAlertController (4.0.0)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.2)
-  - ReactiveCocoa (10.2.0):
-    - ReactiveSwift (~> 6.2)
-  - ReactiveSwift (6.2.0)
-  - RxCocoa (5.0.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxRelay (5.0.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.0.1)
-  - RxTheme (4.0.0):
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - SnapKit (4.2.0)
-  - SwiftValidator (4.0.0)
-  - TinyConstraints (4.0.1)
+  - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - Firebase/Messaging
   - Firebase/Storage
-  - NotificationBannerSwift (= 1.6.3)
-  - ReactiveCocoa (~> 10.1)
-  - RxSwift
-  - RxTheme
-  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, tag `4.2.0`)
-  - TinyConstraints
+  - PMAlertController
+  - TextFieldEffects
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - abseil
     - BoringSSL-GRPC
     - Firebase
@@ -333,29 +312,11 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - leveldb-library
-    - MarqueeLabel
     - nanopb
-    - NotificationBannerSwift
+    - PMAlertController
     - PromisesObjC
     - Protobuf
-    - ReactiveCocoa
-    - ReactiveSwift
-    - RxCocoa
-    - RxRelay
-    - RxSwift
-    - RxTheme
-    - SnapKit
-    - TinyConstraints
-
-EXTERNAL SOURCES:
-  SwiftValidator:
-    :git: https://github.com/jpotts18/SwiftValidator.git
-    :tag: 4.2.0
-
-CHECKOUT OPTIONS:
-  SwiftValidator:
-    :git: https://github.com/jpotts18/SwiftValidator.git
-    :tag: 4.2.0
+    - TextFieldEffects
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -379,21 +340,12 @@ SPEC CHECKSUMS:
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
-  MarqueeLabel: 2daf039bf916937c8a4c9adfc13577cc5e51b4ce
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
-  NotificationBannerSwift: b231e4c3244848ef300e1c53ce027b9756b9b06f
+  PMAlertController: 5fad2da8b9eb687134ed50c3462fed12c3afe976
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
-  ReactiveCocoa: a123c42f449c552460a4ee217dd49c76a17c8204
-  ReactiveSwift: 3dc8800378110b13d40b46ab362afa9f6bcffc6c
-  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
-  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
-  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
-  RxTheme: 0b642f47c7d197a803c6b9c083964188c34f7ddb
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SwiftValidator: 249b6b3ae3b294266c5b9de134d94f18f2d5aa47
-  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 38db0a9e347c8c5bbdb023f7f5e9933dee569804
+PODFILE CHECKSUM: 4e95176aa8677a37765a56172872bb49285c503e
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.1

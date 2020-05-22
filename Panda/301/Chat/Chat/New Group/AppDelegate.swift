@@ -22,12 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
      func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
            // Override point for customization after application launch.
            
+        
+        
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "OK"
          
         FirebaseApp.configure()
         Messaging.messaging().isAutoInitEnabled = true
         Messaging.messaging().isProxy()
+        
+        let settings = FirestoreSettings()
+        settings.isPersistenceEnabled = false
+        Firestore.firestore().settings = settings
+        
         NotificationCenter.default.addObserver(self, selector: #selector(refreshToken), name: .MessagingRegistrationTokenRefreshed, object: nil)
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(

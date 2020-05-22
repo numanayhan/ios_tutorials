@@ -1,0 +1,1249 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0224D121BECAB2E8F3BEF04201D4E094 /* RowProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479C270AB6933B6EBBA8BECB30CBA5F /* RowProtocols.swift */; };
+		022F27838A7229356F7AD2D2F54C34F1 /* ButtonRowWithPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED263577EA53A8B85B5C7F86216734 /* ButtonRowWithPresent.swift */; };
+		0A3458656BB1C37BED2C984ED138DAD3 /* NavigationAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA0492CC82A816F0EA01DC586F3A701 /* NavigationAccessoryView.swift */; };
+		0BBD607C7E77C61B8E618103F30B811D /* Eureka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A2D71F23AE652E21D7170D94BFADEA /* Eureka-dummy.m */; };
+		0C4F18415DC10B01D4C0FF60A36D6809 /* SelectableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38847B5B1BEA84C9F5E947F8F47B1757 /* SelectableSection.swift */; };
+		10693D69118D7F3DADCAE693FD2661B2 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34905AF51B668551E06417E6FAE2C8AC /* ButtonRow.swift */; };
+		13E80E2BFE84CBD7112D524BEAEC4EC6 /* visibility_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA10033C4CE4DF63B801D6AA1EA7D632 /* visibility_off@3x.png */; };
+		1403D058DB3B385BC1FDBD887A4E9DDB /* ActionSheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB49DCDACE868680892CC14FFA3EC4D /* ActionSheetRow.swift */; };
+		16142049712E34206202C05264DBC66F /* PickerInputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D0EB22D0FA91E9DBB4422CC0E1BF4 /* PickerInputRow.swift */; };
+		199C393B0B93CFFCBA319836C9AD3BEF /* AlertOptionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A74F5CE1E059A9337E1C6FE492C0E9 /* AlertOptionsRow.swift */; };
+		1C4380F9A81F8ECB1343957E57373BB8 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F57D69A74CF47F73670AB9B801EC4 /* Core.swift */; };
+		21FD4D317464B14DC1D71431310E42B0 /* DateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0424023CC485CB4FE717BA40BBFE1F8 /* DateRow.swift */; };
+		269B33ECD9A844499DEBD4976AA3A248 /* visibility.png in Resources */ = {isa = PBXBuildFile; fileRef = E67AA4CCA254BE0F066237AE0BB3CD06 /* visibility.png */; };
+		2749A87DBECE3BC423A86D7160B928E7 /* Eureka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 213EBC40B26BD73EE2C139EAD249EB25 /* Eureka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B37CE0063F69D65E5141EF6ADA28885 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66B99DBA140AFC783A97EECA0505AAA /* Foundation.framework */; };
+		2F44B1C3CFDE6A8A0952AB3BAD6CC5BD /* SelectableRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E985FC5CAFB9DF88A92F64167EFBD4E /* SelectableRowType.swift */; };
+		32691B353620A1EBAB6EF735A0B59872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66B99DBA140AFC783A97EECA0505AAA /* Foundation.framework */; };
+		3A0E2EB03E8956699AAA830BF1EDA198 /* BaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F5AF12D384875C99D464DF35BAA333 /* BaseRow.swift */; };
+		410392A8A109A3490DB44ACC1D074DE8 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AA7BBB7DC3CD73C78F099E0032F5F7 /* PasswordValidator.swift */; };
+		42BDA64CEF25936A4D9E1DB68DDB5E80 /* RuleEqualsToRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE43A480D336BF4946F33CDD11B07B /* RuleEqualsToRow.swift */; };
+		433228CBBA87EA97A4631457A05D7927 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D81330CF2EDE806D8111FE63C8B38F /* Section.swift */; };
+		45D6B4B702A58F2892E178BEB8B5A7E4 /* FieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4EADE2199489AE123ACE1CAFE2070B /* FieldRow.swift */; };
+		46AA44AAF04A799BCE087F3691F21AFF /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401522D1F738EA2EF8BCCE140C7D2777 /* Row.swift */; };
+		47F43B2798A4E4EFCBE0664BC597BF76 /* RuleEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFDA041CCF47DF74747A5D08232806F /* RuleEmail.swift */; };
+		48C0093C6E65DC1D814BABF712D85A4E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7AD5187D87363E7CA44A5932BB2E6 /* Validation.swift */; };
+		4AA43CC4FB3E44E304464D85EC2F53DD /* GenericPasswordRow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B204AC6DAB723F3E41E900A2A39861 /* GenericPasswordRow-dummy.m */; };
+		4E31481DBB529F0532A87C1201C19959 /* RuleRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C6EE956527504847F9C4ADABFDD2C3 /* RuleRequired.swift */; };
+		50E2B9CEA7B0B100D46BB03F890ACD0B /* RuleRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4846ADFC927B7CF4582B778E076A0407 /* RuleRange.swift */; };
+		50FEA3AED9D73240616823FF0C7DA6EA /* ListCheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25236E8B860F087BBD958D5A94426063 /* ListCheckRow.swift */; };
+		51F17AFA8608E24BC1B1BD25BF43E43A /* GenericMultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFD883D6FCBEF9DC1CED6E38CAAC70E /* GenericMultipleSelectorRow.swift */; };
+		51F887F91AE4AD0EBD757834033CDCEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66B99DBA140AFC783A97EECA0505AAA /* Foundation.framework */; };
+		556C04B9F5950BB9C33ED9AC9E0E582D /* MultipleSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24729CC8D05C5EE6292911DC023A1E48 /* MultipleSelectorViewController.swift */; };
+		5784A6245646464E602E8A0EF385724E /* RowControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73162A1448951708238B0892BD118EEC /* RowControllerType.swift */; };
+		5C1C974798FD3758C1FA555CDBBBF1A2 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A0987F15F8809984D21371720B9F1 /* Form.swift */; };
+		61122AD05E2E3456468A743367919F86 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F579E2F49597F38DEFD9ED51FA91633B /* Operators.swift */; };
+		6200C1F50A86238071BB19D383D24A4A /* TriplePickerInputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26587FFA2E50692C649199732C7DE3C1 /* TriplePickerInputRow.swift */; };
+		63563AC430435FDBF2DF0900713B03A7 /* CheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B62785D3DF1B3FC0048EC167D2691F3 /* CheckRow.swift */; };
+		655ECEFA756C1CEC3A1839D56BF9FC64 /* visibility@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B55DFAFA72C539BF95935C87160400 /* visibility@3x.png */; };
+		657B55F28C4BDC2F057B0362BFCFD5B5 /* SelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97DD3E0CDC686E99F93BC525F38614 /* SelectorRow.swift */; };
+		6FD48D16F94B692032F7A8880EBFB552 /* MultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6AAC4208CA73E2061581B1A5AFDF9 /* MultipleSelectorRow.swift */; };
+		70275F71BD44B31E751B30B26908005A /* DateInlineFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38808F2E5C1931BB8FD0C1C74CEA0438 /* DateInlineFieldRow.swift */; };
+		72C6EF82AD008B1F715DBCDEF85057A9 /* FieldsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF78C06A5DB3A21919064BFA3603AF3 /* FieldsRow.swift */; };
+		739AFA746E764EDC777462D109DD9CB0 /* visibility_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F25F32ADDD0FAFD361DB9B23BF53B67 /* visibility_off@2x.png */; };
+		7448EED7824D63E4050007492627EFEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388E95AC5739F5D859507A3DCC256AE0 /* UIKit.framework */; };
+		753A706EF830D2B910615ECD1883B976 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA0E2DA8BBB5F5A8643C3A065FFD2AE /* Helpers.swift */; };
+		7641B9C8B2C53CAADDEED65040BF5D7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388E95AC5739F5D859507A3DCC256AE0 /* UIKit.framework */; };
+		7D41156F88899B779A46A90BF8C4EAEB /* TextAreaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5E999954057243D8E080982667409F /* TextAreaRow.swift */; };
+		807B560FBF7B3CA748B2860401CD7DE4 /* RuleRegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF3992B899DAE1E585A560FEF720E2 /* RuleRegExp.swift */; };
+		84B8308BEAD71C29F7ABA725D09B58F9 /* Pods-Validation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF534385FE787898DA9CD8DC649A06AC /* Pods-Validation-dummy.m */; };
+		86B032EFB2E186910A95F242D19C2E2D /* Pods-Validation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0A75093CAD91E26E5925393B991450B /* Pods-Validation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		880792C5150895A89D36C386978A5660 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49FA68419FB836CEC566D82F4C3A0D /* Cell.swift */; };
+		8AD08F5A10C61E8692117C649C53DA3F /* DateFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619979EEA157D9A89B1E6E04EFF2F345 /* DateFieldRow.swift */; };
+		8DAA63F788A3AF70C911F34722696BA2 /* DoublePickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B088637040501AE3D52E818DB45B0019 /* DoublePickerRow.swift */; };
+		8E55873C68650428EEA9368C626F9019 /* PickerInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF33FAB902FFCD49CC72E5CA1FFBECA /* PickerInlineRow.swift */; };
+		8EC09B8AB158F8A9F9DBC1F9367A49A9 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF55D8DA4AD6C59CD6DE0EE8EC64580 /* CellType.swift */; };
+		9024D17F199BAD49063F3884A4C8CB94 /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270C326CBA59F187924F4141BCE69F76 /* RowType.swift */; };
+		93658B50B10FB4677626DA0F0679B2EE /* PopoverSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185AC50B2301761D715FFAE0AE9DBCC0 /* PopoverSelectorRow.swift */; };
+		937B62E19FADB0B6967B77AFF4FE89F8 /* DoublePickerInputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BA6712AE93D1AA31C2BE1BDA02AD3D /* DoublePickerInputRow.swift */; };
+		9450A15D43A97C5022CC8FF413209E22 /* SelectorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B78DC7904D5E5E24D105A27A91B026 /* SelectorAlertController.swift */; };
+		951F464FBBD1F39A750E8AB257296CD5 /* GenericPasswordRow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1531F6EC85BD3ABA4913A05CCD3488BF /* GenericPasswordRow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95951126A0530AA12C587FAF50FD9497 /* PresenterRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369578AABB6A5BA22234DD979EB4BBC1 /* PresenterRowType.swift */; };
+		98780764041BEA997A77724C06C8299C /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2A4C760FBA0822A5890E858C5ADAC /* HeaderFooterView.swift */; };
+		98F7DB48D9818E33C803CC35ABCEBF29 /* OptionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E0A30015E6A4D2DC276F791A73D0D /* OptionsRow.swift */; };
+		9A326C6C5421EE2116C150672D70351D /* DefaultPasswordStrengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE296B85C72D5065AD980C573A2445 /* DefaultPasswordStrengthView.swift */; };
+		9BB8321C7598D383C4B1AAD18D7458CA /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F1DC7B7CA4CCA9DDA11173B18188687 /* Eureka.framework */; };
+		A1AA41858D8D2D1FA720C8AE6F8100D4 /* DatePickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AC5065F3A655C10B37790B0D682AFA /* DatePickerRow.swift */; };
+		A329996E130F5B177C6CC8A52EA2EC77 /* InlineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B01C1BA79403850D3CD7C478472407 /* InlineRowType.swift */; };
+		A408AC62E1B5AA530CB080191592D1D6 /* SegmentedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28089E059D04A97202D3BD598176F6C1 /* SegmentedRow.swift */; };
+		A52B2526DC9324A5AD9D4D667AC7B890 /* StepperRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07718ADE768A612BFB07D05DE6C45C9F /* StepperRow.swift */; };
+		AA60814619AF458475CF0A779F9C732A /* SwitchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1F30B92DD0F377A411F493E52DE20 /* SwitchRow.swift */; };
+		AF5FD79CC433F64092E726FB31615978 /* DateInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788046052759AAF1FB11A696597A7939 /* DateInlineRow.swift */; };
+		B019D57D8D53A20C817653F6D7FD65BD /* PushRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228D3FD7891D9E8AEFE511E7A87A4964 /* PushRow.swift */; };
+		B2345084A5156070B490993932A0C3B8 /* RuleLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93188E5341482276F706F3E16D7780 /* RuleLength.swift */; };
+		B2BDA387D1C8F216F3ABEB002275A543 /* GenericPasswordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E90D7303136AD2A6BA4AEE88A3354AC6 /* GenericPasswordCell.xib */; };
+		BB4625522EE26C889AD12F0A5032E894 /* PickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888857701D2817D512104F16342BE1EA /* PickerRow.swift */; };
+		C03204BD605CFCA283F57C7961E0A40B /* visibility@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3AE3668AE814B501D17AB71007D149B /* visibility@2x.png */; };
+		C75A149144EC66F032DC2EF3716F6605 /* GenericPasswordRow.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1180A80C26D8CE3E4281D5C9618F8D76 /* GenericPasswordRow.bundle */; };
+		C78CAB152D6FE02FF968478C75A3D38A /* LabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E7895775D8C65BB87D00078AC2566 /* LabelRow.swift */; };
+		C97DF03A05390FEF73CE6A81EE356AAF /* GenericPasswordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617581CF8C0654DECFB2283D67884B98 /* GenericPasswordCell.swift */; };
+		CC905B619FFDFC7AD0F92E00843FCB1B /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F9F9D778CCF42B08CF24F0C8295D67 /* SelectorViewController.swift */; };
+		CD4FD7223DD8582266FE150F4938A52C /* RuleClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B3901A815F262EF38D3D31B2C7AF4 /* RuleClosure.swift */; };
+		D3A63D9F5673C2E70DFC10E78B1E77AF /* DefaultPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21DD78E0C7579C6665B3657CEBA36B /* DefaultPasswordValidator.swift */; };
+		DCADFB2CBD765A7C2AA616D610EBAC3E /* TriplePickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3990D2D0E89550A588D1EA5AED7794 /* TriplePickerRow.swift */; };
+		E09DD2E6EAFBA1D1C582E176DC21FC35 /* GenericPasswordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C51AB00234F01427CB2F374F4609A8 /* GenericPasswordRow.swift */; };
+		E35368424AD8EB00ACF5F51377AC53C4 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49CD5AD1E002CA546A63934DFE269A3 /* Protocols.swift */; };
+		E82F729B7306AE1E7B9CD761E7FD4C43 /* Eureka.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 98CF9E30EC301043CC0334AC34FB8A37 /* Eureka.bundle */; };
+		EBE35CB01E172041490718F3CDA17863 /* DecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B5FA50AEA59A42DD2319E2C6D3BD8C /* DecimalFormatter.swift */; };
+		EE47AF285C504BBB4741E221D4866E64 /* RuleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEE22446711585A2674E1598271FBD6 /* RuleURL.swift */; };
+		F690945AED5FB68BA5FAFCB0A6CF4D76 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34EB9ADDC330BC491B88EAA57E184D6 /* Resources.swift */; };
+		F76ED548B7A2B9EDEB308D4B52C41967 /* SliderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51D073D377386EA7ADBD0D4143B0D4 /* SliderRow.swift */; };
+		F8FACCE68E5B13A676F716FDC04EA500 /* visibility_off.png in Resources */ = {isa = PBXBuildFile; fileRef = C30097732C49CE5C15EEE19BD623674D /* visibility_off.png */; };
+		FC2228334A37CC494639B1B072842A33 /* AlertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625A2613E1A0226DFA18FC59637E03A /* AlertRow.swift */; };
+		FC3E6043AEE690A3631486C057AA98C0 /* PasswordStrengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AADB1252F554DFAB111778A706E0EED /* PasswordStrengthView.swift */; };
+		FE3D5F1469168AD7A23703795674D259 /* SwipeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38469BF07BD4240449A4735FE7AD1A9C /* SwipeActions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E45AD7A44FDF910CFF697A08B41DC07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88BE8BE7A2FE6CED4193CCD8FF3CBEF7;
+			remoteInfo = Eureka;
+		};
+		458088127B3CD3D42DFA7FAA699280DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88BE8BE7A2FE6CED4193CCD8FF3CBEF7;
+			remoteInfo = Eureka;
+		};
+		DCF7495C93F866FC8D1CB2D40675DA10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20643BB1286FFB56F1ADE0CF7EB5C169;
+			remoteInfo = GenericPasswordRow;
+		};
+		DF7894B2AAF6BF413B5B0706AFC829C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB70B95C62C64C6F56D78A5E3D90FD82;
+			remoteInfo = "GenericPasswordRow-GenericPasswordRow";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07718ADE768A612BFB07D05DE6C45C9F /* StepperRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StepperRow.swift; path = Source/Rows/StepperRow.swift; sourceTree = "<group>"; };
+		082977F3777A7D434AB35C357B487F83 /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Eureka.framework; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D51D073D377386EA7ADBD0D4143B0D4 /* SliderRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderRow.swift; path = Source/Rows/SliderRow.swift; sourceTree = "<group>"; };
+		0D5E999954057243D8E080982667409F /* TextAreaRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAreaRow.swift; path = Source/Rows/TextAreaRow.swift; sourceTree = "<group>"; };
+		0D6E7895775D8C65BB87D00078AC2566 /* LabelRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelRow.swift; path = Source/Rows/LabelRow.swift; sourceTree = "<group>"; };
+		0F1DC7B7CA4CCA9DDA11173B18188687 /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F5622F5C6539ACAF836D2DF5DAF4D65 /* Eureka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eureka.debug.xcconfig; sourceTree = "<group>"; };
+		0FEE22446711585A2674E1598271FBD6 /* RuleURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleURL.swift; path = Source/Validations/RuleURL.swift; sourceTree = "<group>"; };
+		1180A80C26D8CE3E4281D5C9618F8D76 /* GenericPasswordRow.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GenericPasswordRow.bundle; path = "GenericPasswordRow-GenericPasswordRow.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1531F6EC85BD3ABA4913A05CCD3488BF /* GenericPasswordRow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GenericPasswordRow-umbrella.h"; sourceTree = "<group>"; };
+		185AC50B2301761D715FFAE0AE9DBCC0 /* PopoverSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopoverSelectorRow.swift; path = Source/Rows/PopoverSelectorRow.swift; sourceTree = "<group>"; };
+		1A4B3901A815F262EF38D3D31B2C7AF4 /* RuleClosure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleClosure.swift; path = Source/Validations/RuleClosure.swift; sourceTree = "<group>"; };
+		1B62785D3DF1B3FC0048EC167D2691F3 /* CheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckRow.swift; path = Source/Rows/CheckRow.swift; sourceTree = "<group>"; };
+		1F25F32ADDD0FAFD361DB9B23BF53B67 /* visibility_off@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "visibility_off@2x.png"; path = "Resources/visibility_off@2x.png"; sourceTree = "<group>"; };
+		1F49FA68419FB836CEC566D82F4C3A0D /* Cell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cell.swift; path = Source/Core/Cell.swift; sourceTree = "<group>"; };
+		213EBC40B26BD73EE2C139EAD249EB25 /* Eureka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-umbrella.h"; sourceTree = "<group>"; };
+		228D3FD7891D9E8AEFE511E7A87A4964 /* PushRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PushRow.swift; path = Source/Rows/PushRow.swift; sourceTree = "<group>"; };
+		24729CC8D05C5EE6292911DC023A1E48 /* MultipleSelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipleSelectorViewController.swift; path = Source/Rows/Controllers/MultipleSelectorViewController.swift; sourceTree = "<group>"; };
+		24F9F9D778CCF42B08CF24F0C8295D67 /* SelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorViewController.swift; path = Source/Rows/Controllers/SelectorViewController.swift; sourceTree = "<group>"; };
+		25236E8B860F087BBD958D5A94426063 /* ListCheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListCheckRow.swift; path = Source/Rows/SelectableRows/ListCheckRow.swift; sourceTree = "<group>"; };
+		25A2D71F23AE652E21D7170D94BFADEA /* Eureka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Eureka-dummy.m"; sourceTree = "<group>"; };
+		2625A2613E1A0226DFA18FC59637E03A /* AlertRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertRow.swift; path = Source/Rows/AlertRow.swift; sourceTree = "<group>"; };
+		26587FFA2E50692C649199732C7DE3C1 /* TriplePickerInputRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TriplePickerInputRow.swift; path = Source/Rows/TriplePickerInputRow.swift; sourceTree = "<group>"; };
+		270C326CBA59F187924F4141BCE69F76 /* RowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowType.swift; path = Source/Core/RowType.swift; sourceTree = "<group>"; };
+		275576C6E6E4D866EAAD52F85F79327C /* GenericPasswordRow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GenericPasswordRow.framework; path = GenericPasswordRow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28089E059D04A97202D3BD598176F6C1 /* SegmentedRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedRow.swift; path = Source/Rows/SegmentedRow.swift; sourceTree = "<group>"; };
+		2AADB1252F554DFAB111778A706E0EED /* PasswordStrengthView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PasswordStrengthView.swift; path = Sources/PasswordStrengthView.swift; sourceTree = "<group>"; };
+		30F7533268DB89787634313F3E68506A /* Pods-Validation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Validation.debug.xcconfig"; sourceTree = "<group>"; };
+		32B204AC6DAB723F3E41E900A2A39861 /* GenericPasswordRow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GenericPasswordRow-dummy.m"; sourceTree = "<group>"; };
+		34905AF51B668551E06417E6FAE2C8AC /* ButtonRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonRow.swift; path = Source/Rows/ButtonRow.swift; sourceTree = "<group>"; };
+		369578AABB6A5BA22234DD979EB4BBC1 /* PresenterRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresenterRowType.swift; path = Source/Core/PresenterRowType.swift; sourceTree = "<group>"; };
+		38469BF07BD4240449A4735FE7AD1A9C /* SwipeActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActions.swift; path = Source/Core/SwipeActions.swift; sourceTree = "<group>"; };
+		38808F2E5C1931BB8FD0C1C74CEA0438 /* DateInlineFieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInlineFieldRow.swift; path = Source/Rows/Common/DateInlineFieldRow.swift; sourceTree = "<group>"; };
+		38847B5B1BEA84C9F5E947F8F47B1757 /* SelectableSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectableSection.swift; path = Source/Core/SelectableSection.swift; sourceTree = "<group>"; };
+		388E95AC5739F5D859507A3DCC256AE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		39ED263577EA53A8B85B5C7F86216734 /* ButtonRowWithPresent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonRowWithPresent.swift; path = Source/Rows/ButtonRowWithPresent.swift; sourceTree = "<group>"; };
+		3EE1F30B92DD0F377A411F493E52DE20 /* SwitchRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchRow.swift; path = Source/Rows/SwitchRow.swift; sourceTree = "<group>"; };
+		401522D1F738EA2EF8BCCE140C7D2777 /* Row.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Row.swift; path = Source/Core/Row.swift; sourceTree = "<group>"; };
+		4479C270AB6933B6EBBA8BECB30CBA5F /* RowProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowProtocols.swift; path = Source/Core/RowProtocols.swift; sourceTree = "<group>"; };
+		4846ADFC927B7CF4582B778E076A0407 /* RuleRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRange.swift; path = Source/Validations/RuleRange.swift; sourceTree = "<group>"; };
+		48BA6712AE93D1AA31C2BE1BDA02AD3D /* DoublePickerInputRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoublePickerInputRow.swift; path = Source/Rows/DoublePickerInputRow.swift; sourceTree = "<group>"; };
+		4D3C6F94965B907B775B96209AD8AFDF /* GenericPasswordRow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GenericPasswordRow.debug.xcconfig; sourceTree = "<group>"; };
+		53D81330CF2EDE806D8111FE63C8B38F /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Source/Core/Section.swift; sourceTree = "<group>"; };
+		55B5FA50AEA59A42DD2319E2C6D3BD8C /* DecimalFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecimalFormatter.swift; path = Source/Rows/Common/DecimalFormatter.swift; sourceTree = "<group>"; };
+		617581CF8C0654DECFB2283D67884B98 /* GenericPasswordCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericPasswordCell.swift; path = Sources/GenericPasswordCell.swift; sourceTree = "<group>"; };
+		619979EEA157D9A89B1E6E04EFF2F345 /* DateFieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFieldRow.swift; path = Source/Rows/Common/DateFieldRow.swift; sourceTree = "<group>"; };
+		62BD3BF0FF4C0F1BFEB94B39511DB1B9 /* Eureka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eureka.release.xcconfig; sourceTree = "<group>"; };
+		6AFE43A480D336BF4946F33CDD11B07B /* RuleEqualsToRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleEqualsToRow.swift; path = Source/Validations/RuleEqualsToRow.swift; sourceTree = "<group>"; };
+		6CD046536493625DB4ACB1DAB90C7DB4 /* GenericPasswordRow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GenericPasswordRow.modulemap; sourceTree = "<group>"; };
+		73162A1448951708238B0892BD118EEC /* RowControllerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowControllerType.swift; path = Source/Core/RowControllerType.swift; sourceTree = "<group>"; };
+		733E0A30015E6A4D2DC276F791A73D0D /* OptionsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionsRow.swift; path = Source/Rows/Common/OptionsRow.swift; sourceTree = "<group>"; };
+		75AC5065F3A655C10B37790B0D682AFA /* DatePickerRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerRow.swift; path = Source/Rows/DatePickerRow.swift; sourceTree = "<group>"; };
+		75B55DFAFA72C539BF95935C87160400 /* visibility@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "visibility@3x.png"; path = "Resources/visibility@3x.png"; sourceTree = "<group>"; };
+		788046052759AAF1FB11A696597A7939 /* DateInlineRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInlineRow.swift; path = Source/Rows/DateInlineRow.swift; sourceTree = "<group>"; };
+		7A4EADE2199489AE123ACE1CAFE2070B /* FieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldRow.swift; path = Source/Rows/Common/FieldRow.swift; sourceTree = "<group>"; };
+		7AD90F0BFE4A6B247DFE7A68A8C99C48 /* Eureka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-prefix.pch"; sourceTree = "<group>"; };
+		7E985FC5CAFB9DF88A92F64167EFBD4E /* SelectableRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectableRowType.swift; path = Source/Core/SelectableRowType.swift; sourceTree = "<group>"; };
+		7EA0E2DA8BBB5F5A8643C3A065FFD2AE /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Source/Core/Helpers.swift; sourceTree = "<group>"; };
+		7EFDA041CCF47DF74747A5D08232806F /* RuleEmail.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleEmail.swift; path = Source/Validations/RuleEmail.swift; sourceTree = "<group>"; };
+		80AA7BBB7DC3CD73C78F099E0032F5F7 /* PasswordValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PasswordValidator.swift; path = Sources/PasswordValidator.swift; sourceTree = "<group>"; };
+		888857701D2817D512104F16342BE1EA /* PickerRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerRow.swift; path = Source/Rows/PickerRow.swift; sourceTree = "<group>"; };
+		8A1E88E22C3B59CB55CA0C46A4F4F831 /* Eureka-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Eureka-Info.plist"; sourceTree = "<group>"; };
+		8AB49DCDACE868680892CC14FFA3EC4D /* ActionSheetRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionSheetRow.swift; path = Source/Rows/ActionSheetRow.swift; sourceTree = "<group>"; };
+		8AFF3992B899DAE1E585A560FEF720E2 /* RuleRegExp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRegExp.swift; path = Source/Validations/RuleRegExp.swift; sourceTree = "<group>"; };
+		8E8CAD800ACEDDCCDA9FF3B0F37F5817 /* Eureka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Eureka.modulemap; sourceTree = "<group>"; };
+		92EFF16903DE2F5BC79C9E68E4A8AAD3 /* Pods-Validation-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Validation-frameworks.sh"; sourceTree = "<group>"; };
+		94B78DC7904D5E5E24D105A27A91B026 /* SelectorAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorAlertController.swift; path = Source/Rows/Controllers/SelectorAlertController.swift; sourceTree = "<group>"; };
+		9543D2BCB83DDD29331C91B4286D8C4F /* Pods_Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Validation.framework; path = "Pods-Validation.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98CF9E30EC301043CC0334AC34FB8A37 /* Eureka.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Eureka.bundle; path = Source/Resources/Eureka.bundle; sourceTree = "<group>"; };
+		9A3990D2D0E89550A588D1EA5AED7794 /* TriplePickerRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TriplePickerRow.swift; path = Source/Rows/TriplePickerRow.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A349040A968FAAA760DF632142D6E68A /* Pods-Validation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Validation.release.xcconfig"; sourceTree = "<group>"; };
+		A36F57D69A74CF47F73670AB9B801EC4 /* Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Core.swift; path = Source/Core/Core.swift; sourceTree = "<group>"; };
+		AF93188E5341482276F706F3E16D7780 /* RuleLength.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleLength.swift; path = Source/Validations/RuleLength.swift; sourceTree = "<group>"; };
+		B088637040501AE3D52E818DB45B0019 /* DoublePickerRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoublePickerRow.swift; path = Source/Rows/DoublePickerRow.swift; sourceTree = "<group>"; };
+		B48A0987F15F8809984D21371720B9F1 /* Form.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Form.swift; path = Source/Core/Form.swift; sourceTree = "<group>"; };
+		B4D7AD5187D87363E7CA44A5932BB2E6 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Core/Validation.swift; sourceTree = "<group>"; };
+		B5AE941782F86025CD06D2F339C0DBE1 /* Pods-Validation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Validation-Info.plist"; sourceTree = "<group>"; };
+		B8F5AF12D384875C99D464DF35BAA333 /* BaseRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseRow.swift; path = Source/Core/BaseRow.swift; sourceTree = "<group>"; };
+		BC6A804DE52AF1A797086B3C74606A7F /* Pods-Validation-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Validation-acknowledgements.plist"; sourceTree = "<group>"; };
+		BCF55D8DA4AD6C59CD6DE0EE8EC64580 /* CellType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellType.swift; path = Source/Core/CellType.swift; sourceTree = "<group>"; };
+		BCF78C06A5DB3A21919064BFA3603AF3 /* FieldsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldsRow.swift; path = Source/Rows/FieldsRow.swift; sourceTree = "<group>"; };
+		BCFD883D6FCBEF9DC1CED6E38CAAC70E /* GenericMultipleSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericMultipleSelectorRow.swift; path = Source/Rows/Common/GenericMultipleSelectorRow.swift; sourceTree = "<group>"; };
+		BDD6AAC4208CA73E2061581B1A5AFDF9 /* MultipleSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipleSelectorRow.swift; path = Source/Rows/MultipleSelectorRow.swift; sourceTree = "<group>"; };
+		C0424023CC485CB4FE717BA40BBFE1F8 /* DateRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateRow.swift; path = Source/Rows/DateRow.swift; sourceTree = "<group>"; };
+		C30097732C49CE5C15EEE19BD623674D /* visibility_off.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = visibility_off.png; path = Resources/visibility_off.png; sourceTree = "<group>"; };
+		C32D0EB22D0FA91E9DBB4422CC0E1BF4 /* PickerInputRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerInputRow.swift; path = Source/Rows/PickerInputRow.swift; sourceTree = "<group>"; };
+		C5A74F5CE1E059A9337E1C6FE492C0E9 /* AlertOptionsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertOptionsRow.swift; path = Source/Rows/Common/AlertOptionsRow.swift; sourceTree = "<group>"; };
+		C66B99DBA140AFC783A97EECA0505AAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CA21DD78E0C7579C6665B3657CEBA36B /* DefaultPasswordValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultPasswordValidator.swift; path = Sources/DefaultPasswordValidator.swift; sourceTree = "<group>"; };
+		CBA0492CC82A816F0EA01DC586F3A701 /* NavigationAccessoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationAccessoryView.swift; path = Source/Core/NavigationAccessoryView.swift; sourceTree = "<group>"; };
+		CCAF82050025337809543CAB307ECD3F /* Pods-Validation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Validation.modulemap"; sourceTree = "<group>"; };
+		CCC6716669C8FAAC70F431254B22238D /* GenericPasswordRow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GenericPasswordRow-prefix.pch"; sourceTree = "<group>"; };
+		CCF33FAB902FFCD49CC72E5CA1FFBECA /* PickerInlineRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerInlineRow.swift; path = Source/Rows/PickerInlineRow.swift; sourceTree = "<group>"; };
+		D34EB9ADDC330BC491B88EAA57E184D6 /* Resources.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resources.swift; path = Sources/Resources.swift; sourceTree = "<group>"; };
+		D3AE3668AE814B501D17AB71007D149B /* visibility@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "visibility@2x.png"; path = "Resources/visibility@2x.png"; sourceTree = "<group>"; };
+		D7B01C1BA79403850D3CD7C478472407 /* InlineRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InlineRowType.swift; path = Source/Core/InlineRowType.swift; sourceTree = "<group>"; };
+		D905DA1D34A1D25671F44CF1696E8511 /* GenericPasswordRow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GenericPasswordRow.release.xcconfig; sourceTree = "<group>"; };
+		DA10033C4CE4DF63B801D6AA1EA7D632 /* visibility_off@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "visibility_off@3x.png"; path = "Resources/visibility_off@3x.png"; sourceTree = "<group>"; };
+		DEA1C40AC0A6A0FCB5D3689A761AAC18 /* ResourceBundle-GenericPasswordRow-GenericPasswordRow-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-GenericPasswordRow-GenericPasswordRow-Info.plist"; sourceTree = "<group>"; };
+		DF534385FE787898DA9CD8DC649A06AC /* Pods-Validation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Validation-dummy.m"; sourceTree = "<group>"; };
+		E0F63BB7C11A505551579BD8CBE67A3E /* Pods-Validation-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Validation-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E1C6EE956527504847F9C4ADABFDD2C3 /* RuleRequired.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRequired.swift; path = Source/Validations/RuleRequired.swift; sourceTree = "<group>"; };
+		E3C51AB00234F01427CB2F374F4609A8 /* GenericPasswordRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericPasswordRow.swift; path = Sources/GenericPasswordRow.swift; sourceTree = "<group>"; };
+		E49CD5AD1E002CA546A63934DFE269A3 /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Source/Rows/Common/Protocols.swift; sourceTree = "<group>"; };
+		E67AA4CCA254BE0F066237AE0BB3CD06 /* visibility.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = visibility.png; path = Resources/visibility.png; sourceTree = "<group>"; };
+		E6B2A4C760FBA0822A5890E858C5ADAC /* HeaderFooterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeaderFooterView.swift; path = Source/Core/HeaderFooterView.swift; sourceTree = "<group>"; };
+		E90D7303136AD2A6BA4AEE88A3354AC6 /* GenericPasswordCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = GenericPasswordCell.xib; path = Resources/GenericPasswordCell.xib; sourceTree = "<group>"; };
+		EC29296D963EF32C026A5A59D6A3753B /* GenericPasswordRow-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GenericPasswordRow-Info.plist"; sourceTree = "<group>"; };
+		EFEE296B85C72D5065AD980C573A2445 /* DefaultPasswordStrengthView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultPasswordStrengthView.swift; path = Sources/DefaultPasswordStrengthView.swift; sourceTree = "<group>"; };
+		F0A75093CAD91E26E5925393B991450B /* Pods-Validation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Validation-umbrella.h"; sourceTree = "<group>"; };
+		F579E2F49597F38DEFD9ED51FA91633B /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Source/Core/Operators.swift; sourceTree = "<group>"; };
+		FF97DD3E0CDC686E99F93BC525F38614 /* SelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorRow.swift; path = Source/Rows/Common/SelectorRow.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A0A7138EA30FDAA3225C4E69449FCA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BB8321C7598D383C4B1AAD18D7458CA /* Eureka.framework in Frameworks */,
+				32691B353620A1EBAB6EF735A0B59872 /* Foundation.framework in Frameworks */,
+				7448EED7824D63E4050007492627EFEE /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8756BBD5EBA19A15CF93925C04722E45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		975B7DD5926DC47DA511255E4BA83526 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51F887F91AE4AD0EBD757834033CDCEA /* Foundation.framework in Frameworks */,
+				7641B9C8B2C53CAADDEED65040BF5D7F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9C5E47EA2AE9237B8997C5C299A767B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B37CE0063F69D65E5141EF6ADA28885 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DE394D7A13C5CAEAB6796D16CC7EE8F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE5E0EBAE722B31EA1467056C2C7DD66 /* Pods-Validation */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		45D406576EA4BCD7A27F4A55398475E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E663F97C5280FACC1F1B94A206872D50 /* Eureka */,
+				497843B95C0C10300A737F67F2A8760B /* GenericPasswordRow */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		497843B95C0C10300A737F67F2A8760B /* GenericPasswordRow */ = {
+			isa = PBXGroup;
+			children = (
+				EFEE296B85C72D5065AD980C573A2445 /* DefaultPasswordStrengthView.swift */,
+				CA21DD78E0C7579C6665B3657CEBA36B /* DefaultPasswordValidator.swift */,
+				617581CF8C0654DECFB2283D67884B98 /* GenericPasswordCell.swift */,
+				E3C51AB00234F01427CB2F374F4609A8 /* GenericPasswordRow.swift */,
+				2AADB1252F554DFAB111778A706E0EED /* PasswordStrengthView.swift */,
+				80AA7BBB7DC3CD73C78F099E0032F5F7 /* PasswordValidator.swift */,
+				D34EB9ADDC330BC491B88EAA57E184D6 /* Resources.swift */,
+				EBB5783EE424A7CE84C53291BF1EAD62 /* Resources */,
+				C1AC9683C7552E869C8B574186E120C6 /* Support Files */,
+			);
+			name = GenericPasswordRow;
+			path = GenericPasswordRow;
+			sourceTree = "<group>";
+		};
+		4FE7143B4CBAA8339E3699A52C8FEC3A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				98CF9E30EC301043CC0334AC34FB8A37 /* Eureka.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		71F4079985F3A66192ACCEDA5AECAC8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F1DC7B7CA4CCA9DDA11173B18188687 /* Eureka.framework */,
+				F210E3E2E9746EAC13F85782F2700A7B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85E860845137E944A467336B392CE17B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				082977F3777A7D434AB35C357B487F83 /* Eureka.framework */,
+				1180A80C26D8CE3E4281D5C9618F8D76 /* GenericPasswordRow.bundle */,
+				275576C6E6E4D866EAAD52F85F79327C /* GenericPasswordRow.framework */,
+				9543D2BCB83DDD29331C91B4286D8C4F /* Pods_Validation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2F78C1ECEE8F443EE0D461C22930481 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E8CAD800ACEDDCCDA9FF3B0F37F5817 /* Eureka.modulemap */,
+				25A2D71F23AE652E21D7170D94BFADEA /* Eureka-dummy.m */,
+				8A1E88E22C3B59CB55CA0C46A4F4F831 /* Eureka-Info.plist */,
+				7AD90F0BFE4A6B247DFE7A68A8C99C48 /* Eureka-prefix.pch */,
+				213EBC40B26BD73EE2C139EAD249EB25 /* Eureka-umbrella.h */,
+				0F5622F5C6539ACAF836D2DF5DAF4D65 /* Eureka.debug.xcconfig */,
+				62BD3BF0FF4C0F1BFEB94B39511DB1B9 /* Eureka.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Eureka";
+			sourceTree = "<group>";
+		};
+		C1AC9683C7552E869C8B574186E120C6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CD046536493625DB4ACB1DAB90C7DB4 /* GenericPasswordRow.modulemap */,
+				32B204AC6DAB723F3E41E900A2A39861 /* GenericPasswordRow-dummy.m */,
+				EC29296D963EF32C026A5A59D6A3753B /* GenericPasswordRow-Info.plist */,
+				CCC6716669C8FAAC70F431254B22238D /* GenericPasswordRow-prefix.pch */,
+				1531F6EC85BD3ABA4913A05CCD3488BF /* GenericPasswordRow-umbrella.h */,
+				4D3C6F94965B907B775B96209AD8AFDF /* GenericPasswordRow.debug.xcconfig */,
+				D905DA1D34A1D25671F44CF1696E8511 /* GenericPasswordRow.release.xcconfig */,
+				DEA1C40AC0A6A0FCB5D3689A761AAC18 /* ResourceBundle-GenericPasswordRow-GenericPasswordRow-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GenericPasswordRow";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				71F4079985F3A66192ACCEDA5AECAC8C /* Frameworks */,
+				45D406576EA4BCD7A27F4A55398475E9 /* Pods */,
+				85E860845137E944A467336B392CE17B /* Products */,
+				0DE394D7A13C5CAEAB6796D16CC7EE8F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E663F97C5280FACC1F1B94A206872D50 /* Eureka */ = {
+			isa = PBXGroup;
+			children = (
+				8AB49DCDACE868680892CC14FFA3EC4D /* ActionSheetRow.swift */,
+				C5A74F5CE1E059A9337E1C6FE492C0E9 /* AlertOptionsRow.swift */,
+				2625A2613E1A0226DFA18FC59637E03A /* AlertRow.swift */,
+				B8F5AF12D384875C99D464DF35BAA333 /* BaseRow.swift */,
+				34905AF51B668551E06417E6FAE2C8AC /* ButtonRow.swift */,
+				39ED263577EA53A8B85B5C7F86216734 /* ButtonRowWithPresent.swift */,
+				1F49FA68419FB836CEC566D82F4C3A0D /* Cell.swift */,
+				BCF55D8DA4AD6C59CD6DE0EE8EC64580 /* CellType.swift */,
+				1B62785D3DF1B3FC0048EC167D2691F3 /* CheckRow.swift */,
+				A36F57D69A74CF47F73670AB9B801EC4 /* Core.swift */,
+				619979EEA157D9A89B1E6E04EFF2F345 /* DateFieldRow.swift */,
+				38808F2E5C1931BB8FD0C1C74CEA0438 /* DateInlineFieldRow.swift */,
+				788046052759AAF1FB11A696597A7939 /* DateInlineRow.swift */,
+				75AC5065F3A655C10B37790B0D682AFA /* DatePickerRow.swift */,
+				C0424023CC485CB4FE717BA40BBFE1F8 /* DateRow.swift */,
+				55B5FA50AEA59A42DD2319E2C6D3BD8C /* DecimalFormatter.swift */,
+				48BA6712AE93D1AA31C2BE1BDA02AD3D /* DoublePickerInputRow.swift */,
+				B088637040501AE3D52E818DB45B0019 /* DoublePickerRow.swift */,
+				7A4EADE2199489AE123ACE1CAFE2070B /* FieldRow.swift */,
+				BCF78C06A5DB3A21919064BFA3603AF3 /* FieldsRow.swift */,
+				B48A0987F15F8809984D21371720B9F1 /* Form.swift */,
+				BCFD883D6FCBEF9DC1CED6E38CAAC70E /* GenericMultipleSelectorRow.swift */,
+				E6B2A4C760FBA0822A5890E858C5ADAC /* HeaderFooterView.swift */,
+				7EA0E2DA8BBB5F5A8643C3A065FFD2AE /* Helpers.swift */,
+				D7B01C1BA79403850D3CD7C478472407 /* InlineRowType.swift */,
+				0D6E7895775D8C65BB87D00078AC2566 /* LabelRow.swift */,
+				25236E8B860F087BBD958D5A94426063 /* ListCheckRow.swift */,
+				BDD6AAC4208CA73E2061581B1A5AFDF9 /* MultipleSelectorRow.swift */,
+				24729CC8D05C5EE6292911DC023A1E48 /* MultipleSelectorViewController.swift */,
+				CBA0492CC82A816F0EA01DC586F3A701 /* NavigationAccessoryView.swift */,
+				F579E2F49597F38DEFD9ED51FA91633B /* Operators.swift */,
+				733E0A30015E6A4D2DC276F791A73D0D /* OptionsRow.swift */,
+				CCF33FAB902FFCD49CC72E5CA1FFBECA /* PickerInlineRow.swift */,
+				C32D0EB22D0FA91E9DBB4422CC0E1BF4 /* PickerInputRow.swift */,
+				888857701D2817D512104F16342BE1EA /* PickerRow.swift */,
+				185AC50B2301761D715FFAE0AE9DBCC0 /* PopoverSelectorRow.swift */,
+				369578AABB6A5BA22234DD979EB4BBC1 /* PresenterRowType.swift */,
+				E49CD5AD1E002CA546A63934DFE269A3 /* Protocols.swift */,
+				228D3FD7891D9E8AEFE511E7A87A4964 /* PushRow.swift */,
+				401522D1F738EA2EF8BCCE140C7D2777 /* Row.swift */,
+				73162A1448951708238B0892BD118EEC /* RowControllerType.swift */,
+				4479C270AB6933B6EBBA8BECB30CBA5F /* RowProtocols.swift */,
+				270C326CBA59F187924F4141BCE69F76 /* RowType.swift */,
+				1A4B3901A815F262EF38D3D31B2C7AF4 /* RuleClosure.swift */,
+				7EFDA041CCF47DF74747A5D08232806F /* RuleEmail.swift */,
+				6AFE43A480D336BF4946F33CDD11B07B /* RuleEqualsToRow.swift */,
+				AF93188E5341482276F706F3E16D7780 /* RuleLength.swift */,
+				4846ADFC927B7CF4582B778E076A0407 /* RuleRange.swift */,
+				8AFF3992B899DAE1E585A560FEF720E2 /* RuleRegExp.swift */,
+				E1C6EE956527504847F9C4ADABFDD2C3 /* RuleRequired.swift */,
+				0FEE22446711585A2674E1598271FBD6 /* RuleURL.swift */,
+				53D81330CF2EDE806D8111FE63C8B38F /* Section.swift */,
+				28089E059D04A97202D3BD598176F6C1 /* SegmentedRow.swift */,
+				7E985FC5CAFB9DF88A92F64167EFBD4E /* SelectableRowType.swift */,
+				38847B5B1BEA84C9F5E947F8F47B1757 /* SelectableSection.swift */,
+				94B78DC7904D5E5E24D105A27A91B026 /* SelectorAlertController.swift */,
+				FF97DD3E0CDC686E99F93BC525F38614 /* SelectorRow.swift */,
+				24F9F9D778CCF42B08CF24F0C8295D67 /* SelectorViewController.swift */,
+				0D51D073D377386EA7ADBD0D4143B0D4 /* SliderRow.swift */,
+				07718ADE768A612BFB07D05DE6C45C9F /* StepperRow.swift */,
+				38469BF07BD4240449A4735FE7AD1A9C /* SwipeActions.swift */,
+				3EE1F30B92DD0F377A411F493E52DE20 /* SwitchRow.swift */,
+				0D5E999954057243D8E080982667409F /* TextAreaRow.swift */,
+				26587FFA2E50692C649199732C7DE3C1 /* TriplePickerInputRow.swift */,
+				9A3990D2D0E89550A588D1EA5AED7794 /* TriplePickerRow.swift */,
+				B4D7AD5187D87363E7CA44A5932BB2E6 /* Validation.swift */,
+				4FE7143B4CBAA8339E3699A52C8FEC3A /* Resources */,
+				B2F78C1ECEE8F443EE0D461C22930481 /* Support Files */,
+			);
+			name = Eureka;
+			path = Eureka;
+			sourceTree = "<group>";
+		};
+		EBB5783EE424A7CE84C53291BF1EAD62 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E90D7303136AD2A6BA4AEE88A3354AC6 /* GenericPasswordCell.xib */,
+				E67AA4CCA254BE0F066237AE0BB3CD06 /* visibility.png */,
+				D3AE3668AE814B501D17AB71007D149B /* visibility@2x.png */,
+				75B55DFAFA72C539BF95935C87160400 /* visibility@3x.png */,
+				C30097732C49CE5C15EEE19BD623674D /* visibility_off.png */,
+				1F25F32ADDD0FAFD361DB9B23BF53B67 /* visibility_off@2x.png */,
+				DA10033C4CE4DF63B801D6AA1EA7D632 /* visibility_off@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F210E3E2E9746EAC13F85782F2700A7B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C66B99DBA140AFC783A97EECA0505AAA /* Foundation.framework */,
+				388E95AC5739F5D859507A3DCC256AE0 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FE5E0EBAE722B31EA1467056C2C7DD66 /* Pods-Validation */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF82050025337809543CAB307ECD3F /* Pods-Validation.modulemap */,
+				E0F63BB7C11A505551579BD8CBE67A3E /* Pods-Validation-acknowledgements.markdown */,
+				BC6A804DE52AF1A797086B3C74606A7F /* Pods-Validation-acknowledgements.plist */,
+				DF534385FE787898DA9CD8DC649A06AC /* Pods-Validation-dummy.m */,
+				92EFF16903DE2F5BC79C9E68E4A8AAD3 /* Pods-Validation-frameworks.sh */,
+				B5AE941782F86025CD06D2F339C0DBE1 /* Pods-Validation-Info.plist */,
+				F0A75093CAD91E26E5925393B991450B /* Pods-Validation-umbrella.h */,
+				30F7533268DB89787634313F3E68506A /* Pods-Validation.debug.xcconfig */,
+				A349040A968FAAA760DF632142D6E68A /* Pods-Validation.release.xcconfig */,
+			);
+			name = "Pods-Validation";
+			path = "Target Support Files/Pods-Validation";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		41CB83E573943C2FE24697EA0637690B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86B032EFB2E186910A95F242D19C2E2D /* Pods-Validation-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E1558A69102DA57B1542B0B12DCA543 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				951F464FBBD1F39A750E8AB257296CD5 /* GenericPasswordRow-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F539CA98A424151F5E9C2831105EFA7A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2749A87DBECE3BC423A86D7160B928E7 /* Eureka-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		20643BB1286FFB56F1ADE0CF7EB5C169 /* GenericPasswordRow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA4D88A1B3CC1AD43B3BFDB755917AD6 /* Build configuration list for PBXNativeTarget "GenericPasswordRow" */;
+			buildPhases = (
+				8E1558A69102DA57B1542B0B12DCA543 /* Headers */,
+				F42228E31DCBCC0DEEE3A0440D8AA9BB /* Sources */,
+				5A0A7138EA30FDAA3225C4E69449FCA5 /* Frameworks */,
+				CBC734D44348597DE3A7BFC9F527F91C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD3DFDF84937CBBA313D4953048537D4 /* PBXTargetDependency */,
+				709D72A335272A506AE59242A6CC25A1 /* PBXTargetDependency */,
+			);
+			name = GenericPasswordRow;
+			productName = GenericPasswordRow;
+			productReference = 275576C6E6E4D866EAAD52F85F79327C /* GenericPasswordRow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		88BE8BE7A2FE6CED4193CCD8FF3CBEF7 /* Eureka */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51F1DBB0790CAAB7969B0131682376AE /* Build configuration list for PBXNativeTarget "Eureka" */;
+			buildPhases = (
+				F539CA98A424151F5E9C2831105EFA7A /* Headers */,
+				D0DE84351F71727FE9D38B7D2DBE0E8B /* Sources */,
+				975B7DD5926DC47DA511255E4BA83526 /* Frameworks */,
+				4029631B86D6BF5808623FD0C047DB64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Eureka;
+			productName = Eureka;
+			productReference = 082977F3777A7D434AB35C357B487F83 /* Eureka.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BBF73976EEE2ED5D6115840F2FB1E84A /* Pods-Validation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D940270C6E74A9374753A8FF3B904A7A /* Build configuration list for PBXNativeTarget "Pods-Validation" */;
+			buildPhases = (
+				41CB83E573943C2FE24697EA0637690B /* Headers */,
+				6A387AB5DAE0606A555A4246682C00F8 /* Sources */,
+				F9C5E47EA2AE9237B8997C5C299A767B /* Frameworks */,
+				8BD3DE8FF432B480154002AA07D7504D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1F54559327B8EC66B0978C335F69457 /* PBXTargetDependency */,
+				B2F45621E72B48EEBED1C3074FF28D04 /* PBXTargetDependency */,
+			);
+			name = "Pods-Validation";
+			productName = "Pods-Validation";
+			productReference = 9543D2BCB83DDD29331C91B4286D8C4F /* Pods_Validation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EB70B95C62C64C6F56D78A5E3D90FD82 /* GenericPasswordRow-GenericPasswordRow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82176C296147EB078F3A800B37285D55 /* Build configuration list for PBXNativeTarget "GenericPasswordRow-GenericPasswordRow" */;
+			buildPhases = (
+				492D55F18572BBB228732AAA9D5B66AA /* Sources */,
+				8756BBD5EBA19A15CF93925C04722E45 /* Frameworks */,
+				D461FD396A74281E78A896B636A4B4E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GenericPasswordRow-GenericPasswordRow";
+			productName = "GenericPasswordRow-GenericPasswordRow";
+			productReference = 1180A80C26D8CE3E4281D5C9618F8D76 /* GenericPasswordRow.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 85E860845137E944A467336B392CE17B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88BE8BE7A2FE6CED4193CCD8FF3CBEF7 /* Eureka */,
+				20643BB1286FFB56F1ADE0CF7EB5C169 /* GenericPasswordRow */,
+				EB70B95C62C64C6F56D78A5E3D90FD82 /* GenericPasswordRow-GenericPasswordRow */,
+				BBF73976EEE2ED5D6115840F2FB1E84A /* Pods-Validation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4029631B86D6BF5808623FD0C047DB64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E82F729B7306AE1E7B9CD761E7FD4C43 /* Eureka.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD3DE8FF432B480154002AA07D7504D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC734D44348597DE3A7BFC9F527F91C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C75A149144EC66F032DC2EF3716F6605 /* GenericPasswordRow.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D461FD396A74281E78A896B636A4B4E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2BDA387D1C8F216F3ABEB002275A543 /* GenericPasswordCell.xib in Resources */,
+				269B33ECD9A844499DEBD4976AA3A248 /* visibility.png in Resources */,
+				C03204BD605CFCA283F57C7961E0A40B /* visibility@2x.png in Resources */,
+				655ECEFA756C1CEC3A1839D56BF9FC64 /* visibility@3x.png in Resources */,
+				F8FACCE68E5B13A676F716FDC04EA500 /* visibility_off.png in Resources */,
+				739AFA746E764EDC777462D109DD9CB0 /* visibility_off@2x.png in Resources */,
+				13E80E2BFE84CBD7112D524BEAEC4EC6 /* visibility_off@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		492D55F18572BBB228732AAA9D5B66AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A387AB5DAE0606A555A4246682C00F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B8308BEAD71C29F7ABA725D09B58F9 /* Pods-Validation-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0DE84351F71727FE9D38B7D2DBE0E8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1403D058DB3B385BC1FDBD887A4E9DDB /* ActionSheetRow.swift in Sources */,
+				199C393B0B93CFFCBA319836C9AD3BEF /* AlertOptionsRow.swift in Sources */,
+				FC2228334A37CC494639B1B072842A33 /* AlertRow.swift in Sources */,
+				3A0E2EB03E8956699AAA830BF1EDA198 /* BaseRow.swift in Sources */,
+				10693D69118D7F3DADCAE693FD2661B2 /* ButtonRow.swift in Sources */,
+				022F27838A7229356F7AD2D2F54C34F1 /* ButtonRowWithPresent.swift in Sources */,
+				880792C5150895A89D36C386978A5660 /* Cell.swift in Sources */,
+				8EC09B8AB158F8A9F9DBC1F9367A49A9 /* CellType.swift in Sources */,
+				63563AC430435FDBF2DF0900713B03A7 /* CheckRow.swift in Sources */,
+				1C4380F9A81F8ECB1343957E57373BB8 /* Core.swift in Sources */,
+				8AD08F5A10C61E8692117C649C53DA3F /* DateFieldRow.swift in Sources */,
+				70275F71BD44B31E751B30B26908005A /* DateInlineFieldRow.swift in Sources */,
+				AF5FD79CC433F64092E726FB31615978 /* DateInlineRow.swift in Sources */,
+				A1AA41858D8D2D1FA720C8AE6F8100D4 /* DatePickerRow.swift in Sources */,
+				21FD4D317464B14DC1D71431310E42B0 /* DateRow.swift in Sources */,
+				EBE35CB01E172041490718F3CDA17863 /* DecimalFormatter.swift in Sources */,
+				937B62E19FADB0B6967B77AFF4FE89F8 /* DoublePickerInputRow.swift in Sources */,
+				8DAA63F788A3AF70C911F34722696BA2 /* DoublePickerRow.swift in Sources */,
+				0BBD607C7E77C61B8E618103F30B811D /* Eureka-dummy.m in Sources */,
+				45D6B4B702A58F2892E178BEB8B5A7E4 /* FieldRow.swift in Sources */,
+				72C6EF82AD008B1F715DBCDEF85057A9 /* FieldsRow.swift in Sources */,
+				5C1C974798FD3758C1FA555CDBBBF1A2 /* Form.swift in Sources */,
+				51F17AFA8608E24BC1B1BD25BF43E43A /* GenericMultipleSelectorRow.swift in Sources */,
+				98780764041BEA997A77724C06C8299C /* HeaderFooterView.swift in Sources */,
+				753A706EF830D2B910615ECD1883B976 /* Helpers.swift in Sources */,
+				A329996E130F5B177C6CC8A52EA2EC77 /* InlineRowType.swift in Sources */,
+				C78CAB152D6FE02FF968478C75A3D38A /* LabelRow.swift in Sources */,
+				50FEA3AED9D73240616823FF0C7DA6EA /* ListCheckRow.swift in Sources */,
+				6FD48D16F94B692032F7A8880EBFB552 /* MultipleSelectorRow.swift in Sources */,
+				556C04B9F5950BB9C33ED9AC9E0E582D /* MultipleSelectorViewController.swift in Sources */,
+				0A3458656BB1C37BED2C984ED138DAD3 /* NavigationAccessoryView.swift in Sources */,
+				61122AD05E2E3456468A743367919F86 /* Operators.swift in Sources */,
+				98F7DB48D9818E33C803CC35ABCEBF29 /* OptionsRow.swift in Sources */,
+				8E55873C68650428EEA9368C626F9019 /* PickerInlineRow.swift in Sources */,
+				16142049712E34206202C05264DBC66F /* PickerInputRow.swift in Sources */,
+				BB4625522EE26C889AD12F0A5032E894 /* PickerRow.swift in Sources */,
+				93658B50B10FB4677626DA0F0679B2EE /* PopoverSelectorRow.swift in Sources */,
+				95951126A0530AA12C587FAF50FD9497 /* PresenterRowType.swift in Sources */,
+				E35368424AD8EB00ACF5F51377AC53C4 /* Protocols.swift in Sources */,
+				B019D57D8D53A20C817653F6D7FD65BD /* PushRow.swift in Sources */,
+				46AA44AAF04A799BCE087F3691F21AFF /* Row.swift in Sources */,
+				5784A6245646464E602E8A0EF385724E /* RowControllerType.swift in Sources */,
+				0224D121BECAB2E8F3BEF04201D4E094 /* RowProtocols.swift in Sources */,
+				9024D17F199BAD49063F3884A4C8CB94 /* RowType.swift in Sources */,
+				CD4FD7223DD8582266FE150F4938A52C /* RuleClosure.swift in Sources */,
+				47F43B2798A4E4EFCBE0664BC597BF76 /* RuleEmail.swift in Sources */,
+				42BDA64CEF25936A4D9E1DB68DDB5E80 /* RuleEqualsToRow.swift in Sources */,
+				B2345084A5156070B490993932A0C3B8 /* RuleLength.swift in Sources */,
+				50E2B9CEA7B0B100D46BB03F890ACD0B /* RuleRange.swift in Sources */,
+				807B560FBF7B3CA748B2860401CD7DE4 /* RuleRegExp.swift in Sources */,
+				4E31481DBB529F0532A87C1201C19959 /* RuleRequired.swift in Sources */,
+				EE47AF285C504BBB4741E221D4866E64 /* RuleURL.swift in Sources */,
+				433228CBBA87EA97A4631457A05D7927 /* Section.swift in Sources */,
+				A408AC62E1B5AA530CB080191592D1D6 /* SegmentedRow.swift in Sources */,
+				2F44B1C3CFDE6A8A0952AB3BAD6CC5BD /* SelectableRowType.swift in Sources */,
+				0C4F18415DC10B01D4C0FF60A36D6809 /* SelectableSection.swift in Sources */,
+				9450A15D43A97C5022CC8FF413209E22 /* SelectorAlertController.swift in Sources */,
+				657B55F28C4BDC2F057B0362BFCFD5B5 /* SelectorRow.swift in Sources */,
+				CC905B619FFDFC7AD0F92E00843FCB1B /* SelectorViewController.swift in Sources */,
+				F76ED548B7A2B9EDEB308D4B52C41967 /* SliderRow.swift in Sources */,
+				A52B2526DC9324A5AD9D4D667AC7B890 /* StepperRow.swift in Sources */,
+				FE3D5F1469168AD7A23703795674D259 /* SwipeActions.swift in Sources */,
+				AA60814619AF458475CF0A779F9C732A /* SwitchRow.swift in Sources */,
+				7D41156F88899B779A46A90BF8C4EAEB /* TextAreaRow.swift in Sources */,
+				6200C1F50A86238071BB19D383D24A4A /* TriplePickerInputRow.swift in Sources */,
+				DCADFB2CBD765A7C2AA616D610EBAC3E /* TriplePickerRow.swift in Sources */,
+				48C0093C6E65DC1D814BABF712D85A4E /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F42228E31DCBCC0DEEE3A0440D8AA9BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A326C6C5421EE2116C150672D70351D /* DefaultPasswordStrengthView.swift in Sources */,
+				D3A63D9F5673C2E70DFC10E78B1E77AF /* DefaultPasswordValidator.swift in Sources */,
+				C97DF03A05390FEF73CE6A81EE356AAF /* GenericPasswordCell.swift in Sources */,
+				4AA43CC4FB3E44E304464D85EC2F53DD /* GenericPasswordRow-dummy.m in Sources */,
+				E09DD2E6EAFBA1D1C582E176DC21FC35 /* GenericPasswordRow.swift in Sources */,
+				FC3E6043AEE690A3631486C057AA98C0 /* PasswordStrengthView.swift in Sources */,
+				410392A8A109A3490DB44ACC1D074DE8 /* PasswordValidator.swift in Sources */,
+				F690945AED5FB68BA5FAFCB0A6CF4D76 /* Resources.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		709D72A335272A506AE59242A6CC25A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GenericPasswordRow-GenericPasswordRow";
+			target = EB70B95C62C64C6F56D78A5E3D90FD82 /* GenericPasswordRow-GenericPasswordRow */;
+			targetProxy = DF7894B2AAF6BF413B5B0706AFC829C1 /* PBXContainerItemProxy */;
+		};
+		B1F54559327B8EC66B0978C335F69457 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Eureka;
+			target = 88BE8BE7A2FE6CED4193CCD8FF3CBEF7 /* Eureka */;
+			targetProxy = 458088127B3CD3D42DFA7FAA699280DC /* PBXContainerItemProxy */;
+		};
+		B2F45621E72B48EEBED1C3074FF28D04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GenericPasswordRow;
+			target = 20643BB1286FFB56F1ADE0CF7EB5C169 /* GenericPasswordRow */;
+			targetProxy = DCF7495C93F866FC8D1CB2D40675DA10 /* PBXContainerItemProxy */;
+		};
+		CD3DFDF84937CBBA313D4953048537D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Eureka;
+			target = 88BE8BE7A2FE6CED4193CCD8FF3CBEF7 /* Eureka */;
+			targetProxy = 3E45AD7A44FDF910CFF697A08B41DC07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		198C96B5863169802A2A4FC4FADF5B4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D905DA1D34A1D25671F44CF1696E8511 /* GenericPasswordRow.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GenericPasswordRow/GenericPasswordRow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GenericPasswordRow/GenericPasswordRow-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GenericPasswordRow/GenericPasswordRow.modulemap";
+				PRODUCT_MODULE_NAME = GenericPasswordRow;
+				PRODUCT_NAME = GenericPasswordRow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		257497152829C177993B5EC99C1D227A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		464B8ADFB49E71476672A8F5A8FAFC56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D905DA1D34A1D25671F44CF1696E8511 /* GenericPasswordRow.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GenericPasswordRow";
+				IBSC_MODULE = GenericPasswordRow;
+				INFOPLIST_FILE = "Target Support Files/GenericPasswordRow/ResourceBundle-GenericPasswordRow-GenericPasswordRow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = GenericPasswordRow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		5C134BD2264DBC3B9E67603FD7FD226B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D3C6F94965B907B775B96209AD8AFDF /* GenericPasswordRow.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GenericPasswordRow";
+				IBSC_MODULE = GenericPasswordRow;
+				INFOPLIST_FILE = "Target Support Files/GenericPasswordRow/ResourceBundle-GenericPasswordRow-GenericPasswordRow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = GenericPasswordRow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		5C8A2E2A6680D48EFF222ED16FE73154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62BD3BF0FF4C0F1BFEB94B39511DB1B9 /* Eureka.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Eureka/Eureka-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Eureka/Eureka-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Eureka/Eureka.modulemap";
+				PRODUCT_MODULE_NAME = Eureka;
+				PRODUCT_NAME = Eureka;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		772C65B2740F1162376B25D1B018B979 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30F7533268DB89787634313F3E68506A /* Pods-Validation.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Validation/Pods-Validation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Validation/Pods-Validation.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DFEEA3122086A727D56B43C6EBB290B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F5622F5C6539ACAF836D2DF5DAF4D65 /* Eureka.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Eureka/Eureka-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Eureka/Eureka-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Eureka/Eureka.modulemap";
+				PRODUCT_MODULE_NAME = Eureka;
+				PRODUCT_NAME = Eureka;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C4754BB612C964460611BF57645BE871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A349040A968FAAA760DF632142D6E68A /* Pods-Validation.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Validation/Pods-Validation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Validation/Pods-Validation.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CE2957D24984FC36AF52340D1AA5DCC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D3C6F94965B907B775B96209AD8AFDF /* GenericPasswordRow.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GenericPasswordRow/GenericPasswordRow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GenericPasswordRow/GenericPasswordRow-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GenericPasswordRow/GenericPasswordRow.modulemap";
+				PRODUCT_MODULE_NAME = GenericPasswordRow;
+				PRODUCT_NAME = GenericPasswordRow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
+				257497152829C177993B5EC99C1D227A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51F1DBB0790CAAB7969B0131682376AE /* Build configuration list for PBXNativeTarget "Eureka" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DFEEA3122086A727D56B43C6EBB290B /* Debug */,
+				5C8A2E2A6680D48EFF222ED16FE73154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82176C296147EB078F3A800B37285D55 /* Build configuration list for PBXNativeTarget "GenericPasswordRow-GenericPasswordRow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C134BD2264DBC3B9E67603FD7FD226B /* Debug */,
+				464B8ADFB49E71476672A8F5A8FAFC56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D940270C6E74A9374753A8FF3B904A7A /* Build configuration list for PBXNativeTarget "Pods-Validation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				772C65B2740F1162376B25D1B018B979 /* Debug */,
+				C4754BB612C964460611BF57645BE871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA4D88A1B3CC1AD43B3BFDB755917AD6 /* Build configuration list for PBXNativeTarget "GenericPasswordRow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE2957D24984FC36AF52340D1AA5DCC1 /* Debug */,
+				198C96B5863169802A2A4FC4FADF5B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

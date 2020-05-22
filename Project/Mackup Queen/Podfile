@@ -9,13 +9,9 @@ target 'Mackup Queen' do
    pod 'Firebase/Messaging'
    pod 'Firebase/Storage'
 
-   pod 'RxSwift'
-   pod 'ReactiveCocoa', '~> 10.1'
-   pod 'RxTheme'
-   pod 'TinyConstraints'
-   pod 'NotificationBannerSwift', '1.6.3'
-   pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.2.0'
-   
+   pod 'TextFieldEffects'
+   pod 'PMAlertController'
+
    # Pods for Mackup Queen
 
   target 'Mackup QueenTests' do

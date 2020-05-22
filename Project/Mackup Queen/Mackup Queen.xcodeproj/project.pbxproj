@@ -3,20 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		05C6C925BBACB9DD19D1046D /* Pods_Mackup_QueenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7FDF20A9A4E76A5CFDB389 /* Pods_Mackup_QueenUITests.framework */; };
 		3172E10823D8733F009EBD92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E10723D8733F009EBD92 /* AppDelegate.swift */; };
 		3172E10A23D8733F009EBD92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E10923D8733F009EBD92 /* SceneDelegate.swift */; };
-		3172E10C23D8733F009EBD92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E10B23D8733F009EBD92 /* ContentView.swift */; };
 		3172E10E23D87342009EBD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3172E10D23D87342009EBD92 /* Assets.xcassets */; };
 		3172E11123D87342009EBD92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3172E11023D87342009EBD92 /* Preview Assets.xcassets */; };
 		3172E11423D87342009EBD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3172E11223D87342009EBD92 /* LaunchScreen.storyboard */; };
 		3172E11F23D87342009EBD92 /* Mackup_QueenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E11E23D87342009EBD92 /* Mackup_QueenTests.swift */; };
 		3172E12A23D87342009EBD92 /* Mackup_QueenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E12923D87342009EBD92 /* Mackup_QueenUITests.swift */; };
 		3172E13923D875AA009EBD92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3172E13823D875AA009EBD92 /* GoogleService-Info.plist */; };
+		31C412F02468BDF5000948B9 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C412EF2468BDF5000948B9 /* Auth.storyboard */; };
+		31C412F22468BF46000948B9 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C412F12468BF46000948B9 /* Localization.swift */; };
+		31C412F42468C2A3000948B9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C412F32468C2A3000948B9 /* Login.swift */; };
+		31C412F62468C2B4000948B9 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C412F52468C2B4000948B9 /* Register.swift */; };
+		31C412F82468C2C1000948B9 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C412F72468C2C1000948B9 /* ForgotPassword.swift */; };
+		31C412FA2468C60F000948B9 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C412F92468C60F000948B9 /* MainTab.swift */; };
+		31C412FC2468C817000948B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C412FB2468C817000948B9 /* Main.storyboard */; };
 		31C59AD6A2147A81EFC8230C /* Pods_Mackup_Queen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A334BD335DA833924CA4F52E /* Pods_Mackup_Queen.framework */; };
 		75F3C3C65881FF98542D7377 /* Pods_Mackup_QueenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24FB14C36CF19B8C37594CC /* Pods_Mackup_QueenTests.framework */; };
 /* End PBXBuildFile section */
@@ -42,7 +48,6 @@
 		3172E10423D8733F009EBD92 /* Mackup Queen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mackup Queen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3172E10723D8733F009EBD92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3172E10923D8733F009EBD92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3172E10B23D8733F009EBD92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3172E10D23D87342009EBD92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3172E11023D87342009EBD92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3172E11323D87342009EBD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +59,13 @@
 		3172E12923D87342009EBD92 /* Mackup_QueenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mackup_QueenUITests.swift; sourceTree = "<group>"; };
 		3172E12B23D87342009EBD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3172E13823D875AA009EBD92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		31C412EF2468BDF5000948B9 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		31C412F12468BF46000948B9 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		31C412F32468C2A3000948B9 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		31C412F52468C2B4000948B9 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		31C412F72468C2C1000948B9 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		31C412F92468C60F000948B9 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
+		31C412FB2468C817000948B9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		60F01999330C53755AC81DB4 /* Pods-Mackup Queen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mackup Queen.debug.xcconfig"; path = "Target Support Files/Pods-Mackup Queen/Pods-Mackup Queen.debug.xcconfig"; sourceTree = "<group>"; };
 		7C7FDF20A9A4E76A5CFDB389 /* Pods_Mackup_QueenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mackup_QueenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F37223D1D9AA5026A254D54 /* Pods-Mackup Queen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mackup Queen.release.xcconfig"; path = "Target Support Files/Pods-Mackup Queen/Pods-Mackup Queen.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,7 +115,6 @@
 				B186588E23780F03C8A5C014 /* Pods-Mackup QueenUITests.debug.xcconfig */,
 				FC3AED99DCC7C2F6E260343F /* Pods-Mackup QueenUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -132,14 +143,16 @@
 		3172E10623D8733F009EBD92 /* Mackup Queen */ = {
 			isa = PBXGroup;
 			children = (
+				31C412FD2468C839000948B9 /* Menu */,
+				31C412EE2468BDE7000948B9 /* Auth */,
 				3172E13723D8758B009EBD92 /* Utils */,
 				3172E10723D8733F009EBD92 /* AppDelegate.swift */,
 				3172E10923D8733F009EBD92 /* SceneDelegate.swift */,
-				3172E10B23D8733F009EBD92 /* ContentView.swift */,
 				3172E10D23D87342009EBD92 /* Assets.xcassets */,
 				3172E11223D87342009EBD92 /* LaunchScreen.storyboard */,
 				3172E11523D87342009EBD92 /* Info.plist */,
 				3172E10F23D87342009EBD92 /* Preview Content */,
+				31C412FB2468C817000948B9 /* Main.storyboard */,
 			);
 			path = "Mackup Queen";
 			sourceTree = "<group>";
@@ -174,8 +187,28 @@
 			isa = PBXGroup;
 			children = (
 				3172E13823D875AA009EBD92 /* GoogleService-Info.plist */,
+				31C412F12468BF46000948B9 /* Localization.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		31C412EE2468BDE7000948B9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				31C412EF2468BDF5000948B9 /* Auth.storyboard */,
+				31C412F32468C2A3000948B9 /* Login.swift */,
+				31C412F52468C2B4000948B9 /* Register.swift */,
+				31C412F72468C2C1000948B9 /* ForgotPassword.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		31C412FD2468C839000948B9 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				31C412F92468C60F000948B9 /* MainTab.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		D01AEF640B1C961F691DCADF /* Frameworks */ = {
@@ -298,6 +331,8 @@
 			files = (
 				3172E11423D87342009EBD92 /* LaunchScreen.storyboard in Resources */,
 				3172E13923D875AA009EBD92 /* GoogleService-Info.plist in Resources */,
+				31C412F02468BDF5000948B9 /* Auth.storyboard in Resources */,
+				31C412FC2468C817000948B9 /* Main.storyboard in Resources */,
 				3172E11123D87342009EBD92 /* Preview Assets.xcassets in Resources */,
 				3172E10E23D87342009EBD92 /* Assets.xcassets in Resources */,
 			);
@@ -412,7 +447,11 @@
 			files = (
 				3172E10823D8733F009EBD92 /* AppDelegate.swift in Sources */,
 				3172E10A23D8733F009EBD92 /* SceneDelegate.swift in Sources */,
-				3172E10C23D8733F009EBD92 /* ContentView.swift in Sources */,
+				31C412F22468BF46000948B9 /* Localization.swift in Sources */,
+				31C412F42468C2A3000948B9 /* Login.swift in Sources */,
+				31C412F62468C2B4000948B9 /* Register.swift in Sources */,
+				31C412F82468C2C1000948B9 /* ForgotPassword.swift in Sources */,
+				31C412FA2468C60F000948B9 /* MainTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,11 +618,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Mackup Queen/Preview Content\"";
-				DEVELOPMENT_TEAM = MZRFR72A7G;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = D6Q72QVS55;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Mackup Queen/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,11 +640,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Mackup Queen/Preview Content\"";
-				DEVELOPMENT_TEAM = MZRFR72A7G;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = D6Q72QVS55;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Mackup Queen/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
