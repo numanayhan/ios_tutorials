@@ -7,41 +7,20 @@
 //
 
 import SwiftUI
-
+import CoreLocation
 struct ContentView: View {
     @State var carakter = "TEST"
     @State var show  = false
     
     var body: some View {
-        VStack{
-            Text("İlk Sayfa").padding()
-            Button(action: {
-                //
-                
-            }) {
-                Text("Next")
-                    .foregroundColor(Color.black)
-                    .font(.largeTitle)
-            }.sheet(isPresented:$show) { () -> Detail in
-                
-                return Detail()
-            }
-        }
-        
-//        NavigationView{
-//        List(travels){travel in
-//
-//            NavigationLink(destination:  Detail(name: travel)) {
-//                 Text(travel.name)
-//            }
-//            }
-//        }
-       
+      NavigationView {
+        Text("")
     }
+ }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+ 

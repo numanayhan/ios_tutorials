@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aQ0-vT-ghs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Validation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfg-ps-aPH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4GC-fA-n9k">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-Fa-JKf">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LF5-Wz-b7G">
+                                                        <rect key="frame" x="31" y="50" width="351" height="55"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBx-nk-8Sw">
+                                                        <rect key="frame" x="8" y="113" width="398" height="55"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="getPassword:" destination="BYZ-38-t0r" eventType="editingChanged" id="Y3m-Ey-PXb"/>
+                                                            <action selector="pwdBegin:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="7Ig-hZ-zGA"/>
+                                                            <action selector="pwdEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Mls-cd-1uK"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kg2-QI-KSI">
+                                                        <rect key="frame" x="31" y="176" width="351" height="55"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="IBAN " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qzd-sv-cHu">
+                                                        <rect key="frame" x="31" y="239" width="351" height="55"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="cc-number"/>
+                                                        <connections>
+                                                            <action selector="ibanEditBegun:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="Gr9-cI-aqU"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ETe-dP-gaF">
+                                                        <rect key="frame" x="31" y="302" width="351" height="55"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDZ-09-ja0">
+                                                        <rect key="frame" x="362" y="129" width="20" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="info.circle" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="infoPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="inW-8A-cTa"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="800" id="Mgu-dW-ZqE"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4GC-fA-n9k" firstAttribute="leading" secondItem="DAs-UZ-Qmv" secondAttribute="leading" id="GDH-xX-n8F"/>
+                                    <constraint firstItem="4GC-fA-n9k" firstAttribute="bottom" secondItem="DAs-UZ-Qmv" secondAttribute="bottom" id="ZoO-t5-jfa"/>
+                                    <constraint firstItem="4GC-fA-n9k" firstAttribute="top" secondItem="DAs-UZ-Qmv" secondAttribute="top" id="lPL-UK-sCK"/>
+                                    <constraint firstItem="4GC-fA-n9k" firstAttribute="width" secondItem="FmD-de-nIO" secondAttribute="width" id="vym-cq-h91"/>
+                                    <constraint firstItem="4GC-fA-n9k" firstAttribute="trailing" secondItem="DAs-UZ-Qmv" secondAttribute="trailing" id="xzU-Xx-BZk"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="DAs-UZ-Qmv"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="FmD-de-nIO"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rfg-ps-aPH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sd3-Hl-N5x"/>
+                            <constraint firstItem="rfg-ps-aPH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="88" id="TaJ-YT-kjc"/>
+                            <constraint firstItem="rfg-ps-aPH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eJJ-Oz-FjV"/>
+                            <constraint firstItem="rfg-ps-aPH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zoE-lm-Ssl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a8K-Qe-vrw"/>
+                    <connections>
+                        <outlet property="currencyText" destination="ETe-dP-gaF" id="bki-nL-amZ"/>
+                        <outlet property="emailText" destination="LF5-Wz-b7G" id="Y04-wI-qT3"/>
+                        <outlet property="ibanText" destination="Qzd-sv-cHu" id="EdG-ox-S81"/>
+                        <outlet property="passwordText" destination="sBx-nk-8Sw" id="Tlk-ch-5BD"/>
+                        <outlet property="phoneText" destination="kg2-QI-KSI" id="0PV-rZ-Sja"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="o1h-z8-HsG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aQ0-vT-ghs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L9T-bI-FWg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qD2-07-jeH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8g-TX-dow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

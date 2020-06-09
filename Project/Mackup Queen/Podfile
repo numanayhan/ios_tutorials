@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Mackup Queen' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+   pod 'Firebase/Auth'
+   pod 'Firebase/Firestore'
+   pod 'Firebase/Messaging'
+   pod 'Firebase/Storage'
+
+   pod 'TextFieldEffects'
+   pod 'PMAlertController'
+
+   # Pods for Mackup Queen
+
+  target 'Mackup QueenTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Mackup QueenUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

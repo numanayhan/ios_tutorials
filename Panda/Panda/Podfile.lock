@@ -1,0 +1,28 @@
+PODS:
+  - AloeStackView (1.2.0)
+  - lottie-ios (3.1.5)
+  - Presentr (1.9)
+  - SideMenuSwift (2.0.3)
+
+DEPENDENCIES:
+  - AloeStackView
+  - lottie-ios
+  - Presentr
+  - SideMenuSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AloeStackView
+    - lottie-ios
+    - Presentr
+    - SideMenuSwift
+
+SPEC CHECKSUMS:
+  AloeStackView: 8a4ce0efa08128dd78d538372f60c76c224034bb
+  lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
+  Presentr: 7078d7eb5d1661ebeaae60c9e42a1e534de1b993
+  SideMenuSwift: 5c2b1496544ce3f1f08f4dddf4810eaac49f543d
+
+PODFILE CHECKSUM: 633dd052128adaf605ce73e9398a1aec3425a344
+
+COCOAPODS: 1.7.5
