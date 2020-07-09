@@ -1,9 +1,9 @@
 //
 //  SceneDelegate.swift
-//  Panda
+//  Init
 //
-//  Created by TRA on 16.12.2019.
-//  Copyright © 2019 panda. All rights reserved.
+//  Created by TRA on 20.03.2020.
+//  Copyright © 2020 panda. All rights reserved.
 //
 
 import UIKit
