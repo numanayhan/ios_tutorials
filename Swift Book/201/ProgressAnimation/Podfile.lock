@@ -1,0 +1,24 @@
+PODS:
+  - ButtonProgressBar-iOS (1.0.1)
+  - GradientLoadingBar (2.0.3):
+    - LightweightObservable (~> 2.0)
+  - LightweightObservable (2.0.0)
+
+DEPENDENCIES:
+  - ButtonProgressBar-iOS
+  - GradientLoadingBar (~> 2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ButtonProgressBar-iOS
+    - GradientLoadingBar
+    - LightweightObservable
+
+SPEC CHECKSUMS:
+  ButtonProgressBar-iOS: 1127f15c7ab843648febc857fc2018c8224675c7
+  GradientLoadingBar: ad7664a77f8ed743bfcbc0c8b1fbfc5464314dc1
+  LightweightObservable: f0c032384379a17cb048b861e33de8209155d7be
+
+PODFILE CHECKSUM: caee312e7f15bb3692b4b03bb04dbafdcc44bc2a
+
+COCOAPODS: 1.7.5
