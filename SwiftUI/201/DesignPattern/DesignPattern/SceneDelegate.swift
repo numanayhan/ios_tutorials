@@ -1,9 +1,9 @@
 //
 //  SceneDelegate.swift
-//  SwiftUI 101
+//  DesignPattern
 //
-//  Created by TRA on 13.12.2019.
-//  Copyright © 2019 panda. All rights reserved.
+//  Created by TRA on 13.04.2020.
+//  Copyright © 2020 tra. All rights reserved.
 //
 
 import UIKit
@@ -15,16 +15,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-        let contentView = ContentView()
-
-        // Use a UIHostingController as window root view controller.
+         
+         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UINavigationController(rootViewController: contentView)
+            window.rootViewController = usersVC()
             self.window = window
             window.makeKeyAndVisible()
         }
+    }
+    func usersVC() -> UIViewController{
+        let sot =  UsersSourceOfTruth()
+        let usersCV = UsersCV(sot:sot)
+        let userVC = UsersVC(rootView: usersCV)
+        
+        return userVC
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -32,18 +39,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-         
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+      
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
+      
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        
     }
 
 
