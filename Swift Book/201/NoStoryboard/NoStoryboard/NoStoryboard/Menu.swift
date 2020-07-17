@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+ 
 class Menu: UIViewController {
 
     lazy var login  : UIButton = {
@@ -18,6 +18,7 @@ class Menu: UIViewController {
         btn.layer.borderWidth = 0.2
         btn.backgroundColor = UIColor.white
         btn.setTitleColor(.yellow, for: .normal)
+        
         return btn
     }()
     override func viewDidLoad() {

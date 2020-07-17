@@ -1,5 +1,5 @@
 //
-//  Extentiosn.swift
+//  Extention.swift
 //  NoStoryboard
 //
 //  Created by nayhan on 17.07.2020.
