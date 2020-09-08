@@ -15,6 +15,7 @@
 		3B6627522506DFCC00165AF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6627502506DFCC00165AF9 /* LaunchScreen.storyboard */; };
 		3B66275D2506DFCC00165AF9 /* Core_GraphicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B66275C2506DFCC00165AF9 /* Core_GraphicsTests.swift */; };
 		3B6627682506DFCC00165AF9 /* Core_GraphicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6627672506DFCC00165AF9 /* Core_GraphicsUITests.swift */; };
+		F0DE9A3E2507AEDA00EAF71D /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE9A3D2507AED900EAF71D /* HistogramView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3B6627632506DFCC00165AF9 /* Core GraphicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Core GraphicsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6627672506DFCC00165AF9 /* Core_GraphicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core_GraphicsUITests.swift; sourceTree = "<group>"; };
 		3B6627692506DFCC00165AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0DE9A3D2507AED900EAF71D /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				3B66274E2506DFCC00165AF9 /* Assets.xcassets */,
 				3B6627502506DFCC00165AF9 /* LaunchScreen.storyboard */,
 				3B6627532506DFCC00165AF9 /* Info.plist */,
+				F0DE9A3D2507AED900EAF71D /* HistogramView.swift */,
 			);
 			path = "Core Graphics";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				3B66274A2506DFC400165AF9 /* ViewController.swift in Sources */,
 				3B6627462506DFC400165AF9 /* AppDelegate.swift in Sources */,
 				3B6627482506DFC400165AF9 /* SceneDelegate.swift in Sources */,
+				F0DE9A3E2507AEDA00EAF71D /* HistogramView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D6Q72QVS55;
 				INFOPLIST_FILE = "Core Graphics/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D6Q72QVS55;
 				INFOPLIST_FILE = "Core Graphics/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
