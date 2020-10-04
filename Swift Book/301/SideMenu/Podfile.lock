@@ -1,5 +1,5 @@
 PODS:
-  - SideMenuSwift (2.0.5)
+  - SideMenuSwift (2.0.6)
 
 DEPENDENCIES:
   - SideMenuSwift
@@ -9,8 +9,8 @@ SPEC REPOS:
     - SideMenuSwift
 
 SPEC CHECKSUMS:
-  SideMenuSwift: c7d99c270e0fad922a14b81f1dcc7a84c764bcd5
+  SideMenuSwift: f12ca1b11faad909bfc2878df37e0a1c40fa4570
 
 PODFILE CHECKSUM: 318036b4080919fe4a557d951cb976352ed34f04
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

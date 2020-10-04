@@ -9,7 +9,7 @@
 
 import UIKit
 import SideMenu
-
+import SideMenuSwift
 class Preferences {
     static let shared = Preferences()
     var enableTransitionAnimation = false
@@ -33,7 +33,7 @@ class Menu: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
  
-    }
+    
      isDarkModeEnabled = SideMenuController.preferences.basic.position == .under
             configureView()
 
@@ -115,7 +115,7 @@ extension Menu: UITableViewDelegate, UITableViewDataSource {
 
     // swiftlint:disable force_cast
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SelectionCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MenuCell
         cell.contentView.backgroundColor = themeColor
         let row = indexPath.row
         if row == 0 {
@@ -139,7 +139,6 @@ extension Menu: UITableViewDelegate, UITableViewDataSource {
             print("[Example] View Controller Cache Identifier: \(identifier)")
         }
     }
-
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
