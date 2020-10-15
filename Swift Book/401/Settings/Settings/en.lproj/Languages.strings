@@ -1,0 +1,24 @@
+/* 
+  Languages.strings
+  Settings
+
+  Created by nayhan on 14.10.2020.
+  Copyright © 2020 com.hrdijital. All rights reserved.
+*/
+"signin" = "Sign In";
+"email"  = "Email";
+"password"  = "Password";
+"forgot"  = "Forgot Password?";
+"login"  = "Sign In";
+"close" = "CLOSE";
+"firstName" = "Fisrt Name";
+"lastName" = "Last Name";
+//Register
+"registerHeader" = "Create Account";
+"register" = "Register";
+"haveToFirstName" = "First Name";
+"haveToLastNameText" = "Last Name";
+"haveToEmailText" = "E-mail";
+"haveToEmailValide" = "Please check e-mail";
+"haveToPasswordText"  = "Create Password";
+"haveToPasswordValide" = "Use Password Rules";

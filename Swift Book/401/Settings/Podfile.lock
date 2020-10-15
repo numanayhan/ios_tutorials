@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
+  - QorumLogs (0.9)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.2)
+  - AlamofireImage (~> 3.5)
+  - QorumLogs
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - QorumLogs
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  QorumLogs: 9a484df6973a3697ac79fe2273140fde6b36dccc
+
+PODFILE CHECKSUM: 645e6762296a915ea70de338ce4a61c3c7d62d65
+
+COCOAPODS: 1.9.3

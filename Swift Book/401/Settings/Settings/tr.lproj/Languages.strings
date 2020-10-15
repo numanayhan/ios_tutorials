@@ -1,0 +1,24 @@
+/* 
+  Languages.strings
+  Settings
+
+  Created by nayhan on 14.10.2020.
+  Copyright © 2020 com.hrdijital. All rights reserved.
+*/
+"signin" = "Oturum aç";
+"email"  = "E-posta";
+"password"  = "Şifre";
+"forgot"  = "Şifremi Unuttum";
+"login"  = "Giriş Yap";
+"close" = "Tamam";
+"firstName" = "Ad";
+"lastName" = "Soyad";
+//Register
+"registerHeader" = "Hesap Açın";
+"register" = "Hemen Üye Ol";
+"haveToFirstName" = "Adınızı yazınız";
+"haveToLastNameText" = "Soyadınızı yazınız";
+"haveToEmailText" = "E-posta giriniz";
+"haveToEmailValide" = "E-postanızı kontrol ediniz";
+"haveToPasswordText"  = "Şifre oluşturun";
+"haveToPasswordValide" = "Şifre oluşturma kurallarına uyunuz";
