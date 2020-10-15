@@ -38,19 +38,17 @@ extension   UITextField{
         self.rightViewMode = .always
     }
 }
-extension String { 
+extension String {  
     public static func localize(_ key: String ) -> String {
-        return NSLocalizedString(key, tableName:nil ,bundle: Bundle.main,value: "",comment:  "")
-    } 
+        return NSLocalizedString(key, comment: "")
+    }
 }
-
-class CustomTF: UITextField{
-    let insets : UIEdgeInsets
+class CustomTF: UITextField {
     
+    let insets : UIEdgeInsets
     init(insets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)) {
         self.insets = insets
         super.init(frame: .zero)
-        
         layer.cornerRadius = 2
         layer.borderWidth = 0.2
         layer.borderColor = UIColor.init(named: "border")?.cgColor
