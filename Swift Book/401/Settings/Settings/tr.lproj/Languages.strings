@@ -13,6 +13,8 @@
 "close" = "Tamam";
 "firstName" = "Ad";
 "lastName" = "Soyad";
+"errorLogin" = "Bilgilerinizi kontrol ediniz. \b Giriş Yapılamadı";
+
 //Register
 "registerHeader" = "Hesap Açın";
 "register" = "Hemen Üye Ol";

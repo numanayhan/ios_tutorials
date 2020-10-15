@@ -7,7 +7,7 @@ target 'Settings' do
   pod 'Alamofire' ,'~> 4.8.2'
   pod 'AlamofireImage', '~> 3.5' 
   pod 'QorumLogs'
-
+  pod 'IQKeyboardManagerSwift'
   # Pods for Settings
 
 end

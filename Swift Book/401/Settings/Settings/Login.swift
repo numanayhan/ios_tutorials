@@ -63,7 +63,7 @@ class Login: UIViewController ,UITextFieldDelegate{
     }()
     let login : UIButton = {
              let btn  =  UIButton()
-             btn.setTitle("Login", for: .normal)
+             btn.setTitle(NSLocalizedString("login", comment: ""), for: .normal)
              btn.setTitleColor(UIColor.white, for: .normal)
              btn.layer.cornerRadius = 2
              btn.backgroundColor = UIColor.init(named: "before")
@@ -88,21 +88,32 @@ class Login: UIViewController ,UITextFieldDelegate{
     }
     @objc func setLogin(){
         
-        login.setTitle(" ", for: .normal)
-        login.loading(true)
+        startLoading()
+        
         guard let eml  = email.text else { return }
         guard let pwd  = password.text  else { return }
         if (eml.isEmpty){
-            
+             stopLoading()
+             self.setNotify(String.localize("haveToEmailText"))
         } else if(pwd.isEmpty){
-            
+             stopLoading()
+             self.setNotify(String.localize("haveToPasswordText"))
         }else{
+             
              setLoginRequest()
         }
     }
+    func startLoading(){
+        login.setTitle(" ", for: .normal)
+        login.loading(true)
+    }
+    func stopLoading(){
+        login.setTitle(String.localize("login"), for: .normal)
+        login.loading(false)
+    }
     func setStackView(){
            view.addSubview(logoContainerView)
-           logoContainerView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: self.topBarHeight! + 10, paddingLeft:10, paddingBottom: 0, paddingRight: 10, width: 0, height: 50)
+           logoContainerView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: self.topBarHeight! + 20, paddingLeft:10, paddingBottom: 0, paddingRight: 10, width: 0, height: 50)
            let stackView = UIStackView(arrangedSubviews: [email,password,forgot,login])
            stackView.axis = .vertical
            stackView.spacing = 10
@@ -130,7 +141,7 @@ class Login: UIViewController ,UITextFieldDelegate{
         guard let pwd  = password.text  else { return }
         if Network.isConnectedToNetwork() == true {
             let parameters  = [ "userHash" : userHash,"email":email,"password":pwd]
-             defaultRequest.postParamsRequest( url:Config.Login  , parameters: parameters , completion : { data in
+             defaultRequest.postParamsRequest( url:Config.isLogin  , parameters: parameters , completion : { data in
                 DispatchQueue.main.async { 
                     let res = data as? NSDictionary
                         if res!["status"] as? Int != 200 {
@@ -139,12 +150,23 @@ class Login: UIViewController ,UITextFieldDelegate{
                                  UserDefaults.standard.set(false, forKey: "authorized")
                             }
                         }else{
-                             
+                            self.setNotify(String.localize("errorLogin"))
                         }
                      self.login.setTitle("Login", for: .normal)
                     self.login.loading(false)
                 }
             })
+        }else{
+            
+        }
+    }
+    func setNotify(_ text:String){
+        let alert = UIAlertController(title: "", message: text, preferredStyle: .alert)
+        alert.modalPresentationStyle = .overCurrentContext
+        self.present(alert, animated: true)
+        let duration: Double = 1.2
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+            alert.dismiss(animated: true)
         }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

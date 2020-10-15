@@ -13,6 +13,8 @@
 "close" = "CLOSE";
 "firstName" = "Fisrt Name";
 "lastName" = "Last Name";
+"errorLogin" = "Error Login";
+
 //Register
 "registerHeader" = "Create Account";
 "register" = "Register";

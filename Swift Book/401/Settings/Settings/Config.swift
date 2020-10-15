@@ -9,8 +9,9 @@
 import Foundation
 
 class Config {
-    static let Login = "https://www.satisgaranti.com/api/index.php?route=account/login"
-    static let Register = ""
-    static let ForgotPassword = ""
+    static let isInit = ""
+    static let isLogin = "https://www.satisgaranti.com/api/index.php?route=account/login"
+    static let isRegister = ""
+    static let isForgotPassword = ""
     
 }

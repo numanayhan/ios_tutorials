@@ -26,13 +26,12 @@ class Settings: UIViewController {
         title = "Account"
     }
     override func viewWillDisappear(_ animated: Bool) {
-        title = "Account"
+        title = " "
     }
     func setNavbar() {
         title = "Account"
         navigationController?.navigationBar.tintColor = .black
-        navigationController?.navigationBar.barTintColor = .white
-        
+        navigationController?.navigationBar.barTintColor = headerColor
     }
     func setTableView() {
         tableView = UITableView()
