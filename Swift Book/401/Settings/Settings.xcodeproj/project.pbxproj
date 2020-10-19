@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F8F656EBCAA020964FAFB27 /* Pods_Settings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE8AB8A6E6575609E3CF952 /* Pods_Settings.framework */; };
+		3BE4A429253C69A1006FF45A /* Forgot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A428253C69A1006FF45A /* Forgot.swift */; };
 		F0CEEB5B2538319700788EF9 /* DefaultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEEB5A2538319700788EF9 /* DefaultRequest.swift */; };
 		F0CEEB5D253831C000788EF9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEEB5C253831C000788EF9 /* Network.swift */; };
 		F0CEEB5F253832D900788EF9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEEB5E253832D900788EF9 /* Config.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		1DE8AB8A6E6575609E3CF952 /* Pods_Settings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Settings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE4A428253C69A1006FF45A /* Forgot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgot.swift; sourceTree = "<group>"; };
 		579C9DC668FBEFAD0EEA37BB /* Pods-Settings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Settings.debug.xcconfig"; path = "Target Support Files/Pods-Settings/Pods-Settings.debug.xcconfig"; sourceTree = "<group>"; };
 		DA5BED1A7F2270EF962FCF36 /* Pods-Settings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Settings.release.xcconfig"; path = "Target Support Files/Pods-Settings/Pods-Settings.release.xcconfig"; sourceTree = "<group>"; };
 		F0CEEB5A2538319700788EF9 /* DefaultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRequest.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				F0CEEB5C253831C000788EF9 /* Network.swift */,
 				F0CEEB5E253832D900788EF9 /* Config.swift */,
 				F0CEEB60253865C400788EF9 /* Language.swift */,
+				3BE4A428253C69A1006FF45A /* Forgot.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				F0DBFD0D2535D35D006AAB66 /* Login.swift in Sources */,
 				F0DBFD052535A32C006AAB66 /* Store.swift in Sources */,
 				F0DBFCF225343A1F006AAB66 /* UserInfoHeader.swift in Sources */,
+				3BE4A429253C69A1006FF45A /* Forgot.swift in Sources */,
 				F0DBFD032535A2AB006AAB66 /* Menu.swift in Sources */,
 				F0DBFD0B2535BEB8006AAB66 /* CategoriesType.swift in Sources */,
 				F0DBFCF4253465BE006AAB66 /* SettingSection.swift in Sources */,

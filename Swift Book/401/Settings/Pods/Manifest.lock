@@ -2,28 +2,36 @@ PODS:
   - Alamofire (4.8.2)
   - AlamofireImage (3.5.2):
     - Alamofire (~> 4.8)
+  - CustomUISwitch (0.0.1)
   - IQKeyboardManagerSwift (6.5.6)
+  - PinLayout (1.9.2)
   - QorumLogs (0.9)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
   - AlamofireImage (~> 3.5)
+  - CustomUISwitch
   - IQKeyboardManagerSwift
+  - PinLayout
   - QorumLogs
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
+    - CustomUISwitch
     - IQKeyboardManagerSwift
+    - PinLayout
     - QorumLogs
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  CustomUISwitch: 2076af90de425af11cc7631dda40bc441e707b0f
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  PinLayout: 0d96022e46e8b80468d819f182a393b97ca038da
   QorumLogs: 9a484df6973a3697ac79fe2273140fde6b36dccc
 
-PODFILE CHECKSUM: 8a6ea5ab2ee05c0ee9719003e396d9f2fac0c7ee
+PODFILE CHECKSUM: 9f602379546326036c16abb165fce5b0ba0aa7ac
 
 COCOAPODS: 1.9.3

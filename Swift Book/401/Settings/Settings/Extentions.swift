@@ -15,15 +15,18 @@ extension CALayer {
         let mask = CAShapeLayer()
         mask.bounds = view.frame
         mask.position = view.center
+        mask.backgroundColor = UIColor.white.cgColor
         mask.path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
         view.clipsToBounds = false
         view.layer.mask = mask
+         
     }
     func addRadius(radius: CGFloat) {
         self.cornerRadius = radius
         self.borderWidth = 1
         self.borderColor = UIColor.init(named: "border")?.cgColor
-        self.bounds.inset(by: padding)
+        self.backgroundColor = UIColor.white.cgColor
+        self.bounds.inset(by: padding) 
     }
 }
 extension   UITextField{
@@ -36,6 +39,28 @@ extension   UITextField{
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
         self.rightView = paddingView
         self.rightViewMode = .always
+    }
+    enum direction {
+        case left
+        case right
+    }
+    func withImage(direction: direction, image: UIImage){
+        let mainView = UIView(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
+        view.backgroundColor = .white
+        view.clipsToBounds = true
+        mainView.addSubview(view)
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        imageView.frame = CGRect(x: 8.0, y: 12.0, width: 20.0, height: 20.0)
+        view.addSubview(imageView)
+        if(UITextField.direction.left == direction){
+            self.leftViewMode = .always
+            self.leftView = mainView
+        } else { // image right
+            self.rightViewMode = .always
+            self.rightView = mainView
+        }
     }
 }
 extension String {  

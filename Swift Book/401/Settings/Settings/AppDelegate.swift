@@ -12,11 +12,11 @@ import IQKeyboardManagerSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var defaultRequest = DefaultRequest()
- var window: UIWindow?
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.toolbarDoneBarButtonItemText =  String.localize("close")
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText =  "TAMAM"
         setAuth()
         UserDefaults.standard.set("CtBIwJONOGP8oA5Oj2gqEDOs897MbNrG",forKey: "userHash")
         window = UIWindow()

@@ -8,6 +8,8 @@ target 'Settings' do
   pod 'AlamofireImage', '~> 3.5' 
   pod 'QorumLogs'
   pod 'IQKeyboardManagerSwift'
+  pod 'PinLayout'
+  pod 'CustomUISwitch'
   # Pods for Settings
 
 end
