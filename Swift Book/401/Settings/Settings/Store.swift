@@ -10,76 +10,52 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class Store: UICollectionViewController   {
-
-    var layout = UICollectionViewFlowLayout()
+class Store: UICollectionViewController ,UICollectionViewDelegateFlowLayout  {
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        layout.scrollDirection = .vertical
-        guard let cvv = collectionView else{
-            return
-        }
-        cvv.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "StoreCell")
-        cvv.dataSource = self
-        cvv.delegate = self
-        cvv.frame = view.bounds
+        collectionView?.backgroundColor = .white
+        
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+       
+        setTopBar()
         
     }
-     @objc func handleRefresh() {
-         collectionView?.reloadData()
+    func setTopBar(){
         
-         self.collectionView?.refreshControl?.endRefreshing()
-                        
-     }
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "right"), style: .plain,
+                                                                target: self, action: #selector(favPost))
+          let btnSearch = UIButton.init(type: .custom)
+          btnSearch.setImage(UIImage(named: "right"), for: .normal)
+          btnSearch.addTarget(self, action: #selector(favPost), for: .touchUpInside)
+          let btnEdit = UIButton.init(type: .custom)
+          btnEdit.setImage(UIImage(named: "right"), for: .normal)
+          btnEdit.addTarget(self, action: #selector(savePost), for: .touchUpInside)
+          let stackview = UIStackView.init(arrangedSubviews: [btnEdit, btnSearch])
+          stackview.distribution = .equalSpacing
+          stackview.axis = .horizontal
+          stackview.alignment = .center
+          stackview.spacing = 24
+        
+        let rightBarButton = UIBarButtonItem(customView: stackview)
+        self.navigationItem.rightBarButtonItem = rightBarButton
+        
+    }
+    @objc func favPost(){
+        print("favPost")
+    }
+    @objc func savePost(){
+        print("favPost")
+    }
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+      return 0
     }
-
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+      return 0
     }
-
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoreCell", for: indexPath)
-        cell.contentView.backgroundColor = .lightGray
-        
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) 
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }

@@ -15,8 +15,8 @@ class Menu: UITabBarController ,UITabBarControllerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+         
         setTabBar()
-        setNavBar()
     }
     func setNavBar() {
         
@@ -31,13 +31,16 @@ class Menu: UITabBarController ,UITabBarControllerDelegate{
         
     }
     func setTabBar() {
-      
-       let store = setNav(unselected: #imageLiteral(resourceName: "right"), selected: #imageLiteral(resourceName: "right"), root: Store())
-       let search = setNav(unselected: #imageLiteral(resourceName: "right"), selected: #imageLiteral(resourceName: "right"), root: Search())
-       let settings = setNav(unselected: #imageLiteral(resourceName: "right"), selected: #imageLiteral(resourceName: "right"),root:Settings())
+        navigationController?.navigationBar.isHidden  = true
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        let store = setNav(unselected: #imageLiteral(resourceName: "right"), selected: #imageLiteral(resourceName: "right"), root: Store(collectionViewLayout: UICollectionViewFlowLayout()))
+        let search = setNav(unselected: #imageLiteral(resourceName: "right"), selected: #imageLiteral(resourceName: "right"), root: Search())
+        let addPost = setNav(unselected: #imageLiteral(resourceName: "right"), selected: #imageLiteral(resourceName: "right"),root: AddPost())
+        let services = setNav(unselected: #imageLiteral(resourceName: "right"), selected: #imageLiteral(resourceName: "right"),root: Services())
+        let profile = setNav(unselected: #imageLiteral(resourceName: "right"), selected: #imageLiteral(resourceName: "right"),root:Settings())
         
-       viewControllers = [store,search,settings]
-       tabBar.tintColor = .black
+        viewControllers = [store,search,addPost,services,profile]
+        tabBar.tintColor = .black
     }
     func setNav(unselected: UIImage, selected: UIImage, root: UIViewController = UIViewController()) -> UINavigationController {
         let navController = UINavigationController(rootViewController: root)
