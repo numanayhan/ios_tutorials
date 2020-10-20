@@ -152,21 +152,26 @@ class Register: UIViewController {
         cs.isOn = true
         return cs
     }()
-    let rulesText : UIButton = {
-        let btn = UIButton(type: .system)
-        let paragraph = NSMutableParagraphStyle()
-        paragraph.alignment = .left
-        let texts =  "Üyelik Sözleşmesi'"
-        let attributedString = NSMutableAttributedString(string: texts)
-        attributedString.append(NSAttributedString(string: " Giriş Yap", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor(red: 255/255, green: 45/255, blue: 85/255, alpha: 1)]))
-        attributedString.addAttribute(.foregroundColor, value: UIFont.systemFont(ofSize: 8), range: NSRange(location: 0, length: 4))
+    let rulesView : UIView = {
         
-        btn.setTitle(attributedString.string , for: .normal)
+        let viewRules = UIView()
         
-        btn.titleLabel?.textAlignment = .left
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-        btn.addTarget(self, action: #selector(setRules), for: .touchUpInside)
-        return btn
+        let rulesText = UIButton()
+        let rulesAccept = UILabel()
+        
+        let attributedTitle = NSMutableAttributedString(string: "Üyelik Sözleşmesi'", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor:UIColor.lightGray])
+        rulesText.setTitle(attributedTitle.string, for: .normal)
+        
+        let attributedTitleAccept = NSMutableAttributedString(string: "ni kabul ediyorum", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor:UIColor.lightGray])
+        rulesAccept.attributedText = attributedTitleAccept
+        let infoView = UIStackView(arrangedSubviews: [rulesText,rulesAccept])
+        infoView.axis = .horizontal
+        infoView.spacing = 0
+        viewRules.addSubview(infoView)
+        infoView.anchor(top: viewRules.topAnchor, left: viewRules.leftAnchor, bottom: viewRules.bottomAnchor, right: viewRules.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: viewRules.frame.width, height: 40)
+        
+        
+        return viewRules
     }()
     var topBarHeight:CGFloat? = 44
     var isRules : Bool = true
@@ -253,12 +258,12 @@ class Register: UIViewController {
         stackView.anchor(top: infoView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 200)
         
         
-        let rulesView = UIStackView(arrangedSubviews: [acceptRules,rulesText])
-        rulesView.axis = .horizontal
-        rulesView.spacing =  10
-        rulesView.distribution = .fill
-        view.addSubview(rulesView)
-        rulesView.anchor(top: stackView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop:  10  , paddingLeft: 20, paddingBottom: 0, paddingRight:  10, width: view.frame.width, height:30)
+        let rulesContent = UIStackView(arrangedSubviews: [acceptRules,rulesView])
+        rulesContent.axis = .horizontal
+        rulesContent.spacing =  10
+        rulesContent.distribution = .fill
+        view.addSubview(rulesContent)
+        rulesContent.anchor(top: stackView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop:  10  , paddingLeft: 20, paddingBottom: 0, paddingRight:  10, width: view.frame.width, height:40)
         
      }
     @objc func validation() {
