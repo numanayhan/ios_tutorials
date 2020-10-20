@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2F8F656EBCAA020964FAFB27 /* Pods_Settings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE8AB8A6E6575609E3CF952 /* Pods_Settings.framework */; };
 		3BE4A429253C69A1006FF45A /* Forgot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A428253C69A1006FF45A /* Forgot.swift */; };
+		F0586ED4253EBEAD00591DC5 /* SecondSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0586ED3253EBEAD00591DC5 /* SecondSegment.swift */; };
+		F0586ED7253EC00100591DC5 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0586ED6253EC00100591DC5 /* Detail.swift */; };
+		F0586F03253EC09900591DC5 /* DetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0586F02253EC09900591DC5 /* DetailInfo.swift */; };
+		F0586F06253EC0C300591DC5 /* Explanation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0586F05253EC0C300591DC5 /* Explanation.swift */; };
+		F0586F9F253F287400591DC5 /* AddPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0586F9E253F287400591DC5 /* AddPost.swift */; };
+		F0586FA2253F28B500591DC5 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0586FA1253F28B500591DC5 /* Services.swift */; };
 		F0CEEB5B2538319700788EF9 /* DefaultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEEB5A2538319700788EF9 /* DefaultRequest.swift */; };
 		F0CEEB5D253831C000788EF9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEEB5C253831C000788EF9 /* Network.swift */; };
 		F0CEEB5F253832D900788EF9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEEB5E253832D900788EF9 /* Config.swift */; };
@@ -37,6 +43,12 @@
 		3BE4A428253C69A1006FF45A /* Forgot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgot.swift; sourceTree = "<group>"; };
 		579C9DC668FBEFAD0EEA37BB /* Pods-Settings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Settings.debug.xcconfig"; path = "Target Support Files/Pods-Settings/Pods-Settings.debug.xcconfig"; sourceTree = "<group>"; };
 		DA5BED1A7F2270EF962FCF36 /* Pods-Settings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Settings.release.xcconfig"; path = "Target Support Files/Pods-Settings/Pods-Settings.release.xcconfig"; sourceTree = "<group>"; };
+		F0586ED3253EBEAD00591DC5 /* SecondSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSegment.swift; sourceTree = "<group>"; };
+		F0586ED6253EC00100591DC5 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		F0586F02253EC09900591DC5 /* DetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfo.swift; sourceTree = "<group>"; };
+		F0586F05253EC0C300591DC5 /* Explanation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explanation.swift; sourceTree = "<group>"; };
+		F0586F9E253F287400591DC5 /* AddPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPost.swift; sourceTree = "<group>"; };
+		F0586FA1253F28B500591DC5 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		F0CEEB5A2538319700788EF9 /* DefaultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRequest.swift; sourceTree = "<group>"; };
 		F0CEEB5C253831C000788EF9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		F0CEEB5E253832D900788EF9 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -137,6 +149,12 @@
 				F0CEEB5E253832D900788EF9 /* Config.swift */,
 				F0CEEB60253865C400788EF9 /* Language.swift */,
 				3BE4A428253C69A1006FF45A /* Forgot.swift */,
+				F0586ED3253EBEAD00591DC5 /* SecondSegment.swift */,
+				F0586ED6253EC00100591DC5 /* Detail.swift */,
+				F0586F02253EC09900591DC5 /* DetailInfo.swift */,
+				F0586F05253EC0C300591DC5 /* Explanation.swift */,
+				F0586F9E253F287400591DC5 /* AddPost.swift */,
+				F0586FA1253F28B500591DC5 /* Services.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -258,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CEEB5B2538319700788EF9 /* DefaultRequest.swift in Sources */,
+				F0586F06253EC0C300591DC5 /* Explanation.swift in Sources */,
 				F0DBFD072535A516006AAB66 /* Search.swift in Sources */,
 				F0CEEB5D253831C000788EF9 /* Network.swift in Sources */,
 				F0CEEB61253865C400788EF9 /* Language.swift in Sources */,
@@ -265,17 +284,22 @@
 				F0CEEB5F253832D900788EF9 /* Config.swift in Sources */,
 				F0DBFCDC25343131006AAB66 /* AppDelegate.swift in Sources */,
 				F0DBFCF025343174006AAB66 /* Settings.swift in Sources */,
+				F0586ED7253EC00100591DC5 /* Detail.swift in Sources */,
+				F0586FA2253F28B500591DC5 /* Services.swift in Sources */,
 				F0DBFD0F2535D36D006AAB66 /* Register.swift in Sources */,
 				F0DBFCF725349D0E006AAB66 /* Extentions.swift in Sources */,
 				F0DBFD092535B722006AAB66 /* SearchSection.swift in Sources */,
 				F0DBFCDE25343131006AAB66 /* SceneDelegate.swift in Sources */,
 				F0DBFD0D2535D35D006AAB66 /* Login.swift in Sources */,
+				F0586F03253EC09900591DC5 /* DetailInfo.swift in Sources */,
+				F0586ED4253EBEAD00591DC5 /* SecondSegment.swift in Sources */,
 				F0DBFD052535A32C006AAB66 /* Store.swift in Sources */,
 				F0DBFCF225343A1F006AAB66 /* UserInfoHeader.swift in Sources */,
 				3BE4A429253C69A1006FF45A /* Forgot.swift in Sources */,
 				F0DBFD032535A2AB006AAB66 /* Menu.swift in Sources */,
 				F0DBFD0B2535BEB8006AAB66 /* CategoriesType.swift in Sources */,
 				F0DBFCF4253465BE006AAB66 /* SettingSection.swift in Sources */,
+				F0586F9F253F287400591DC5 /* AddPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

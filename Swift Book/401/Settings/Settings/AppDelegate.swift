@@ -4,8 +4,7 @@
 //
 //  Created by nayhan on 12.10.2020.
 //  Copyright © 2020 com.hrdijital. All rights reserved.
-//
-
+ 
 import UIKit
 import IQKeyboardManagerSwift
 @UIApplicationMain
@@ -21,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.set("CtBIwJONOGP8oA5Oj2gqEDOs897MbNrG",forKey: "userHash")
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: Settings())
+        window?.rootViewController = Menu()
         
         return true
     } 
