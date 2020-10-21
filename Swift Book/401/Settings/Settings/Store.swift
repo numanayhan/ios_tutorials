@@ -24,23 +24,33 @@ class Store: UICollectionViewController ,UICollectionViewDelegateFlowLayout  {
     }
     func setTopBar(){
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "right"), style: .plain,
-                                                                target: self, action: #selector(favPost))
-          let btnSearch = UIButton.init(type: .custom)
-          btnSearch.setImage(UIImage(named: "right"), for: .normal)
-          btnSearch.addTarget(self, action: #selector(favPost), for: .touchUpInside)
-          let btnEdit = UIButton.init(type: .custom)
-          btnEdit.setImage(UIImage(named: "right"), for: .normal)
-          btnEdit.addTarget(self, action: #selector(savePost), for: .touchUpInside)
-          let stackview = UIStackView.init(arrangedSubviews: [btnEdit, btnSearch])
-          stackview.distribution = .equalSpacing
-          stackview.axis = .horizontal
-          stackview.alignment = .center
-          stackview.spacing = 24
+        let icon = UIImage.init(named: "icon")!
+        let imageLeft = resizeImage(image: icon)
         
-        let rightBarButton = UIBarButtonItem(customView: stackview)
-        self.navigationItem.rightBarButtonItem = rightBarButton
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: imageLeft, style: .plain,  target: self, action: #selector(favPost))
+
+    }
+    func resizeImage(image: UIImage ) -> UIImage {
         
+        let widthRatio  =  24.0
+        let heightRatio = 24.0 
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: 24, height: 24)
+        } else {
+            newSize = CGSize(width: 24,  height: 24)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
     @objc func favPost(){
         print("favPost")

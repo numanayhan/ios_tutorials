@@ -9,7 +9,7 @@
 import Foundation
 
 class Config {
-    static let isInit = ""
+    static let isInit = "https://www.satisgaranti.com/api/index.php?"
     static let isLogin = "https://www.satisgaranti.com/api/index.php?route=account/login"
     static let isRegister = ""
     static let isForgotPassword = ""
