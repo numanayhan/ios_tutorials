@@ -49,6 +49,7 @@
 		F0586F05253EC0C300591DC5 /* Explanation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explanation.swift; sourceTree = "<group>"; };
 		F0586F9E253F287400591DC5 /* AddPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPost.swift; sourceTree = "<group>"; };
 		F0586FA1253F28B500591DC5 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		F06C13FB25403B7C00915D27 /* Settings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Settings.entitlements; sourceTree = "<group>"; };
 		F0CEEB5A2538319700788EF9 /* DefaultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRequest.swift; sourceTree = "<group>"; };
 		F0CEEB5C253831C000788EF9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		F0CEEB5E253832D900788EF9 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -126,6 +127,7 @@
 		F0DBFCDA25343131006AAB66 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				F06C13FB25403B7C00915D27 /* Settings.entitlements */,
 				F0DBFCDB25343131006AAB66 /* AppDelegate.swift */,
 				F0DBFCDD25343131006AAB66 /* SceneDelegate.swift */,
 				F0DBFCE425343135006AAB66 /* Assets.xcassets */,
@@ -448,6 +450,7 @@
 			baseConfigurationReference = 579C9DC668FBEFAD0EEA37BB /* Pods-Settings.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Settings/Settings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MZRFR72A7G;
 				INFOPLIST_FILE = Settings/Info.plist;
@@ -456,7 +459,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hrdijital.Settings;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hrdijital.Setting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -468,6 +471,7 @@
 			baseConfigurationReference = DA5BED1A7F2270EF962FCF36 /* Pods-Settings.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Settings/Settings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MZRFR72A7G;
 				INFOPLIST_FILE = Settings/Info.plist;
@@ -476,7 +480,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hrdijital.Settings;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hrdijital.Setting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

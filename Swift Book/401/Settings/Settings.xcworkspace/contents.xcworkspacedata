@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Settings.xcodeproj">
+      location = "group:/Users/numanayhan/Repository/ios-tutorials/Swift Book/401/Settings/Settings.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

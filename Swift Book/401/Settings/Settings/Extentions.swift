@@ -123,6 +123,17 @@ extension UIView {
     
     
 }
+func setStatusBarStyle(_ style: UIStatusBarStyle) {
+      if let statusBar = UIApplication.shared.value(forKey: "statusBar") as? UIView {
+          statusBar.backgroundColor = style == .lightContent ? UIColor.black : .white
+          statusBar.setValue(style == .lightContent ? UIColor.white : .black, forKey: "foregroundColor")
+      }
+  }
+extension UINavigationController {
+   open override var preferredStatusBarStyle: UIStatusBarStyle {
+      return topViewController?.preferredStatusBarStyle ?? .default
+   }
+}
 extension UIButton
 {
   func roundCorners(corners:UIRectCorner, radius: CGFloat) {
