@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F8F656EBCAA020964FAFB27 /* Pods_Settings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE8AB8A6E6575609E3CF952 /* Pods_Settings.framework */; };
+		3B83D47D253F764800F11DB6 /* NotNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83D47C253F764800F11DB6 /* NotNetwork.swift */; };
 		3BE4A429253C69A1006FF45A /* Forgot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A428253C69A1006FF45A /* Forgot.swift */; };
 		F0586ED4253EBEAD00591DC5 /* SecondSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0586ED3253EBEAD00591DC5 /* SecondSegment.swift */; };
 		F0586ED7253EC00100591DC5 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0586ED6253EC00100591DC5 /* Detail.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		1DE8AB8A6E6575609E3CF952 /* Pods_Settings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Settings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B83D47C253F764800F11DB6 /* NotNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotNetwork.swift; sourceTree = "<group>"; };
 		3BE4A428253C69A1006FF45A /* Forgot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgot.swift; sourceTree = "<group>"; };
 		579C9DC668FBEFAD0EEA37BB /* Pods-Settings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Settings.debug.xcconfig"; path = "Target Support Files/Pods-Settings/Pods-Settings.debug.xcconfig"; sourceTree = "<group>"; };
 		DA5BED1A7F2270EF962FCF36 /* Pods-Settings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Settings.release.xcconfig"; path = "Target Support Files/Pods-Settings/Pods-Settings.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				F0586F05253EC0C300591DC5 /* Explanation.swift */,
 				F0586F9E253F287400591DC5 /* AddPost.swift */,
 				F0586FA1253F28B500591DC5 /* Services.swift */,
+				3B83D47C253F764800F11DB6 /* NotNetwork.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				F0586F06253EC0C300591DC5 /* Explanation.swift in Sources */,
 				F0DBFD072535A516006AAB66 /* Search.swift in Sources */,
 				F0CEEB5D253831C000788EF9 /* Network.swift in Sources */,
+				3B83D47D253F764800F11DB6 /* NotNetwork.swift in Sources */,
 				F0CEEB61253865C400788EF9 /* Language.swift in Sources */,
 				F0DBFCFF25358C01006AAB66 /* UploadImage.swift in Sources */,
 				F0CEEB5F253832D900788EF9 /* Config.swift in Sources */,
