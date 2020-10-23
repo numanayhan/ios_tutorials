@@ -51,17 +51,7 @@ class Menu: UITabBarController ,UITabBarControllerDelegate{
         let search = setNav(unselected: unSearchIcon, selected: SearchIcon,title:"Arama", root: Search())
         let unPostIcon = resizeImage(image: UIImage.init(named: "un_post")!)
         let PostIcon = resizeImage(image: UIImage.init(named: "post")!)
-        
-        let logoImage = UIImage(named: "logoLeft")
-        let logoImageView = UIImageView(image: PostIcon)
-        logoImageView.frame = CGRect(x: -10, y: 0, width: 120, height: 44)
-        logoImageView.contentMode = .scaleAspectFit
-        let logoView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
-        logoView.clipsToBounds = false
-        logoView.addSubview(logoImageView)
-        let logoItem = UIBarButtonItem(customView: logoView)
-        
-        let addPost = setNav(unselected: logoImageView.image!, selected: logoImageView.image!,title:"İlan Ver",root: AddPost())
+        let addPost = setNav(unselected: unPostIcon, selected: PostIcon,title:"İlan Ver",root: AddPost())
         let unServiceIcon = resizeImage(image: UIImage.init(named: "un_service")!)
         let ServiceIcon = resizeImage(image: UIImage.init(named: "service")!)
         let services = setNav(unselected: unServiceIcon, selected: ServiceIcon,title:"Servisler",root: Services())
@@ -69,17 +59,11 @@ class Menu: UITabBarController ,UITabBarControllerDelegate{
         let UserIcon = resizeImage(image: UIImage.init(named: "user")!)
         let user = setNav(unselected: unUserIcon, selected: UserIcon,title:"Bana Özel",root:Settings())
         
+        
         viewControllers = [store,search,addPost,services,user]
         tabBar.tintColor = .black
-        print(tabBar.frame.height)
-        let tabImage = UIImage(named: "tab")
-        let tabImageView = UIImageView(image: tabImage)
-        tabImageView.frame = CGRect(x:  0, y: 0, width: tabBar.frame.width, height: tabBar.frame.height)
-        tabImageView.contentMode = .scaleAspectFit
-         
-        UITabBar.appearance().backgroundImage = tabImageView.image
-        UITabBar.appearance().shadowImage = tabImageView.image
-        UITabBar.appearance().clipsToBounds = true
+        
+        print("test")
     }
     func resizeImage(image: UIImage ) -> UIImage {
         let widthRatio  =  20.0
@@ -118,7 +102,6 @@ class Menu: UITabBarController ,UITabBarControllerDelegate{
     }
     func setAuth(){ 
         print("setAuth")
-        print
         if Network.isConnectedToNetwork()  {
             print("isConnectedToNetwork")
             let parameters  = [ "route":"common/home/init"]

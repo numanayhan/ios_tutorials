@@ -17,33 +17,16 @@ class Store: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
       }
     }
     var collectionSizeType:CGSize? = CGSize.init(width: 24, height: 24)
-    var isShowcase:Bool? = true
-    var isList:Bool? = false
-    
+    var isShowcase:Bool?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.isShowcase = true
         
-        if (isList == true ){
-            let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-            layout.sectionInset = UIEdgeInsets(top: 6, left: 4, bottom: 6, right: 4)
-            layout.minimumInteritemSpacing = 04
-            layout.minimumLineSpacing = 04
-            layout.invalidateLayout()
-            collectionSizeType =    CGSize(width: ((self.view.frame.width ) - 6), height: 200)
-        }else if (isShowcase == true ){
-            let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-            layout.sectionInset = UIEdgeInsets(top: 6, left: 4, bottom: 6, right: 4)
-            layout.minimumInteritemSpacing = 04
-            layout.minimumLineSpacing = 04
-            layout.invalidateLayout()
-            collectionSizeType =    CGSize(width: ((self.view.frame.width/2) - 6), height: ((self.view.frame.width / 2) - 6))
-        }else{
-            
-        }
         setTopBar()
         setStoreRegister()
-         
+        setCollectionStyle(true)
     }
+    
     func setStoreRegister(){
         collectionView?.backgroundColor =  UIColor.init(named: "bg")
         collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseId)
@@ -60,27 +43,57 @@ class Store: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
           
         let logoImage = UIImage(named: "logoLeft")
         let logoImageView = UIImageView(image: logoImage)
-        logoImageView.frame = CGRect(x: -10, y: 0, width: 120, height: 44)
+        logoImageView.frame = CGRect(x: -10, y: -5, width: 120, height: 44)
         logoImageView.contentMode = .scaleAspectFit
         let logoView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         logoView.clipsToBounds = false
         logoView.addSubview(logoImageView)
         let logoItem = UIBarButtonItem(customView: logoView)
         navigationItem.leftBarButtonItem = logoItem
-        title = "Vitrin"
         
-        UINavigationBar.appearance().tintColor = .white
-        
-        let rightImage = UIImage(named: "store")
-        let rightImageView = UIImageView(image: rightImage)
-        rightImageView.frame = CGRect(x: -10, y: 0, width: 120, height: 44)
-        rightImageView.contentMode = .scaleAspectFit
-        let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
-        rightView.clipsToBounds = false
-        rightView.addSubview(rightImageView)
-        let rightItem = UIBarButtonItem(customView: rightView)
+        let button =  UIButton(type: .custom)
+        let store = resizeImage(image: UIImage.init(named: "un_store")!,width: 24,height: 24)
+        button.setImage(store, for: .normal)
+        button.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        button.addTarget(self, action: #selector(changeList), for: .touchUpInside)
+        let rightItem = UIBarButtonItem(customView: button)
+
         navigationItem.rightBarButtonItem = rightItem
          
+    }
+    @objc func changeList(sender:UIButton){
+        if sender.isTouchInside {
+            setCollectionStyle(sender.isTouchInside)
+        }
+    }
+    func setCollectionStyle(_ isShow:Bool){
+        
+        if isShowcase == true {
+            self.isShowcase = false
+            setTable()
+        }else if isShowcase == false  {
+            self.isShowcase = true
+            setCollection()
+        }
+    }
+    func setCollection(){
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.sectionInset = UIEdgeInsets(top: 6, left: 4, bottom: 6, right: 4)
+        layout.minimumInteritemSpacing = 04
+        layout.minimumLineSpacing = 04
+        layout.invalidateLayout()
+        collectionSizeType =    CGSize(width: ((self.view.frame.width ) - 6), height: 200)
+        collectionView.reloadData()
+    }
+    func setTable(){
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.sectionInset = UIEdgeInsets(top: 6, left: 4, bottom: 6, right: 4)
+        layout.minimumInteritemSpacing = 04
+        layout.minimumLineSpacing = 04
+        layout.invalidateLayout()
+        collectionSizeType =    CGSize(width: ((self.view.frame.width/2) - 6), height: ((self.view.frame.width / 2) - 6))
+        collectionView.reloadData()
     }
     func resizeImage(image: UIImage,width:Double,height:Double ) -> UIImage {
         let widthRatio  =  width
