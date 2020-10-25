@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import Network
 
 class Menu: UITabBarController ,UITabBarControllerDelegate{
     let dot = UIView()
@@ -29,6 +31,8 @@ class Menu: UITabBarController ,UITabBarControllerDelegate{
         setNavBar()
         
         setTabBar()
+        
+        setAuth()
     }
     func setNavBar() {
         
@@ -60,7 +64,7 @@ class Menu: UITabBarController ,UITabBarControllerDelegate{
         let user = setNav(unselected: unUserIcon, selected: UserIcon,title:"Bana Özel",root:Settings())
         
         
-        viewControllers = [store,search,addPost,services,user]
+        viewControllers = [search,store,addPost,services,user]
         tabBar.tintColor = .black
         
         print("test")
@@ -100,17 +104,15 @@ class Menu: UITabBarController ,UITabBarControllerDelegate{
         tabBar.backgroundImage =  tabImageView.image
         
     }
-    func setAuth(){ 
-        print("setAuth")
+    func setAuth(){
         if Network.isConnectedToNetwork()  {
-            print("isConnectedToNetwork")
             let parameters  = [ "route":"common/home/init"]
              defaultRequest.postParamsRequest( url:Config.isInit  , parameters: parameters , completion : { data in
                 DispatchQueue.main.async {
-                    print(data)
                     let res = data as? NSDictionary
                         if res!["userHash"]  != nil {
                             guard let userHash = res!["userHash"] as? String else {return}
+                            print("userHash",userHash)
                             UserDefaults.standard.set(userHash, forKey: "userHash")
                             
                         }

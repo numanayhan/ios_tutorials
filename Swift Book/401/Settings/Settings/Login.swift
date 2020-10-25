@@ -211,7 +211,7 @@ class Login: UIViewController ,UITextFieldDelegate{
         guard let pwd  = password.text  else { return }
         if Network.isConnectedToNetwork() == true {
             let parameters  = [ "userHash" : userHash,"email":email,"password":pwd]
-             defaultRequest.postParamsRequest( url:Config.isLogin  , parameters: parameters , completion : { data in
+             defaultRequest.postParamsRequest( url:Config.isInit  , parameters: parameters , completion : { data in
                 DispatchQueue.main.async {
                     let res = data as? NSDictionary
                     print(res)

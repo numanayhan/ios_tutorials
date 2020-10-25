@@ -47,13 +47,13 @@ class Settings: UIViewController {
          
     }
     override func viewWillAppear(_ animated: Bool) {
-        title = "Account"
+        title = " "
     }
     override func viewWillDisappear(_ animated: Bool) {
         title = " "
     }
     func setNavbar() {
-        title = "Account"
+        title = " "
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.barTintColor = headerColor
     }

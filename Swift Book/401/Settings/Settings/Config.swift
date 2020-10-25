@@ -11,8 +11,6 @@ import Foundation
 
 class Config {
     static let isInit = "https://www.satisgaranti.com/api/index.php?"
-    static let isLogin = "https://www.satisgaranti.com/api/index.php?"
     static let isRegister = ""
     static let isForgotPassword = ""
-    
 }
