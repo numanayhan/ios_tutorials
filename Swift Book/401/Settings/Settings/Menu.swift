@@ -23,7 +23,7 @@ class Menu: UITabBarController ,UITabBarControllerDelegate{
         self.delegate = self
          
         if (UserDefaults.standard.string(forKey: "ApplicationIdentifier") != nil){
-            print(UserDefaults.standard.string(forKey: "ApplicationIdentifier"))
+            print(UserDefaults.standard.string(forKey: "ApplicationIdentifier")!)
         }else{
             print("ApplicationIdentifier else ")
         }

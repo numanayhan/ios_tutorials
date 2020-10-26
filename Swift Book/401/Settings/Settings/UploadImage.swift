@@ -40,10 +40,8 @@ extension UploadImage: UIImagePickerControllerDelegate, UINavigationControllerDe
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         // selected image
-        guard let profileImage = info[.editedImage] as? UIImage else {
-            
-            return
-        }
+        guard let profileImage = info[.editedImage] as? UIImage else { return }
+        print(profileImage)
         // configure plusPhotoBtn with selected image
         self.dismiss(animated: true, completion: nil)
     }

@@ -165,7 +165,7 @@ struct PinLayoutSwizzling {
         if let view = viewController.view {
             let safeAreaInsets = UIEdgeInsets(top: viewController.topLayoutGuide.length, left: 0,
                                               bottom: viewController.bottomLayoutGuide.length, right: 0)
-
+ 
             // Set children safeArea up to 3 level, to limit the performance issue of computing this compatibilitySafeAreaInsets
             PinSafeArea.setViewSafeAreaInsets(view: view, insets: safeAreaInsets, recursiveLevel: 3)
         }

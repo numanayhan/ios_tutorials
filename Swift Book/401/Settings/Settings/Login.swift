@@ -214,11 +214,9 @@ class Login: UIViewController ,UITextFieldDelegate{
              defaultRequest.postParamsRequest( url:Config.isInit  , parameters: parameters , completion : { data in
                 DispatchQueue.main.async {
                     let res = data as? NSDictionary
-                    print(res)
+                    print(res!)
                         if res!["status"] as? Int != 200 {
-                            print(res!["status"])
                             guard let auth = res!["authorized"] as? Int else {return}
-                            print(auth)
                             if auth  == 1{
                                  UserDefaults.standard.set(false, forKey: "authorized")
                             }

@@ -25,9 +25,7 @@ class CategoriesProtocol {
         self.description = dictionary["description"] as? String
     }
 }
-class Search: UITableViewController, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
-   
-    
+class Search: UITableViewController, UISearchBarDelegate  {
     
     var refresher = UIRefreshControl()
     var searchBar = UISearchBar()
@@ -36,55 +34,33 @@ class Search: UITableViewController, UISearchBarDelegate, UICollectionViewDelega
     var collectionViewEnabled = true
     var defaultRequest = DefaultRequest()
     var categoriesList  = [CategoriesProtocol]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         setTopBar()
-        setCollectionView()
-        //setTableView()
+        setTableView()
         setCategoriesData()
         
     }
     func setTableView() {
-        
+         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CategoriesCell.self, forCellReuseIdentifier: reuseIdentifier)
-        
-
+        refresher.attributedTitle = NSAttributedString(string:"Yenileniyor",
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(named: "header")!])
+        refresher.addTarget(self, action: #selector(refreshResult), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+        tableView.allowsMultipleSelection = false
     }
-    
-    func setCollectionView() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        
-        let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - (tabBarController?.tabBar.frame.height)! - (navigationController?.navigationBar.frame.height)!)
-        
-        collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.alwaysBounceVertical = true
-        collectionView.backgroundColor = .white
-        collectionView.register(SearchCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
-        configureRefreshControl()
-        
-        tableView.addSubview(collectionView)
-        tableView.separatorColor = .clear
-    }
-    func configureRefreshControl() {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(refreshResult), for: .valueChanged)
-        self.tableView.refreshControl = refreshControl
-        
-    }
-    
     @objc func refreshResult(){
         print("refreshResult")
         tableView.reloadData()
-        
         refresher.endRefreshing()
+        
     }
     func setCategoriesData(){
         if (UserDefaults.standard.string(forKey: "userHash") != nil){
@@ -96,10 +72,9 @@ class Search: UITableViewController, UISearchBarDelegate, UICollectionViewDelega
                         let dataStatus:NSDictionary = data  as NSDictionary.Value as! NSDictionary
                        
                         if (dataStatus.object(forKey:"categories") != nil){
-                                    let categories : NSArray = dataStatus.object(forKey: "categories") as! NSArray
-                                    self.categoriesList = categories.compactMap{return CategoriesProtocol(($0 as? [String : AnyObject])!)}
-                                    self.collectionView.reloadData()
-                                
+                            let categories : NSArray = dataStatus.object(forKey: "categories") as! NSArray
+                            self.categoriesList = categories.compactMap{return CategoriesProtocol(($0 as? [String : AnyObject])!)}
+                            self.tableView.reloadData()
                         }else{
                             //server error
                         }
@@ -108,37 +83,19 @@ class Search: UITableViewController, UISearchBarDelegate, UICollectionViewDelega
             }else{
                 //network error
                 print("network not available")
+                setNotify(text: "İnternet bağlantınız kontrol ediniz")
             }
-            
         }
        
     }
-     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 1
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoriesList.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? SearchCell
-        cell?.thumbView.image = UIImage.init(named: "un_store")
-        
-        return cell!
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (view.frame.width - 2) / 3
-        return CGSize(width: width, height: width)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        print("willDisplay")
+    func setNotify(text:String){
+        let alert = UIAlertController(title: "Satış Garanti", message: text, preferredStyle: .alert)
+        alert.modalPresentationStyle = .overCurrentContext
+        self.present(alert, animated: true) 
+        let duration: Double = 1.2
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+            alert.dismiss(animated: true)
+        }
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return SearchSection.allCases.count
@@ -171,7 +128,7 @@ class Search: UITableViewController, UISearchBarDelegate, UICollectionViewDelega
         if section == 0 {
             viewHeader.frame = CGRect.init(x: 0, y: 0, width: viewHeader.frame.width, height: 50)
             viewHeader.addSubview(searchBar)
-            searchBar.anchor(top: viewHeader.topAnchor, left: viewHeader.leftAnchor   , bottom: nil, right: viewHeader.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: viewHeader.frame.width, height:  50)
+            searchBar.anchor(top: viewHeader.topAnchor, left: viewHeader.leftAnchor   , bottom: nil, right: viewHeader.rightAnchor, paddingTop: 5, paddingLeft:5, paddingBottom: 0, paddingRight:5, width: viewHeader.frame.width, height:  60)
             searchBar.delegate = self
         }else{
             let title = UILabel()
@@ -207,22 +164,23 @@ class Search: UITableViewController, UISearchBarDelegate, UICollectionViewDelega
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier:  reuseIdentifier, for: indexPath) as? CategoriesCell {
+                
            if (categoriesList.count   > 0) {
-            print(categoriesList[indexPath.row].name)
-            cell.title.text = categoriesList[indexPath.row].name
+            cell.titleText.text = categoriesList[indexPath.row].name
             cell.accessoryType = .disclosureIndicator
-            
             return cell
            }
-        
-    }
-     return UITableViewCell()
+        }
+      return UITableViewCell()
     }
     func setTopBar(){
+        
         setLeftItems()
         setSearchBar()
+        
     }
     func setLeftItems(){
+        
         let logoImage = UIImage(named: "logoLeft")
         let logoImageView = UIImageView(image: logoImage)
         logoImageView.frame = CGRect(x: -10, y: -5, width: 120, height: 44)
@@ -232,14 +190,10 @@ class Search: UITableViewController, UISearchBarDelegate, UICollectionViewDelega
         logoView.addSubview(logoImageView)
         let logoItem = UIBarButtonItem(customView: logoView)
         navigationItem.leftBarButtonItem = logoItem
-        
     }
     func setSearchBar(){
-        
         let searchTextField: UITextField
-        
         searchTextField = (searchBar.value(forKey: "searchField") as? UITextField) ?? UITextField()
-     
         if let systemPlaceholderLabel = searchTextField.value(forKey: "placeholderLabel") as? UILabel {
             let placeholderLabel = UILabel(frame: .zero)
             placeholderLabel.text = "Kelime veya İlan No ile Ara"
@@ -256,11 +210,13 @@ class Search: UITableViewController, UISearchBarDelegate, UICollectionViewDelega
         } else {
             searchBar.placeholder = "Kelime veya İlan No ile Ara"
         }
-        searchBar.tintColor = UIColor.init(named: "header")
-        refresher.attributedTitle = NSAttributedString(string:"Yenileniyor",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(named: "header")!])
-        refresher.addTarget(self, action: #selector(refreshResult), for: UIControl.Event.valueChanged)
-        tableView.addSubview(refresher)
+        searchBar.backgroundColor = UIColor.white
+        searchBar.backgroundImage = UIImage()
+        searchTextField.backgroundColor = UIColor.init(named: "search")
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 50
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
        print("clear list")
@@ -275,63 +231,43 @@ class Search: UITableViewController, UISearchBarDelegate, UICollectionViewDelega
         print("end")
     }
 }
- 
-class SearchCell: UICollectionViewCell{
-    let thumbView : UIImageView = {
-       let image  = UIImageView()
-        image.backgroundColor = UIColor.init(named: "border")
-        image.translatesAutoresizingMaskIntoConstraints = true
-        return image
-    }()
-    var id : String?
-    override  init(frame:CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-    func setupViews(){
-        addSubview(thumbView)
-        thumbView.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: nil, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: self.contentView.frame.width*25, height: contentView.frame.height)
-        thumbView.clipsToBounds = true
-        thumbView.contentMode = .scaleAspectFill
-    
-    }
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
 class  CategoriesCell: UITableViewCell {
-    let categoryView : UIView = {
+    
+    lazy var categoryView : UIView = {
        let view  = UIView()
-        view.backgroundColor = .red
         view.translatesAutoresizingMaskIntoConstraints = true
         return view
     }()
-    let title : UILabel = {
-        let title  =  UILabel()
-        title.textColor = UIColor.init(named: "header")
-        title.textAlignment = .left
-        title.font = UIFont.systemFont(ofSize: 14)
-        return title
+    
+    lazy var titleText : UILabel = {
+        let titleText  =  UILabel()
+        titleText.textColor = UIColor.black
+        titleText.textAlignment = .left
+        return titleText
     }()
-    let iconView: UIImageView = {
+    lazy var iconView: UIImageView = {
        let icon = UIImageView()
         icon.contentMode = .scaleAspectFill
         icon.translatesAutoresizingMaskIntoConstraints = true
         icon.image = UIImage.init(named: "un_store")
         return icon
     }()
-    
     var id : String?
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        contentView.backgroundColor = .red
+        categoryView.addSubview(titleText)
+        titleText.anchor(top: categoryView.topAnchor, left: categoryView.leftAnchor, bottom: nil, right: categoryView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: categoryView.frame.width , height: categoryView.frame.height)
+        
+        addSubview(categoryView)
+        categoryView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: self.contentView.frame.width, height: self.contentView.frame.height)
         
         
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        if  isHighlighted{
+            contentView.backgroundColor   =  UIColor.init(named: "bar")
+        }
     }
 }
