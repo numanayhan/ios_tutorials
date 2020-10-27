@@ -10,6 +10,10 @@ target 'Settings' do
   pod 'IQKeyboardManagerSwift'
   pod 'PinLayout'
   pod 'CustomUISwitch'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
+
   # Pods for Settings
 
 end

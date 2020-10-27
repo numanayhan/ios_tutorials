@@ -110,7 +110,6 @@ class Store: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
                             cell.title.text = self.storeList[indexPath.row].name!.uppercased()
                             cell.id = self.storeList[indexPath.row].id
                             activityView.stopAnimating()
-                            
                         }
                     }
                 }

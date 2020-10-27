@@ -10,7 +10,20 @@ import UIKit
 import Alamofire
 import AlamofireImage
 import Network
-private let reuseIdentifier = "Categories"
+struct Categories {
+    var id : Int?
+    var name:String?
+    var total:String?
+    var icon:String?
+    var description:String?
+    init(id : Int,name:String,total:String,icon:String,description:String) {
+        self.id = id
+        self.name = name
+        self.total = total
+        self.icon = icon
+        self.description = description
+    }
+}
 class CategoriesProtocol {
     var id : String?
     var name:String?
@@ -25,44 +38,57 @@ class CategoriesProtocol {
         self.description = dictionary["description"] as? String
     }
 }
-class Search: UITableViewController, UISearchBarDelegate  {
+class Search: UIViewController, UISearchBarDelegate  {
     
     var refresher = UIRefreshControl()
     var searchBar = UISearchBar()
     var inSearchMode = false
-    var collectionView: UICollectionView!
-    var collectionViewEnabled = true
     var defaultRequest = DefaultRequest()
     var categoriesList  = [CategoriesProtocol]()
+    var collectionSizeType:CGSize? = CGSize.init(width: 24, height: 24)
+     
+    lazy var tableViews: UITableView = {
+        let tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: "SearchTableViewCell")
+        tableView.tableFooterView = UIView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
     
+    var categories = [Categories]()
     
+    var titles: [String] = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"]
+       
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        categories.append(Categories(id: 1, name: "EMLAK", total: "102", icon: "store", description: "KATEGORİ DETAYLARI"))
+        categories.append(Categories(id: 2, name: "ARABA", total: "103", icon: "store", description: "KATEGORİ DETAYLARI"))
+          
+        self.view.addSubview(tableViews)
+        NSLayoutConstraint.activate([
+            tableViews.widthAnchor.constraint(equalTo: self.view.widthAnchor),
+            tableViews.heightAnchor.constraint(equalTo: self.view.heightAnchor)
+        ])
         view.backgroundColor = .white
-        setTopBar()
-        setTableView()
+        setLeftItems()
+        setSearchBar()
         setCategoriesData()
         
     }
-    func setTableView() {
-         
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(CategoriesCell.self, forCellReuseIdentifier: reuseIdentifier)
-        refresher.attributedTitle = NSAttributedString(string:"Yenileniyor",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(named: "header")!])
-        refresher.addTarget(self, action: #selector(refreshResult), for: .valueChanged)
-        tableView.refreshControl = refreshControl
-        tableView.allowsMultipleSelection = false
-    }
-    @objc func refreshResult(){
-        print("refreshResult")
-        tableView.reloadData()
-        refresher.endRefreshing()
-        
-    }
-    func setCategoriesData(){
+//    func setTableView() {
+//        tableViews.delegate = self
+//        tableViews.dataSource = self
+//        tableViews.register(SearchTableViewCell.self, forCellReuseIdentifier: "SearchTableViewCell")
+//        refresher.attributedTitle = NSAttributedString(string:"Yenileniyor",
+//        attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(named: "header")!])
+//        refresher.addTarget(self, action: #selector(setCategoriesData), for: .valueChanged)
+//        tableViews.refreshControl = refreshControl
+//        tableViews.allowsMultipleSelection = false
+//    }
+    @objc func setCategoriesData(){
         if (UserDefaults.standard.string(forKey: "userHash") != nil){
             let  userHash = UserDefaults.standard.string(forKey: "userHash")!
             let parameters  = [  "route" : "advert/category/sub_categories" ,"userHash":userHash ]
@@ -74,19 +100,17 @@ class Search: UITableViewController, UISearchBarDelegate  {
                         if (dataStatus.object(forKey:"categories") != nil){
                             let categories : NSArray = dataStatus.object(forKey: "categories") as! NSArray
                             self.categoriesList = categories.compactMap{return CategoriesProtocol(($0 as? [String : AnyObject])!)}
-                            self.tableView.reloadData()
+                            self.tableViews.reloadData()
                         }else{
-                            //server error
+                            self.setNotify(text: "Sunucu ile bağlantınız kontrol ediniz")
                         }
                     }
                 }
             }else{
-                //network error
-                print("network not available")
-                setNotify(text: "İnternet bağlantınız kontrol ediniz")
+                self.setNotify(text: "İnternet bağlantınız kontrol ediniz")
             }
         }
-       
+        refresher.endRefreshing()
     }
     func setNotify(text:String){
         let alert = UIAlertController(title: "Satış Garanti", message: text, preferredStyle: .alert)
@@ -97,88 +121,7 @@ class Search: UITableViewController, UISearchBarDelegate  {
             alert.dismiss(animated: true)
         }
     }
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return SearchSection.allCases.count
-    }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        guard let section = SearchSection(rawValue: section) else {return 0}
-        switch  section {
-        case .categories:
-            return categoriesList.count
-        case .emergency:
-            return 1
-        case .interested:
-            return 1
-        case .near:
-            return 1
-        case .lastSearch:
-            return 1
-        case .lastVisit:
-            return 1
-        }
-    }
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let viewHeader = UIView()
-        viewHeader.layer.borderWidth = 0.5
-        viewHeader.backgroundColor = .white
-        viewHeader.layer.borderColor = UIColor.init(white: 1.0, alpha: 1.0).cgColor
-       
-        if section == 0 {
-            viewHeader.frame = CGRect.init(x: 0, y: 0, width: viewHeader.frame.width, height: 50)
-            viewHeader.addSubview(searchBar)
-            searchBar.anchor(top: viewHeader.topAnchor, left: viewHeader.leftAnchor   , bottom: nil, right: viewHeader.rightAnchor, paddingTop: 5, paddingLeft:5, paddingBottom: 0, paddingRight:5, width: viewHeader.frame.width, height:  60)
-            searchBar.delegate = self
-        }else{
-            let title = UILabel()
-            title.font = UIFont.systemFont(ofSize:16)
-            title.text = SearchSection(rawValue: section)?.description
-            title.text = title.text!.uppercased()
-            title.textColor = UIColor.init(named: "header")
-            viewHeader.addSubview(title)
-            title.translatesAutoresizingMaskIntoConstraints  = false
-            title.bottomAnchor.constraint(equalTo: viewHeader.bottomAnchor,constant: -4).isActive = true
-            title.leftAnchor.constraint(equalTo: viewHeader.leftAnchor,constant: 16).isActive = true
-            
-        }
-        
-      return viewHeader
-    }
-    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        print("editing")
-        searchBar.text?.removeAll()
-        return true
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        tableView.endEditing(true)
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 {
-          return 80
-        }
-        return 30
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if let cell = tableView.dequeueReusableCell(withIdentifier:  reuseIdentifier, for: indexPath) as? CategoriesCell {
-                
-           if (categoriesList.count   > 0) {
-            cell.titleText.text = categoriesList[indexPath.row].name
-            cell.accessoryType = .disclosureIndicator
-            return cell
-           }
-        }
-      return UITableViewCell()
-    }
-    func setTopBar(){
-        
-        setLeftItems()
-        setSearchBar()
-        
-    }
+   
     func setLeftItems(){
         
         let logoImage = UIImage(named: "logoLeft")
@@ -190,6 +133,7 @@ class Search: UITableViewController, UISearchBarDelegate  {
         logoView.addSubview(logoImageView)
         let logoItem = UIBarButtonItem(customView: logoView)
         navigationItem.leftBarButtonItem = logoItem
+        
     }
     func setSearchBar(){
         let searchTextField: UITextField
@@ -214,60 +158,47 @@ class Search: UITableViewController, UISearchBarDelegate  {
         searchBar.backgroundImage = UIImage()
         searchTextField.backgroundColor = UIColor.init(named: "search")
     }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 50
-    }
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-       print("clear list")
-    }
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-       print("search")
-    }
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        print("begin")
-    }
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        print("end")
-    }
+    
 }
-class  CategoriesCell: UITableViewCell {
-    
-    lazy var categoryView : UIView = {
-       let view  = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = true
-        return view
-    }()
-    
-    lazy var titleText : UILabel = {
-        let titleText  =  UILabel()
-        titleText.textColor = UIColor.black
-        titleText.textAlignment = .left
-        return titleText
-    }()
-    lazy var iconView: UIImageView = {
-       let icon = UIImageView()
-        icon.contentMode = .scaleAspectFill
-        icon.translatesAutoresizingMaskIntoConstraints = true
-        icon.image = UIImage.init(named: "un_store")
-        return icon
-    }()
-    var id : String?
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        categoryView.addSubview(titleText)
-        titleText.anchor(top: categoryView.topAnchor, left: categoryView.leftAnchor, bottom: nil, right: categoryView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: categoryView.frame.width , height: categoryView.frame.height)
-        
-        addSubview(categoryView)
-        categoryView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: self.contentView.frame.width, height: self.contentView.frame.height)
-        
-        
-    }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        if  isHighlighted{
-            contentView.backgroundColor   =  UIColor.init(named: "bar")
+extension Search : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return titles.count
         }
-    }
+        
+        func numberOfSections(in tableView: UITableView) -> Int {
+            return 1
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as! SearchTableViewCell
+            cell.titleLabel.text = titles[indexPath.row]
+            return cell
+        }
+    
+    
 }
+class SearchTableViewCell: UITableViewCell {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    override func layoutSubviews() {
+        setupUI()
+    }
+    lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "HelveticaNeue", size: 20)
+        label.textColor = .systemBlue
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    private func setupUI() {
+     self.contentView.addSubview(titleLabel)
+     NSLayoutConstraint.activate([
+          titleLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),
+     ])
+   }
+}
+ 
