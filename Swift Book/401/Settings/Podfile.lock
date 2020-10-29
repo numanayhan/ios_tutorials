@@ -3,9 +3,20 @@ PODS:
   - AlamofireImage (3.5.2):
     - Alamofire (~> 4.8)
   - CustomUISwitch (0.0.1)
+  - Differentiator (4.0.1)
   - IQKeyboardManagerSwift (6.5.6)
   - PinLayout (1.9.2)
   - QorumLogs (0.9)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
@@ -14,24 +25,37 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - PinLayout
   - QorumLogs
+  - RxCocoa
+  - RxDataSources
+  - RxSwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
     - CustomUISwitch
+    - Differentiator
     - IQKeyboardManagerSwift
     - PinLayout
     - QorumLogs
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
   CustomUISwitch: 2076af90de425af11cc7631dda40bc441e707b0f
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   PinLayout: 0d96022e46e8b80468d819f182a393b97ca038da
   QorumLogs: 9a484df6973a3697ac79fe2273140fde6b36dccc
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 9f602379546326036c16abb165fce5b0ba0aa7ac
+PODFILE CHECKSUM: ef4ed5f600903592fd0d66b2ed38b954b95925d8
 
 COCOAPODS: 1.9.3

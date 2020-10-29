@@ -58,7 +58,7 @@ class Settings: UIViewController {
         navigationController?.navigationBar.barTintColor = headerColor
     }
     func setTableView() {
-        tableView = UITableView()
+        tableView = UITableView(frame: .infinite, style: .grouped)
         tableView.backgroundColor = headerColor
         tableView.delegate = self
         tableView.dataSource = self

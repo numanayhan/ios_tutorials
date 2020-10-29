@@ -10,6 +10,9 @@ import UIKit
 import Alamofire
 import AlamofireImage
 import Network
+import RxSwift
+import RxCocoa
+
 struct Categories {
     var id : Int?
     var name:String?
@@ -58,25 +61,29 @@ class Search: UIViewController, UISearchBarDelegate  {
     }()
     
     var categories = [Categories]()
+    var shownTitles = [String]()
+    let disposeBag = DisposeBag()
+    var shownCities = [String]() // Data source for UITableView
+    let allCities = ["New York", "London", "Oslo", "Warsaw", "Berlin", "Praga"] // Our mocked API data source
     
-    var titles: [String] = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"]
-       
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categories.append(Categories(id: 1, name: "EMLAK", total: "102", icon: "store", description: "KATEGORİ DETAYLARI"))
-        categories.append(Categories(id: 2, name: "ARABA", total: "103", icon: "store", description: "KATEGORİ DETAYLARI"))
-          
+        tableViews.tableHeaderView = searchBar
+        
         self.view.addSubview(tableViews)
         NSLayoutConstraint.activate([
             tableViews.widthAnchor.constraint(equalTo: self.view.widthAnchor),
             tableViews.heightAnchor.constraint(equalTo: self.view.heightAnchor)
         ])
         view.backgroundColor = .white
-        setLeftItems()
-        setSearchBar()
-        setCategoriesData()
         
+        setSearchBar()
+        setLeftItems()
+        setCategoriesData()
+         
+         
     }
 //    func setTableView() {
 //        tableViews.delegate = self
@@ -96,7 +103,6 @@ class Search: UIViewController, UISearchBarDelegate  {
                 defaultRequest.getParamsRequest(url: Config.isInit, parameters: parameters) { data in
                     DispatchQueue.main.async {
                         let dataStatus:NSDictionary = data  as NSDictionary.Value as! NSDictionary
-                       
                         if (dataStatus.object(forKey:"categories") != nil){
                             let categories : NSArray = dataStatus.object(forKey: "categories") as! NSArray
                             self.categoriesList = categories.compactMap{return CategoriesProtocol(($0 as? [String : AnyObject])!)}
@@ -157,12 +163,13 @@ class Search: UIViewController, UISearchBarDelegate  {
         searchBar.backgroundColor = UIColor.white
         searchBar.backgroundImage = UIImage()
         searchTextField.backgroundColor = UIColor.init(named: "search")
+        tableViews.tableHeaderView = searchBar
     }
     
 }
 extension Search : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return titles.count
+        return shownCities.count
         }
         
         func numberOfSections(in tableView: UITableView) -> Int {
@@ -171,13 +178,23 @@ extension Search : UITableViewDelegate, UITableViewDataSource{
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as! SearchTableViewCell
-            cell.titleLabel.text = titles[indexPath.row]
+            cell.titleLabel.text = shownCities[indexPath.row]
             return cell
         }
-    
-    
 }
 class SearchTableViewCell: UITableViewCell {
+    lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "HelveticaNeue", size: 20)
+        label.textColor = .systemBlue
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    lazy var iconThumb: UIImageView = {
+       let icon = UIImageView()
+        
+        return icon
+    }()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
@@ -187,18 +204,15 @@ class SearchTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         setupUI()
     }
-    lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "HelveticaNeue", size: 20)
-        label.textColor = .systemBlue
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    
     private func setupUI() {
+        
+    
+     self.contentView.addSubview(iconThumb)
+        iconThumb.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 50, height: 50)
+        
      self.contentView.addSubview(titleLabel)
-     NSLayoutConstraint.activate([
-          titleLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),
-     ])
+        iconThumb.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 50, height: 50)
    }
 }
  
