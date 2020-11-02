@@ -49,17 +49,14 @@ class Search: UIViewController, UISearchBarDelegate  {
     var defaultRequest = DefaultRequest()
     var categoriesList  = [CategoriesProtocol]()
     var collectionSizeType:CGSize? = CGSize.init(width: 24, height: 24)
-     
-    lazy var tableViews: UITableView = {
-        let tableView = UITableView()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: "SearchTableViewCell")
-        tableView.tableFooterView = UIView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
+    let headerColor = UIColor.init(named: "headerBar")
+    var tableViews: UITableView = {
+       let tableView = UITableView()
+        
         return tableView
     }()
-    
+    let searchBarView = UIView()
+    var isSearch:Bool = false
     var categories = [Categories]()
     var shownTitles = [String]()
     let disposeBag = DisposeBag()
@@ -70,31 +67,17 @@ class Search: UIViewController, UISearchBarDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableViews.tableHeaderView = searchBar
         
-        self.view.addSubview(tableViews)
-        NSLayoutConstraint.activate([
-            tableViews.widthAnchor.constraint(equalTo: self.view.widthAnchor),
-            tableViews.heightAnchor.constraint(equalTo: self.view.heightAnchor)
-        ])
+        setSearch()
+       
+    }
+    func setSearch(){
         view.backgroundColor = .white
         
-        setSearchBar()
         setLeftItems()
+        setTableView()
         setCategoriesData()
-         
-         
     }
-//    func setTableView() {
-//        tableViews.delegate = self
-//        tableViews.dataSource = self
-//        tableViews.register(SearchTableViewCell.self, forCellReuseIdentifier: "SearchTableViewCell")
-//        refresher.attributedTitle = NSAttributedString(string:"Yenileniyor",
-//        attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(named: "header")!])
-//        refresher.addTarget(self, action: #selector(setCategoriesData), for: .valueChanged)
-//        tableViews.refreshControl = refreshControl
-//        tableViews.allowsMultipleSelection = false
-//    }
     @objc func setCategoriesData(){
         if (UserDefaults.standard.string(forKey: "userHash") != nil){
             let  userHash = UserDefaults.standard.string(forKey: "userHash")!
@@ -102,11 +85,12 @@ class Search: UIViewController, UISearchBarDelegate  {
             if Network.isConnectedToNetwork() == true {
                 defaultRequest.getParamsRequest(url: Config.isInit, parameters: parameters) { data in
                     DispatchQueue.main.async {
+                        print("search",data)
                         let dataStatus:NSDictionary = data  as NSDictionary.Value as! NSDictionary
                         if (dataStatus.object(forKey:"categories") != nil){
                             let categories : NSArray = dataStatus.object(forKey: "categories") as! NSArray
                             self.categoriesList = categories.compactMap{return CategoriesProtocol(($0 as? [String : AnyObject])!)}
-                            self.tableViews.reloadData()
+                             
                         }else{
                             self.setNotify(text: "Sunucu ile bağlantınız kontrol ediniz")
                         }
@@ -127,7 +111,6 @@ class Search: UIViewController, UISearchBarDelegate  {
             alert.dismiss(animated: true)
         }
     }
-   
     func setLeftItems(){
         
         let logoImage = UIImage(named: "logoLeft")
@@ -141,7 +124,8 @@ class Search: UIViewController, UISearchBarDelegate  {
         navigationItem.leftBarButtonItem = logoItem
         
     }
-    func setSearchBar(){
+    func setSearchHeaderBar(){
+        
         let searchTextField: UITextField
         searchTextField = (searchBar.value(forKey: "searchField") as? UITextField) ?? UITextField()
         if let systemPlaceholderLabel = searchTextField.value(forKey: "placeholderLabel") as? UILabel {
@@ -163,26 +147,163 @@ class Search: UIViewController, UISearchBarDelegate  {
         searchBar.backgroundColor = UIColor.white
         searchBar.backgroundImage = UIImage()
         searchTextField.backgroundColor = UIColor.init(named: "search")
-        tableViews.tableHeaderView = searchBar
+        
+        searchBarView.backgroundColor = .lightGray
+        tableViews.frame = CGRect.init(x: 0, y: 0, width: view.frame.width, height: view.frame.height  )
+        tableViews.tableHeaderView?.frame = CGRect.init(x: 0, y: 0, width: view.frame.width, height: 50  )
+        tableViews.tableHeaderView = searchBarView
+        tableViews.sectionHeaderHeight = searchBarView.frame.height
+        
     }
+     
+    func setTableView() {
+        
+        tableViews = UITableView(frame: .infinite, style: .grouped)
+        tableViews.backgroundColor = UIColor.white
+        tableViews.delegate = self
+        tableViews.dataSource = self
+        tableViews.register(SettingCell.self, forCellReuseIdentifier: "SearchCell")
+        view.addSubview(tableViews)
+        tableViews.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: view.frame.width, height: view.frame.height)
+        //HEADER AND SEARCH
+        setSearchHeaderBar()
+        
+        //tableViews.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 120))
+        
+        
+    }
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        print("editing")
+        isSearch = true
+        searchBar.text?.removeAll()
+        return true
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+       print("clear list")
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+       print("search")
+    }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        print("begin")
+    }
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        print("end")
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        tableViews.endEditing(true)
+    }
+    
     
 }
 extension Search : UITableViewDelegate, UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return SearchSection.allCases.count
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        return " "
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        guard let section = SearchSection(rawValue: section) else {return 0}
+        switch  section {
+        case .search:
+            return 50
+        case .categories:
+            return 0
+        case .emergency:
+            return 0
+        case .interested:
+            return 0
+        case .near:
+            return 0
+        case .lastSearch:
+            return 0
+        case .lastVisit:
+            return 0
+        }
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shownCities.count
+        guard let section = SearchSection(rawValue: section) else {return 0}
+        switch  section {
+        case .search:
+            return Searching.allCases.count
+        case .categories:
+            return 0//categoriesList.count
+        case .emergency:
+            return 0//EmergencySection.allCases.count
+        case .interested:
+            return 0
+        case .near:
+            return 0
+        case .lastSearch:
+            return 0
+        case .lastVisit:
+            return 0
         }
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let viewHeader = UIView()
+        viewHeader.layer.borderWidth = 0.5
+        viewHeader.backgroundColor = headerColor
+        viewHeader.layer.borderColor = UIColor.init(white: 0.7, alpha: 1.0).cgColor
         
-        func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
+        if section == 0 {
+            
+            viewHeader.addSubview(searchBar)
+            searchBar.anchor(top: viewHeader.topAnchor, left: viewHeader.leftAnchor   , bottom: viewHeader.bottomAnchor, right: viewHeader.rightAnchor, paddingTop: 0, paddingLeft:0, paddingBottom: 0, paddingRight:0, width: viewHeader.frame.width, height:  searchBar.frame.height)
+            
+        }else if section != 0 {
+            
+            let title = UILabel()
+            title.font = UIFont.systemFont(ofSize:16)
+            title.text = SearchSection(rawValue: section)?.description
+            title.text = title.text!.uppercased()
+            title.textColor = UIColor.init(named: "header")
+            viewHeader.addSubview(title)
+            title.translatesAutoresizingMaskIntoConstraints  = false
+            title.bottomAnchor.constraint(equalTo: viewHeader.bottomAnchor,constant: -4).isActive = true
+            title.leftAnchor.constraint(equalTo: viewHeader.leftAnchor,constant: 16).isActive = true
         }
+        searchBar.delegate  = self
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as! SearchTableViewCell
-            cell.titleLabel.text = shownCities[indexPath.row]
-            return cell
-        }
+       
+        /*let viewHeader = UIView()
+        viewHeader.layer.borderWidth = 0.5
+        viewHeader.backgroundColor = .white
+        viewHeader.layer.borderColor = UIColor.init(white: 1.0, alpha: 1.0).cgColor
+         
+        if section == 0 {
+            viewHeader.frame = CGRect.init(x: 0, y: 0, width: viewHeader.frame.width, height: 50)
+            viewHeader.addSubview(searchBar)
+            searchBar.anchor(top: viewHeader.topAnchor, left: viewHeader.leftAnchor   , bottom: nil, right: viewHeader.rightAnchor, paddingTop: 5, paddingLeft:5, paddingBottom: 0, paddingRight:5, width: viewHeader.frame.width, height:  50)
+            searchBar.delegate = self
+        }else{
+            let title = UILabel()
+            title.font = UIFont.systemFont(ofSize:16)
+            title.text = SearchSection(rawValue: section)?.description
+            title.text = title.text!.uppercased()
+            title.textColor = UIColor.init(named: "header")
+            viewHeader.addSubview(title)
+            title.translatesAutoresizingMaskIntoConstraints  = false
+            title.bottomAnchor.constraint(equalTo: viewHeader.bottomAnchor,constant: -4).isActive = true
+            title.leftAnchor.constraint(equalTo: viewHeader.leftAnchor,constant: 16).isActive = true
+            
+        }*/
+        
+      return viewHeader
+
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            //let cell = tableViews.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell
+            //cell.titleLabel.text = shownCities[indexPath.row].description
+        return UITableViewCell()
+    }
+    
 }
-class SearchTableViewCell: UITableViewCell {
+
+class SearchCell: UITableViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "HelveticaNeue", size: 20)
@@ -205,9 +326,7 @@ class SearchTableViewCell: UITableViewCell {
         setupUI()
     }
     
-    private func setupUI() {
-        
-    
+    private func setupUI() { 
      self.contentView.addSubview(iconThumb)
         iconThumb.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 50, height: 50)
         

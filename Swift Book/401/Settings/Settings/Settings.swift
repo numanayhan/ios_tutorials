@@ -73,6 +73,8 @@ class Settings: UIViewController {
 }
 
 extension Settings: UITableViewDelegate, UITableViewDataSource {
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return SettingSection.allCases.count
     }

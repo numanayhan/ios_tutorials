@@ -139,6 +139,7 @@ class Store: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
         logoView.addSubview(logoImageView)
         let logoItem = UIBarButtonItem(customView: logoView)
         navigationItem.leftBarButtonItem = logoItem
+        //Center Item LOGO
         
     }
     func setRightItem(_ isTable:Bool){

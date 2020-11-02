@@ -107,14 +107,13 @@ class Menu: UITabBarController ,UITabBarControllerDelegate{
     func setAuth(){
         if Network.isConnectedToNetwork()  {
             let parameters  = [ "route":"common/home/init"]
+            //FCMToken,OneSignalToken
              defaultRequest.postParamsRequest( url:Config.isInit  , parameters: parameters , completion : { data in
                 DispatchQueue.main.async {
                     let res = data as? NSDictionary
                         if res!["userHash"]  != nil {
                             guard let userHash = res!["userHash"] as? String else {return}
-                            print("userHash",userHash)
                             UserDefaults.standard.set(userHash, forKey: "userHash")
-                            
                         }
                 }
             })

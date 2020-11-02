@@ -8,6 +8,7 @@
 
 import Foundation
 enum SearchSection: Int,CaseIterable,CustomStringConvertible{
+    case search
     case categories
     case emergency
     case interested
@@ -16,6 +17,7 @@ enum SearchSection: Int,CaseIterable,CustomStringConvertible{
     case lastVisit 
     var description: String{
         switch self{
+          case .search: return ""
           case .categories : return " ARAMA"
           case .emergency : return "ACİL"
           case .interested : return "İLGİLENEBİLECEĞİNİZ İLANLAR"
@@ -25,4 +27,44 @@ enum SearchSection: Int,CaseIterable,CustomStringConvertible{
         }
     }
     
+}
+enum Searching : Int,CaseIterable,CustomStringConvertible{
+      
+    case title
+       var description: String{
+           switch self{
+           case .title : return ""
+       }
+    }
+}
+enum CategoriesSection : Int,CaseIterable,CustomStringConvertible{
+      
+    case title
+       var description: String{
+           switch self{
+           case .title : return ""
+       }
+    }
+}
+enum EmergencySection : Int,CaseIterable,CustomStringConvertible{
+    
+    case emergency
+    case fallingPrice
+    case last48hours
+       var description: String{
+           switch self{
+           case .emergency : return "ACİL ACİL"
+           case .fallingPrice : return "FİYATI DÜŞENLER"
+           case . last48hours : return "SON 48 SAAT"
+       }
+    }
+}
+enum interestedSection: Int,CaseIterable,CustomStringConvertible{
+    
+    case title
+       var description: String{
+           switch self{
+           case .title : return "İLGİLENEBİLECEĞİNİZ "
+       }
+    }
 }
