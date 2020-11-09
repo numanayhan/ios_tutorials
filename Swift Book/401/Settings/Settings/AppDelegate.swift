@@ -19,10 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController =  Menu() 
-        
+        window?.rootViewController =  Menu()
         attemptToRegisterForNotifications(application: application)
-         
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText =  "TAMAM"
         

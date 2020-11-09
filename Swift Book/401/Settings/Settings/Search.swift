@@ -41,6 +41,9 @@ class CategoriesProtocol {
         self.description = dictionary["description"] as? String
     }
 }
+
+private let reuseIdentifier = "SearchCell"
+
 class Search: UIViewController, UISearchBarDelegate  {
     
     var refresher = UIRefreshControl()
@@ -48,11 +51,11 @@ class Search: UIViewController, UISearchBarDelegate  {
     var inSearchMode = false
     var defaultRequest = DefaultRequest()
     var categoriesList  = [CategoriesProtocol]()
+    var storeList  = [StoreProtocol]()
     var collectionSizeType:CGSize? = CGSize.init(width: 24, height: 24)
     let headerColor = UIColor.init(named: "headerBar")
     var tableViews: UITableView = {
        let tableView = UITableView()
-        
         return tableView
     }()
     let searchBarView = UIView()
@@ -60,22 +63,18 @@ class Search: UIViewController, UISearchBarDelegate  {
     var categories = [Categories]()
     var shownTitles = [String]()
     let disposeBag = DisposeBag()
-    var shownCities = [String]() // Data source for UITableView
-    let allCities = ["New York", "London", "Oslo", "Warsaw", "Berlin", "Praga"] // Our mocked API data source
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        CheckBox().isChecked = true
         
         setSearch()
-       
     }
     func setSearch(){
         view.backgroundColor = .white
-        
         setLeftItems()
-        setTableView()
+        
         setCategoriesData()
     }
     @objc func setCategoriesData(){
@@ -86,11 +85,12 @@ class Search: UIViewController, UISearchBarDelegate  {
                 defaultRequest.getParamsRequest(url: Config.isInit, parameters: parameters) { data in
                     DispatchQueue.main.async {
                         print("search",data)
+                        self.setTableView()
                         let dataStatus:NSDictionary = data  as NSDictionary.Value as! NSDictionary
                         if (dataStatus.object(forKey:"categories") != nil){
                             let categories : NSArray = dataStatus.object(forKey: "categories") as! NSArray
                             self.categoriesList = categories.compactMap{return CategoriesProtocol(($0 as? [String : AnyObject])!)}
-                             
+                            self.tableViews.reloadData()
                         }else{
                             self.setNotify(text: "Sunucu ile bağlantınız kontrol ediniz")
                         }
@@ -162,15 +162,11 @@ class Search: UIViewController, UISearchBarDelegate  {
         tableViews.backgroundColor = UIColor.white
         tableViews.delegate = self
         tableViews.dataSource = self
-        tableViews.register(SettingCell.self, forCellReuseIdentifier: "SearchCell")
+        tableViews.register(SettingCell.self, forCellReuseIdentifier: reuseIdentifier)
         view.addSubview(tableViews)
         tableViews.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: view.frame.width, height: view.frame.height)
         //HEADER AND SEARCH
         setSearchHeaderBar()
-        
-        //tableViews.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 120))
-        
-        
     }
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         print("editing")
@@ -206,41 +202,21 @@ extension Search : UITableViewDelegate, UITableViewDataSource{
         return " "
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        guard let section = SearchSection(rawValue: section) else {return 0}
+        guard let section = CategoriesSection(rawValue: section) else {return 0}
         switch  section {
-        case .search:
-            return 50
         case .categories:
-            return 0
-        case .emergency:
-            return 0
-        case .interested:
-            return 0
-        case .near:
-            return 0
-        case .lastSearch:
-            return 0
-        case .lastVisit:
-            return 0
+            return 50
+        case .store:
+            return 50
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let section = SearchSection(rawValue: section) else {return 0}
+        guard let section = CategoriesSection(rawValue: section) else {return 0}
         switch  section {
-        case .search:
-            return Searching.allCases.count
         case .categories:
-            return 0//categoriesList.count
-        case .emergency:
-            return 0//EmergencySection.allCases.count
-        case .interested:
-            return 0
-        case .near:
-            return 0
-        case .lastSearch:
-            return 0
-        case .lastVisit:
-            return 0
+            return categoriesList.count
+        case .store:
+            return storeList.count
         }
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -250,15 +226,13 @@ extension Search : UITableViewDelegate, UITableViewDataSource{
         viewHeader.layer.borderColor = UIColor.init(white: 0.7, alpha: 1.0).cgColor
         
         if section == 0 {
-            
             viewHeader.addSubview(searchBar)
             searchBar.anchor(top: viewHeader.topAnchor, left: viewHeader.leftAnchor   , bottom: viewHeader.bottomAnchor, right: viewHeader.rightAnchor, paddingTop: 0, paddingLeft:0, paddingBottom: 0, paddingRight:0, width: viewHeader.frame.width, height:  searchBar.frame.height)
             
         }else if section != 0 {
-            
             let title = UILabel()
             title.font = UIFont.systemFont(ofSize:16)
-            title.text = SearchSection(rawValue: section)?.description
+            title.text = CategoriesSection(rawValue: section)?.description
             title.text = title.text!.uppercased()
             title.textColor = UIColor.init(named: "header")
             viewHeader.addSubview(title)
@@ -267,44 +241,29 @@ extension Search : UITableViewDelegate, UITableViewDataSource{
             title.leftAnchor.constraint(equalTo: viewHeader.leftAnchor,constant: 16).isActive = true
         }
         searchBar.delegate  = self
-        
-       
-        /*let viewHeader = UIView()
-        viewHeader.layer.borderWidth = 0.5
-        viewHeader.backgroundColor = .white
-        viewHeader.layer.borderColor = UIColor.init(white: 1.0, alpha: 1.0).cgColor
-         
-        if section == 0 {
-            viewHeader.frame = CGRect.init(x: 0, y: 0, width: viewHeader.frame.width, height: 50)
-            viewHeader.addSubview(searchBar)
-            searchBar.anchor(top: viewHeader.topAnchor, left: viewHeader.leftAnchor   , bottom: nil, right: viewHeader.rightAnchor, paddingTop: 5, paddingLeft:5, paddingBottom: 0, paddingRight:5, width: viewHeader.frame.width, height:  50)
-            searchBar.delegate = self
-        }else{
-            let title = UILabel()
-            title.font = UIFont.systemFont(ofSize:16)
-            title.text = SearchSection(rawValue: section)?.description
-            title.text = title.text!.uppercased()
-            title.textColor = UIColor.init(named: "header")
-            viewHeader.addSubview(title)
-            title.translatesAutoresizingMaskIntoConstraints  = false
-            title.bottomAnchor.constraint(equalTo: viewHeader.bottomAnchor,constant: -4).isActive = true
-            title.leftAnchor.constraint(equalTo: viewHeader.leftAnchor,constant: 16).isActive = true
-            
-        }*/
-        
       return viewHeader
-
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            //let cell = tableViews.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell
-            //cell.titleLabel.text = shownCities[indexPath.row].description
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! SearchCell
+        guard let section = CategoriesSection(rawValue: indexPath.section) else {return SearchCell()}
+        switch section {
+            case .categories :
+                cell.nameText.text =  categoriesList[indexPath.row].name
+                break
+            case .store :
+                cell.nameText.text = "TEST"
+            break
+        }
+       // cell.nameText.text = categoriesList[indexPath.row].name
+        cell.accessoryType = .disclosureIndicator
+        return cell
     }
     
 }
 
 class SearchCell: UITableViewCell {
-    lazy var titleLabel: UILabel = {
+    
+    lazy var nameText: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "HelveticaNeue", size: 20)
         label.textColor = .systemBlue
@@ -313,25 +272,31 @@ class SearchCell: UITableViewCell {
     }()
     lazy var iconThumb: UIImageView = {
        let icon = UIImageView()
-        
         return icon
     }()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+         
     }
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("init has not been implemented")
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+         
+    }
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
     override func layoutSubviews() {
-        setupUI()
-    }
-    
+        
+    } 
     private func setupUI() { 
      self.contentView.addSubview(iconThumb)
-        iconThumb.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 50, height: 50)
+        iconThumb.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right : rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 50, height: 50)
         
-     self.contentView.addSubview(titleLabel)
-        iconThumb.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 50, height: 50)
+     self.contentView.addSubview(nameText)
+        nameText.anchor(top:  topAnchor, left: leftAnchor, bottom : bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 50, height: 50)
    }
 }
  

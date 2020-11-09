@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F8F656EBCAA020964FAFB27 /* Pods_Settings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE8AB8A6E6575609E3CF952 /* Pods_Settings.framework */; };
 		3B83D47D253F764800F11DB6 /* NotNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83D47C253F764800F11DB6 /* NotNetwork.swift */; };
+		3B8E5DE02556E5A900448017 /* Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8E5DDF2556E5A900448017 /* Widgets.swift */; };
 		3BE4A429253C69A1006FF45A /* Forgot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A428253C69A1006FF45A /* Forgot.swift */; };
 		F0586ED4253EBEAD00591DC5 /* SecondSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0586ED3253EBEAD00591DC5 /* SecondSegment.swift */; };
 		F0586ED7253EC00100591DC5 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0586ED6253EC00100591DC5 /* Detail.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		1DE8AB8A6E6575609E3CF952 /* Pods_Settings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Settings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B83D47C253F764800F11DB6 /* NotNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotNetwork.swift; sourceTree = "<group>"; };
+		3B8E5DDF2556E5A900448017 /* Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widgets.swift; sourceTree = "<group>"; };
 		3BE4A428253C69A1006FF45A /* Forgot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgot.swift; sourceTree = "<group>"; };
 		579C9DC668FBEFAD0EEA37BB /* Pods-Settings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Settings.debug.xcconfig"; path = "Target Support Files/Pods-Settings/Pods-Settings.debug.xcconfig"; sourceTree = "<group>"; };
 		DA5BED1A7F2270EF962FCF36 /* Pods-Settings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Settings.release.xcconfig"; path = "Target Support Files/Pods-Settings/Pods-Settings.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		F0DBFCCF25343131006AAB66 = {
 			isa = PBXGroup;
 			children = (
+				3B8E5DDF2556E5A900448017 /* Widgets.swift */,
 				F0DBFCDA25343131006AAB66 /* Settings */,
 				F0DBFCD925343131006AAB66 /* Products */,
 				A823988A93042AD5A56181BD /* Pods */,
@@ -302,6 +305,7 @@
 				F0DBFD052535A32C006AAB66 /* Store.swift in Sources */,
 				F0DBFCF225343A1F006AAB66 /* UserInfoHeader.swift in Sources */,
 				3BE4A429253C69A1006FF45A /* Forgot.swift in Sources */,
+				3B8E5DE02556E5A900448017 /* Widgets.swift in Sources */,
 				F0DBFD032535A2AB006AAB66 /* Menu.swift in Sources */,
 				F0DBFD0B2535BEB8006AAB66 /* CategoriesType.swift in Sources */,
 				F0DBFCF4253465BE006AAB66 /* SettingSection.swift in Sources */,

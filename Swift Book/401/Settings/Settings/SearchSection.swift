@@ -7,6 +7,18 @@
 //
 
 import Foundation
+
+enum CategoriesSection: Int,CaseIterable,CustomStringConvertible {
+    case categories
+    case store
+    var description: String{
+        switch self{
+        case .categories: return ""
+        case .store: return "Vitrin"
+        }
+        
+    }
+}
 enum SearchSection: Int,CaseIterable,CustomStringConvertible{
     case search
     case categories
@@ -29,15 +41,6 @@ enum SearchSection: Int,CaseIterable,CustomStringConvertible{
     
 }
 enum Searching : Int,CaseIterable,CustomStringConvertible{
-      
-    case title
-       var description: String{
-           switch self{
-           case .title : return ""
-       }
-    }
-}
-enum CategoriesSection : Int,CaseIterable,CustomStringConvertible{
       
     case title
        var description: String{
