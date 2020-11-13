@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 import CustomUISwitch
 class Register: UIViewController {
     let containerView: UIView = {

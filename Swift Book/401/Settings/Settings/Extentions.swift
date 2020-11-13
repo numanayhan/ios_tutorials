@@ -162,3 +162,17 @@ extension UIButton
         }
     }
 }
+
+struct RegisterModel {
+    let email:String
+    let password:String
+    let firstName:String
+    let lastName:String
+    let acceptTerms:Bool
+    let privacyPolicy:Bool
+}
+extension RegisterModel{
+    func isEmailValid() -> Bool{
+        return email.contains("@") && email.contains(".")
+    }
+}
