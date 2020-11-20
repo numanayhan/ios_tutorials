@@ -146,7 +146,7 @@ class Search: UIViewController, UISearchBarDelegate  {
         }
         searchBar.backgroundColor = UIColor.white
         searchBar.backgroundImage = UIImage()
-        searchTextField.backgroundColor = UIColor.init(named: "search")
+        searchTextField.backgroundColor = UIColor.init(named: "searching")
         
         searchBarView.backgroundColor = .lightGray
         tableViews.frame = CGRect.init(x: 0, y: 0, width: view.frame.width, height: view.frame.height  )
