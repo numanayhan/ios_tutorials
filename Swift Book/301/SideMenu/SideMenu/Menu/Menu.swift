@@ -14,9 +14,8 @@ class Preferences {
     static let shared = Preferences()
     var enableTransitionAnimation = false
 }
-class Menu: UIViewController {
+class Menu:  UIViewController {
     var isDarkModeEnabled = false
-    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
@@ -24,59 +23,67 @@ class Menu: UIViewController {
             tableView.separatorStyle = .none
         }
     }
-    @IBOutlet weak var profileInfo: UILabel!
-
+    @IBOutlet weak var selectionTableViewHeader: UILabel!
     @IBOutlet weak var selectionMenuTrailingConstraint: NSLayoutConstraint!
     private var themeColor = UIColor.white
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
- 
-    
-     isDarkModeEnabled = SideMenuController.preferences.basic.position == .under
-            configureView()
 
-            sideMenuController?.cache(viewControllerGenerator: {
-                self.storyboard?.instantiateViewController(withIdentifier: "Dashboard")
-            }, with: "1")
+        isDarkModeEnabled = SideMenuController.preferences.basic.position == .under
+        configureView()
 
-            sideMenuController?.cache(viewControllerGenerator: {
-                self.storyboard?.instantiateViewController(withIdentifier: "Profile")
-            }, with: "2")
+        sideMenuController?.cache(viewControllerGenerator: {
+            self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController")
+        }, with: "1")
 
-            sideMenuController?.delegate = self
+        sideMenuController?.cache(viewControllerGenerator: {
+            self.storyboard?.instantiateViewController(withIdentifier: "ThirdViewController")
+        }, with: "2")
+
+        sideMenuController?.delegate = self
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("[Example] Menu did appear")
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("[Example] Menu will disappear")
+    }
+
+    private func configureView() {
+        if isDarkModeEnabled {
+            themeColor = UIColor(red: 0.03, green: 0.04, blue: 0.07, alpha: 1.00)
+            selectionTableViewHeader.textColor = .white
+        } else {
+            selectionMenuTrailingConstraint.constant = 0
+            themeColor = UIColor(red: 0.98, green: 0.97, blue: 0.96, alpha: 1.00)
         }
 
-        private func configureView() {
-            if isDarkModeEnabled {
-                themeColor = UIColor(red: 0.03, green: 0.04, blue: 0.07, alpha: 1.00)
-                profileInfo.textColor = .white
-            } else {
-                selectionMenuTrailingConstraint.constant = 0
-                themeColor = UIColor(red: 0.98, green: 0.97, blue: 0.96, alpha: 1.00)
-            }
-
-            let sidemenuBasicConfiguration = SideMenuController.preferences.basic
-            let showPlaceTableOnLeft = (sidemenuBasicConfiguration.position == .under) != (sidemenuBasicConfiguration.direction == .right)
-            if showPlaceTableOnLeft {
-                selectionMenuTrailingConstraint.constant = SideMenuController.preferences.basic.menuWidth - view.frame.width
-            }
-
-            view.backgroundColor = themeColor
-            tableView.backgroundColor = themeColor
+        let sidemenuBasicConfiguration = SideMenuController.preferences.basic
+        let showPlaceTableOnLeft = (sidemenuBasicConfiguration.position == .under) != (sidemenuBasicConfiguration.direction == .right)
+        if showPlaceTableOnLeft {
+            selectionMenuTrailingConstraint.constant = SideMenuController.preferences.basic.menuWidth - view.frame.width
         }
 
-        override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-            super.viewWillTransition(to: size, with: coordinator)
+        view.backgroundColor = themeColor
+        tableView.backgroundColor = themeColor
+    }
 
-            let sidemenuBasicConfiguration = SideMenuController.preferences.basic
-            let showPlaceTableOnLeft = (sidemenuBasicConfiguration.position == .under) != (sidemenuBasicConfiguration.direction == .right)
-            selectionMenuTrailingConstraint.constant = showPlaceTableOnLeft ? SideMenuController.preferences.basic.menuWidth - size.width : 0
-            view.layoutIfNeeded()
-        }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        let sideMenuBasicConfiguration = SideMenuController.preferences.basic
+        let showPlaceTableOnLeft = (sideMenuBasicConfiguration.position == .under) != (sideMenuBasicConfiguration.direction == .right)
+        selectionMenuTrailingConstraint.constant = showPlaceTableOnLeft ? SideMenuController.preferences.basic.menuWidth - size.width : 0
+        view.layoutIfNeeded()
+    }
 }
-extension Menu: SideMenuControllerDelegate {
+
+extension Menu : SideMenuControllerDelegate {
     func sideMenuController(_ sideMenuController: SideMenuController,
                             animationControllerFrom fromVC: UIViewController,
                             to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -108,7 +115,7 @@ extension Menu: SideMenuControllerDelegate {
     }
 }
 
-extension Menu: UITableViewDelegate, UITableViewDataSource {
+extension Menu : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -119,13 +126,13 @@ extension Menu: UITableViewDelegate, UITableViewDataSource {
         cell.contentView.backgroundColor = themeColor
         let row = indexPath.row
         if row == 0 {
-            cell.titleLabel?.text = "Dashboard"
+            cell.menuTitle?.text = "Preferences"
         } else if row == 1 {
-            cell.titleLabel?.text = "Profile"
+            cell.menuTitle?.text = "Scroll View and Others"
         } else if row == 2 {
-            cell.titleLabel?.text = "Contact"
+            cell.menuTitle?.text = "IB / Code"
         }
-        cell.titleLabel?.textColor = isDarkModeEnabled ? .white : .black
+        cell.menuTitle?.textColor = isDarkModeEnabled ? .white : .black
         return cell
     }
 
@@ -139,7 +146,9 @@ extension Menu: UITableViewDelegate, UITableViewDataSource {
             print("[Example] View Controller Cache Identifier: \(identifier)")
         }
     }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
 }
+ 
