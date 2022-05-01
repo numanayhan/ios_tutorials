@@ -123,6 +123,14 @@ class Store: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
         
         return cell
     }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
+            
+                self.navigationController?.pushViewController(Detail(), animated: true)
+             
+            
+        }
+    } 
     func setTopBar(){
           
         setLeftItems()

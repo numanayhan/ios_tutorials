@@ -66,26 +66,22 @@ class Search: UIViewController, UISearchBarDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        CheckBox().isChecked = true
-        
+         
         setSearch()
     }
     func setSearch(){
         view.backgroundColor = .white
         setLeftItems()
-        
+        setTableView()
         setCategoriesData()
     }
     @objc func setCategoriesData(){
-        if (UserDefaults.standard.string(forKey: "userHash") != nil){
-            let  userHash = UserDefaults.standard.string(forKey: "userHash")!
-            let parameters  = [  "route" : "advert/category/sub_categories" ,"userHash":userHash ]
+         
+        let parameters  = [ "":"" ]
             if Network.isConnectedToNetwork() == true {
-                defaultRequest.getParamsRequest(url: Config.isInit, parameters: parameters) { data in
+                defaultRequest.getParamsRequest(url: " https://www.satisgaranti.com/api/2.0.1/index.php?route=advert/category/sub_categories&userHash=QxHMIHanHj2MTk71bwqPdn9xl9kANmpl", parameters: parameters) { data in
                     DispatchQueue.main.async {
-                        print("search",data)
-                        self.setTableView()
+                        
                         let dataStatus:NSDictionary = data  as NSDictionary.Value as! NSDictionary
                         if (dataStatus.object(forKey:"categories") != nil){
                             let categories : NSArray = dataStatus.object(forKey: "categories") as! NSArray
@@ -99,7 +95,7 @@ class Search: UIViewController, UISearchBarDelegate  {
             }else{
                 self.setNotify(text: "İnternet bağlantınız kontrol ediniz")
             }
-        }
+        
         refresher.endRefreshing()
     }
     func setNotify(text:String){
@@ -208,7 +204,7 @@ extension Search : UITableViewDelegate, UITableViewDataSource{
             return 50
         case .store:
             return 50
-        }
+         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let section = CategoriesSection(rawValue: section) else {return 0}
@@ -244,19 +240,15 @@ extension Search : UITableViewDelegate, UITableViewDataSource{
       return viewHeader
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! SearchCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? SearchCell
         guard let section = CategoriesSection(rawValue: indexPath.section) else {return SearchCell()}
-        switch section {
-            case .categories :
-                cell.nameText.text =  categoriesList[indexPath.row].name
-                break
-            case .store :
-                cell.nameText.text = "TEST"
-            break
+        print(categoriesList[0].name)
+        if categoriesList.count > 0{
+             
         }
        // cell.nameText.text = categoriesList[indexPath.row].name
-        cell.accessoryType = .disclosureIndicator
-        return cell
+        cell!.accessoryType = .disclosureIndicator
+        return cell!
     }
     
 }
@@ -283,10 +275,11 @@ class SearchCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-         
+        setupUI()
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        setupUI()
     }
     override func layoutSubviews() {
         
